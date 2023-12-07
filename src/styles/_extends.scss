@@ -1,0 +1,92 @@
+$primary-black: #1c1c1c;
+$primary-black-90: #272727;
+$primary-black-80: #3d3d3d;
+$primary-black-70: #535353;
+$primary-black-60: #696969;
+$primary-black-50: #808080;
+$primary-black-40: #969696;
+
+$primary-yellow-90: #f2d018;
+$primary-yellow-80: #f2d430;
+$primary-yellow-70: #f2d747;
+$primary-yellow-60: #f1da5f;
+$primary-yellow-50: #f0dd77;
+$primary-yellow-40: #f0e18f;
+$primary-yellow: #f3cd00;
+
+$secondary-brown: #e3d9c6;
+$secondary-gary: #e5e5e5;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$fs-small-1980: 40px;
+$fs-medium-1980: 48px;
+$fs-large-1980: 64px;
+
+$hl-small-1980: 40px;
+$hl-medium-1980: 48px;
+$hl-large-1980: 64px;
+
+$title-large-1980: 36px;
+$title-medium-1980: 32px;
+$title-small-1980: 24px;
+
+$body-large-1980: 20px;
+$body-medium-1980: 16px;
+$body-small-1980: 14px;
+$body-v-small-1980: 12px;
+
+$ff-regular: 'Sans-Regular';
+
+@font-face {
+  font-family: "Sans-Regular";
+  src: url("../assets/fonts/sangbleu-sans/sangbleu-sans-regular-maisfontes.53ed/sangbleu-sans-regular.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sans-Regular-italic";
+  src: url("../assets/fonts/sangbleu-sans/sangbleu-sans-regular-italic-maisfontes.47ef/sangbleu-sans-regular-italic.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sans-Medium";
+  src: url("../assets/fonts/sangbleu-sans/sangbleu-sans-medium-maisfontes.57ff/sangbleu-sans-medium.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sans-Medium-italic";
+  src: url("../assets/fonts/sangbleu-sans/sangbleu-sans-medium-maisfontes.57ff/sangbleu-sans-medium.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sans-Bold";
+  src: url("../assets/fonts/sangbleu-sans/sangbleu-sans-bold-maisfontes.3b58/sangbleu-sans-bold.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sans-Bold-italic";
+  src: url("../assets/fonts/sangbleu-sans/sangbleu-sans-bold-italic-maisfontes.3a23/sangbleu-sans-bold-italic.woff2")
+    format("woff2");
+}
+@font-face {
+    font-family: "Sans-Light";
+    src: url("../assets/fonts/sangbleu-sans/sangbleu-sans-light-maisfontes.d730/sangbleu-sans-light.woff2")
+      format("woff2");
+  }
+@font-face {
+  font-family: "Sans-Light-italic";
+  src: url("../assets/fonts/sangbleu-sans/sangbleu-sans-light-italic-maisfontes.2509/sangbleu-sans-light-italic.woff2")
+    format("woff2");
+}
+@font-face {
+    font-family: "Sans-Hairline";
+    src: url("../assets/fonts/sangbleu-sans/sangbleu-sans-hairline-maisfontes.3b82/sangbleu-sans-hairline.woff2")
+      format("woff2");
+  }
+@font-face {
+  font-family: "Sans-Hairline-italic";
+  src: url("../assets/fonts/sangbleu-sans/sangbleu-sans-hairline-italic-maisfontes.7f38/sangbleu-sans-hairline-italic.woff2")
+    format("woff2");
+}
