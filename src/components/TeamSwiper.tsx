@@ -13,7 +13,7 @@ import Image from "next/image";
 import { teamLead } from "@/assets/images";
 const TeamSwiper = () => {
   const [autoplayEnabled, setAutoplayEnabled] = useState(true); // State to control autoplay
-  const swiperRef = useRef(null); // Ref for accessing Swiper instance
+  const swiperRef = useRef(null);
 
   const handleToggleAutoplay = () => {
     const swiperInstance = swiperRef.current?.swiper;
