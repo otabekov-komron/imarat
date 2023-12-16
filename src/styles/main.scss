@@ -379,8 +379,11 @@ ul {
   }
 
   .card {
+    &:hover {
+      background-color: $primary-yellow;
+    }
     border-radius: 40px;
-    background: rgba(243, 205, 0, 0.64);
+    background: $primary-yellow-70;
     box-shadow: 30px 0px 30px 0px rgba(125, 125, 125, 0.25);
     backdrop-filter: blur(10px);
     display: inline-flex;
@@ -389,6 +392,7 @@ ul {
     gap: 32px;
     padding: 30px 56px;
     font-family: "Sans-Regular";
+    transition: background-color 0.3s ease-in-out;
     .card_title {
       font-size: 48px;
       font-style: normal;
@@ -549,4 +553,31 @@ ul {
     }
   }
   
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title__content {
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.title__left {
+  margin-right: 40px;
+  width: 200px;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+.title__right {
+  margin-left: 40px;
+  width: 200px;
+  height: 1px;
+  background-color: #ffffff;
 }
