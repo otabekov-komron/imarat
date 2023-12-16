@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/main.scss";
+import '../styles/about.scss'
+import '../styles/home.scss'
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";

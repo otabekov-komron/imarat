@@ -1,0 +1,22 @@
+@import "extends";
+@import "../styles/main.scss";
+@media (min-width: 1980px) {
+  .about {
+    background-color: $primary-black;
+    padding: 2% 6%;
+    .first_section {
+      border-radius: 40px;
+      background-color: #ffffff;
+      -webkit-border-radius: 40px;
+      -moz-border-radius: 40px;
+      -ms-border-radius: 40px;
+      -o-border-radius: 40px;
+      display: flex;
+      flex-direction: column;
+      .top {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

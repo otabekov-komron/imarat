@@ -2786,10 +2786,12 @@ export default function Home() {
           <div className="second_section_right_img">
             <Image width={700} height={714} src={group} alt="group" />
           </div>
-          <div className="second_section_right_blur">
-            we have experienced professionals in our team
+          <div className="blur_content">
+            <div className="second_section_right_blur">
+              we have experienced professionals in our team
+            </div>
+            <p className="second_section_right_count">30+</p>
           </div>
-          <p className="second_section_right_count">30+</p>
         </div>
       </section>
       <span>
