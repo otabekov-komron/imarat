@@ -11,8 +11,6 @@ const About = () => {
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="261"
-                height="199"
                 viewBox="0 0 261 199"
                 fill="none"
               >
@@ -2069,7 +2067,11 @@ const About = () => {
             <p>About us. Our team.</p>
           </div>
           <div className="top_right">
-            <p className="top_right_title">About us</p>
+            <p className="top_right_title">
+              <span />
+              About us
+              <span />
+            </p>
             <div className="top_right_container">
               <span className="top_right_container_svg">
                 <svg
@@ -2103,31 +2105,30 @@ const About = () => {
                       fill="#F3CD00"
                     />
                   </svg>
-                  <p>
-                    Welcome to Imarat group. We are a passionate team of design
-                    enthusiasts dedicated to delivering excellence in every
-                    project. Our main goal is to understand and cater to each
-                    clien&apos;s needs, providing exceptional design services
-                    tailored to their vision
-                  </p>
-                  <p>
-                    At Imarat group, we consider ourselves pioneers in design,
-                    always pushing boundaries and seeking the latest trends. Our
-                    team, consisting of industry experts and creative minds, is
-                    here to leave a lasting impact on every project we
-                    undertake. Choose us for a collaborative and visionary
-                    design journey
-                  </p>
                 </span>
+                <p>
+                  Welcome to Imarat group. We are a passionate team of design
+                  enthusiasts dedicated to delivering excellence in every
+                  project. Our main goal is to understand and cater to each
+                  clien&apos;s needs, providing exceptional design services
+                  tailored to their vision
+                </p>
+                <p>
+                  At Imarat group, we consider ourselves pioneers in design,
+                  always pushing boundaries and seeking the latest trends. Our
+                  team, consisting of industry experts and creative minds, is
+                  here to leave a lasting impact on every project we undertake.
+                  Choose us for a collaborative and visionary design journey
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div className="middle">
-          <Image src={group} alt="group"/>
+          <Image src={group} alt="group" />
         </div>
         <div className="bottom">
-          <div className="blur_content">
+          <div className="blur_content_another">
             <div className="second_section_right_blur">
               we have experienced professionals in our team
             </div>

@@ -15,16 +15,7 @@ ul {
 }
 
 /* Apply a blur effect to the entire body */
-.menu-open::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9998; /* Ensure it's below the menu */
-  backdrop-filter: brightness(33%); /* Adjust the blur strength as needed */
-}
+
 
 //components
 
@@ -34,7 +25,7 @@ ul {
     font-family: "Sans-Regular";
   }
 }
-@media (min-width: 1980px) {
+@media (min-width: 1920px) {
   .header {
     background: $primary-black;
     display: flex;
@@ -99,6 +90,16 @@ ul {
         }
       }
     }
+  }
+  .menu-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9998; /* Ensure it's below the menu */
+    backdrop-filter: brightness(33%); /* Adjust the blur strength as needed */
   }
   .open_navbar {
     transition: all ease-in-out 2s;
