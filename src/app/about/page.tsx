@@ -2110,7 +2110,7 @@ const About = () => {
                   Welcome to Imarat group. We are a passionate team of design
                   enthusiasts dedicated to delivering excellence in every
                   project. Our main goal is to understand and cater to each
-                  clien&apos;s needs, providing exceptional design services
+                  clien&apos;ts needs, providing exceptional design services
                   tailored to their vision
                 </p>
                 <p>
@@ -2136,7 +2136,13 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="second_section"></div>
+      <div className="second_section">
+        <div className="title">
+          <span className="title__left"></span>
+          <h2 className="title__content">Services</h2>
+          <span className="title__right"></span>
+        </div>
+      </div>
     </div>
   );
 };

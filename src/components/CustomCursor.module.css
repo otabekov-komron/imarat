@@ -1,8 +1,10 @@
 .cursorDiv{
     margin-left: -15px;
     margin-top: -15px;
+    z-index: 99999;
 }
 .cursor {
+  z-index: 99999;
   width: 15px;
   height: 15px;
   margin: 12.5px;
@@ -10,10 +12,10 @@
 }
 .cursor,
 .cursorFollower {
+  z-index: 99999;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  z-index: 9999;
   transition: transform 0.1s ease;
   -webkit-transition: transform 0.1s ease;
   -moz-transition: transform 0.1s ease;
@@ -22,10 +24,10 @@
 }
 
 .cursorFollower {
+  z-index: 99998;
   width: 40px;
   height: 40px;
-  background: #e5e5e558;
-  z-index: 9998;
+  background: #ffffff6c;  
   transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease,    border-width 0.2s ease;
   -webkit-transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease,    border-width 0.2s ease;
   -moz-transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease,    border-width 0.2s ease;
