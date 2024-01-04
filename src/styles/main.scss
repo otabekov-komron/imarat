@@ -6,6 +6,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   cursor: none;
+  font-family: "Sans-Regular";
 }
 a {
   text-decoration: none;
@@ -264,13 +265,18 @@ ul {
   .container {
     z-index: 999;
     overflow-y: auto;
+    
+    display: flex;
     position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     .fixedDiv {
       position: fixed;
       bottom: -20%;
-      left: 45%;
+
       border-radius: 30px;
-      background: #F3CD0026;
+      background: #f3cd0026;
       padding: 10px 25px;
       width: fit-content;
       display: flex;
@@ -281,7 +287,7 @@ ul {
       backdrop-filter: blur(15px);
       transition: bottom 0.3s ease; /* Smooth transition for visibility */
 
-      button{
+      button {
         border: none;
         background: none;
       }
@@ -410,6 +416,7 @@ ul {
 
   .card {
     height: 100%;
+    width: 100%;
     &:hover {
       background-color: $primary-yellow;
     }
@@ -498,6 +505,7 @@ ul {
       -o-transition: border 1s;
     }
   }
+
   .scrolling_text {
     width: 100%;
     padding-top: 20px;
@@ -615,6 +623,84 @@ ul {
       width: 200px;
       height: 1px;
       background-color: #ffffff;
+    }
+  }
+  .team_card {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    margin-bottom: 35%;
+    &:hover {
+      .team_card_desc {
+        opacity: 1;
+      }
+      .team_card_img {
+        height: 200%;
+        box-shadow: -1px 1px 112px 46px rgba(61, 61, 61, 0.7);
+        -webkit-box-shadow: -1px 1px 112px 46px rgba(61, 61, 61, 0.7);
+        -moz-box-shadow: -1px 1px 112px 46px rgba(61, 61, 61, 0.7);
+      }
+    }
+
+    .team_card_img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 40px 0 0 0;
+      border-radius: 40px;
+      background-color: $primary-black-90;
+      -webkit-border-radius: 40px;
+      -moz-border-radius: 40px;
+      -ms-border-radius: 40px;
+      -o-border-radius: 40px;
+      transition: all ease-in-out 0.5s;
+      -webkit-transition: all ease-in-out 0.5s;
+      -moz-transition: all ease-in-out 0.5s;
+      -ms-transition: all ease-in-out 0.5s;
+      -o-transition: all ease-in-out 0.5s;
+    }
+    .team_card_desc {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      background-color: #f3cd00;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      -webkit-transition: opacity 0.5s ease-in-out;
+      -moz-transition: opacity 0.5s ease-in-out;
+      -ms-transition: opacity 0.5s ease-in-out;
+      -o-transition: opacity 0.5s ease-in-out;
+      p {
+        font-family: "Sans-Regular";
+        &:first-child {
+          color: $primary-black;
+          font-size: 36px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 42px; /* 116.667% */
+        }
+        &:last-child {
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px; /* 150% */
+          letter-spacing: 0.1px;
+        }
+      }
+    }
+  }
+  .pv{
+    width: 40%;
+    height: 60vh;
+    transition-timing-function: linear;
+    .swiper-slide{
+      background-image: url('../assets/images/design.jpg');
     }
   }
 }

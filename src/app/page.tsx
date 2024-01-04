@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import { group } from "@/assets/images";
 import Card from "@/components/Card";
 import SwiperComponent from "@/components/SwiperComponent";

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "../styles/main.scss";
-import '../styles/about.scss'
-import '../styles/home.scss'
-import '../styles/services.scss'
+import '../styles/_about.scss'
+import '../styles/_home.scss'
+import '../styles/_services.scss'
+import '../styles/_contacts.scss'
+import '../styles/_news.scss'
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";

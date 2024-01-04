@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.29",
+    "axios": "^1.6.2",
     "framer-motion": "^10.16.15",
     "next": "^14.0.5-canary.6",
     "react": "^18",

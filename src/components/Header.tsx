@@ -277,7 +277,7 @@ const Header = () => {
               </span>
             </div>
           </Link>
-          <Link onClick={closeNavbar} href={"/showroom"} className="navbar_top_item">
+          <Link onClick={closeNavbar} target="_blank" href={"https://live.imaratgroup.uz/"} className="navbar_top_item">
             <span className="navbar_top_item_letters">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
