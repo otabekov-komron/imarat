@@ -1,6 +1,5 @@
 import ShortsSwiper from "@/components/ShortsSwiper";
 import React from "react";
-import Projects from "../projects/page";
 
 const News = () => {
   return (
@@ -28,7 +27,6 @@ const News = () => {
           <h2 className="title__content">Vacancies</h2>
           <span className="title__right"></span>
         </div>
-        <Projects/>
       </div>
     </div>
   );

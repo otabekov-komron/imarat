@@ -1,0 +1,31 @@
+@import "extends";
+@import "main.scss";
+@media (min-width: 1920px) {
+  .projects {
+    padding: 2% 6%;
+    background-color: $primary-black;
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+      button {
+        background: none;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px; /* 133.333% */
+        color: #fff;
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 36px;
+        border-radius: 20px;
+        border: 1px solid #f3cd00;
+      }
+      .active{
+        background-color: #F3CD00;
+        color: #000;
+      }
+    }
+  }
+}
