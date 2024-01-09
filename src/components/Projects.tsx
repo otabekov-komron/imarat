@@ -1,23 +1,16 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-
-interface Project {
-  category: string;
-}
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Projects = () => {
-  const [projects, setProjects] = useState<Project[]>([]);
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get(
-          "https://admin.imaratgroup.uz/api/projects"
-        );
+        const response = await axios.get('https://admin.imarat.uz/api/vacancies'); // Use relative path if you've set up API routes
         setProjects(response.data);
-        console.log(response.data);
       } catch (error) {
-        console.error("Error fetching projects:", error);
+        console.error('Error fetching projects:', error);
       }
     };
 
@@ -26,12 +19,11 @@ const Projects = () => {
 
   return (
     <div>
-      <h1>Projects</h1>
+      <h1>Vacancies</h1>
       <ul>
         {projects.map((project, index) => (
           <li key={index}>
-            <p>{project.category}</p>
-            {/* Render other project details here */}
+            <p>{project}</p>
           </li>
         ))}
       </ul>
