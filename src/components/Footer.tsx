@@ -110,7 +110,7 @@ const Footer = () => {
         <div className="footer_columns_contact">
           <span>Contact</span>
           <a href="mailto:imaratgroup@gmail.com">
-            <span>
+            
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -143,11 +143,10 @@ const Footer = () => {
                   </clipPath>
                 </defs>
               </svg>
-            </span>
             Imaratgroup@gmail.com
           </a>
           <a href="tel:+998338808800">
-            <span>
+            
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -163,11 +162,10 @@ const Footer = () => {
                   />
                 </g>
               </svg>
-            </span>
             +998 33 8808800
           </a>
           <a href="/something">
-            <span>
+            
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -188,11 +186,10 @@ const Footer = () => {
                   fill="#ffffff8f"
                 />
               </svg>
-            </span>
             <p>Tashkent, Mirzo-Ulugbek district</p>
-            <a className="map" href="/something">
+            {/* <a className="map" href="/something">
               map
-            </a>
+            </a> */}
           </a>
           <div>
             <a href="/something">
