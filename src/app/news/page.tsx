@@ -1,7 +1,14 @@
 import ShortsSwiper from "@/components/ShortsSwiper";
 import React from "react";
+import axios from "axios"
 
 const News = () => {
+  const fetchData = async () => {
+    const res = await axios.get("https://admin.imaratgroup.uz/api/shorts")
+    console.log(res.data)
+  }
+  fetchData();
+
   return (
     <div className="news">
       <div className="blogs">
