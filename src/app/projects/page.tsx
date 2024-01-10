@@ -183,7 +183,7 @@ const Projects = () => {
               <span>360°</span>
             </div>
             <Link className='link_button' href={'/3601'}>
-            <p>View more</p>
+            <p>View project 360°</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -204,7 +204,7 @@ const Projects = () => {
               <span>360°</span>
             </div>
             <Link className='link_button' href={'/3601'}>
-            <p>View more</p>
+            <p>View project 360°</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -225,7 +225,7 @@ const Projects = () => {
               <span>360°</span>
             </div>
             <Link className='link_button' href={'/3601'}>
-            <p>View more</p>
+            <p>View project 360°</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -246,7 +246,7 @@ const Projects = () => {
               <span>360°</span>
             </div>
             <Link className='link_button' href={'/3601'}>
-            <p>View more</p>
+            <p>View project 360°</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"

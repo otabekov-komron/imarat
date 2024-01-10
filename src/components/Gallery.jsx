@@ -28,7 +28,7 @@ export default function Gallery({ images }) {
           enabled: true,
         }}
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs,]}
+        modules={[FreeMode, Navigation, Thumbs]}
         className="gallery_images"
       >
         {images.slice(0, 8).map((product, index) => (
@@ -36,8 +36,9 @@ export default function Gallery({ images }) {
             <Image
               src={`https://admin.imaratgroup.uz/${product.photo}`}
               alt={`Slide ${index}`}
-              width={400}
-              height={400}
+              width={1000}
+              height={1000}
+              placeholder="blur"
             />
           </SwiperSlide>
         ))}
@@ -115,6 +116,7 @@ export default function Gallery({ images }) {
         {images.slice(0, 8).map((product, index) => (
           <SwiperSlide key={index}>
             <Image
+              placeholder="blur"
               src={`https://admin.imaratgroup.uz/${product.photo}`}
               alt={`Slide ${index}`}
               width={200}
