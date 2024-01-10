@@ -8,6 +8,7 @@ module.exports = {
         protocol: 'https',
         hostname: 'admin.imaratgroup.uz',
         port: '',
+        pathname: '/uploads/**',
       },
     ],
   },
