@@ -4,6 +4,104 @@
   .news {
     padding: 2% 6%;
     background-color: $primary-black;
+    .blogs {
+      .blogs__list {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 32%);
+        justify-content: space-between;
+        margin-top: 3%;
+        .blogs__item {
+          margin-bottom: 6%;
+          .blog__item-img {
+            position: relative;
+            img {
+              height: 230px;
+              width: 100%;
+              object-fit: cover;
+              border-radius: 20px;
+            }
+            p {
+              position: absolute;
+              top: 8px;
+              right: 15px;
+              padding: 5px;
+              border-radius: 8px;
+              font-weight: bold;
+              color: #ffffff;
+              background-color: rgba(255, 255, 255, 0.35);;
+            }
+          }
+          padding: 2%;
+          border-radius: 10px;
+          background-color: #ffffff;
+          .blog__item-title {
+            margin-top: 10px;
+            margin-bottom: 8px;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 13.564px;
+            color: #1C1C1C;
+          }
+          .blog__item-text {
+            max-height: 68px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: wrap;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.055px;
+            color: #1C1C1C;
+          }
+          .blog__item-footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 10px;
+            .blog__item-date {
+              display: flex;
+              align-items: center;
+              p {
+                margin-left: 5px;
+                color: #969696;
+              }
+            }
+            .blog__item-views {
+              display: flex;
+              align-items: center;
+              margin-left: 10px;
+              p {
+                margin-left: 5px;
+                color: #969696;
+              }
+            }
+          }
+        }
+      }
+      .blog__view {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        padding: 16px 56px;
+        border-radius: 20px;
+        border: 1px solid $primary-yellow;
+        background-color: transparent;
+        p {
+          margin: 0;
+          margin-right: 16px;
+          color:#FFF;
+          font-family: SangBleu Sans;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 32px;
+        }
+      }
+    }
     .shorts {
       .shortsSwiper {
         margin: 2% 0;
