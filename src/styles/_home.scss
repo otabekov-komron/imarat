@@ -221,13 +221,12 @@
             padding: 45px 0 0 0;
             display: flex;
             position: relative;
-            transition: all ease-in-out 0.5s;
+            transition: transform ease-in-out 0.5s;
             flex-direction: column;
-            -webkit-transition: all ease-in-out 0.5s;
-            -moz-transition: all ease-in-out 0.5s;
-            -ms-transition: all ease-in-out 0.5s;
-            -o-transition: all ease-in-out 0.5s;
-
+            -webkit-transition: transform ease-in-out 0.5s;
+            -moz-transition: transform ease-in-out 0.5s;
+            -ms-transition: transform ease-in-out 0.5s;
+            -o-transition: transform ease-in-out 0.5s;
             &:hover {
               transform: scale(1.1);
               .ts-slide-title {

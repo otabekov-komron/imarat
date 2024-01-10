@@ -49,75 +49,13 @@ const TeamSwiper = () => {
       className="teamSwiper"
     >
       <SwiperSlide className="ts-slide">
-        <Image src={teamLead} alt="ts-item" />
+        <Image width={400} height={400} src={teamLead} alt="ts-item" />
         <span className="ts-slide-title">
           <p className="ts-slide-name">G&apos;ulom Maxkamov</p>
           <p className="ts-slide-desc">Imarat group Founder</p>
         </span>
       </SwiperSlide>
-      <SwiperSlide className="ts-slide">
-        <Image src={teamLead} alt="ts-item" />
-        <span className="ts-slide-title">
-          <p className="ts-slide-name">G&apos;ulom Maxkamov</p>
-          <p className="ts-slide-desc">Imarat group Founder</p>
-        </span>
-      </SwiperSlide>
-      <SwiperSlide className="ts-slide">
-        <Image src={teamLead} alt="ts-item" />
-        <span className="ts-slide-title">
-          <p className="ts-slide-name">G&apos;ulom Maxkamov</p>
-          <p className="ts-slide-desc">Imarat group Founder</p>
-        </span>
-      </SwiperSlide>
-      <SwiperSlide className="ts-slide">
-        <Image src={teamLead} alt="ts-item" />
-        <span className="ts-slide-title">
-          <p className="ts-slide-name">G&apos;ulom Maxkamov</p>
-          <p className="ts-slide-desc">Imarat group Founder</p>
-        </span>
-      </SwiperSlide>
-      <SwiperSlide className="ts-slide">
-        <Image src={teamLead} alt="ts-item" />
-        <span className="ts-slide-title">
-          <p className="ts-slide-name">G&apos;ulom Maxkamov</p>
-          <p className="ts-slide-desc">Imarat group Founder</p>
-        </span>
-      </SwiperSlide>
-      <SwiperSlide className="ts-slide">
-        <Image src={teamLead} alt="ts-item" />
-        <span className="ts-slide-title">
-          <p className="ts-slide-name">G&apos;ulom Maxkamov</p>
-          <p className="ts-slide-desc">Imarat group Founder</p>
-        </span>
-      </SwiperSlide>
-      <SwiperSlide className="ts-slide">
-        <Image src={teamLead} alt="ts-item" />
-        <span className="ts-slide-title">
-          <p className="ts-slide-name">G&apos;ulom Maxkamov</p>
-          <p className="ts-slide-desc">Imarat group Founder</p>
-        </span>
-      </SwiperSlide>
-      <SwiperSlide className="ts-slide">
-        <Image src={teamLead} alt="ts-item" />
-        <span className="ts-slide-title">
-          <p className="ts-slide-name">G&apos;ulom Maxkamov</p>
-          <p className="ts-slide-desc">Imarat group Founder</p>
-        </span>
-      </SwiperSlide>
-      <SwiperSlide className="ts-slide">
-        <Image src={teamLead} alt="ts-item" />
-        <span className="ts-slide-title">
-          <p className="ts-slide-name">G&apos;ulom Maxkamov</p>
-          <p className="ts-slide-desc">Imarat group Founder</p>
-        </span>
-      </SwiperSlide>
-      <SwiperSlide className="ts-slide">
-        <Image src={teamLead} alt="ts-item" />
-        <span className="ts-slide-title">
-          <p className="ts-slide-name">G&apos;ulom Maxkamov</p>
-          <p className="ts-slide-desc">Imarat group Founder</p>
-        </span>
-      </SwiperSlide>
+      
 
       <div className="ts">
         <div className="ts_left">
