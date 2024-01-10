@@ -5,6 +5,7 @@ import '../styles/_home.scss'
 import '../styles/_services.scss'
 import '../styles/_contacts.scss'
 import '../styles/_news.scss'
+import '../styles/_projects.scss'
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
