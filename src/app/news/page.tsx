@@ -54,7 +54,6 @@ const News = () => {
   useEffect(() => {
     const filteredVacancies = vacancies.filter((v: any) => v.category === vacancyId)
     setFilteredVacancies(filteredVacancies)
-    console.log('ozgardi')
   }, [vacancyId])
 
   useEffect(() => {
