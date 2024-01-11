@@ -7,9 +7,13 @@ import Link from 'next/link';
 
 const News = () => {
   const [blogs, setBlogs] = useState([])
+  const [categories, setCategories] = useState([])
   const [vacancies, setVacancies] = useState([])
-  
+  const [filteredVacancies, setFilteredVacancies] = useState<filtered[]>([])
+
   const [end, setEnd] = useState(6)
+
+  const [vacancyId, setVacancyId] = useState(null)
 
   type BlogType = {
     _id: string,
@@ -19,8 +23,22 @@ const News = () => {
     hashtag: string,
     createdAt: string,
     updatedAt: string
-  };  
+  }; 
 
+  type vacancyType = {
+    _id: string,
+    category: string,
+  };
+
+  type filtered = {
+    _id: string,
+    title: string,
+    description: string,
+    photo: string,
+    hashtag: string,
+    createdAt: string,
+    updatedAt: string
+  }
 
   const parseDate = (date: string) => {
     const formattedDate = new Date(date).toLocaleDateString('en-US', {
@@ -34,11 +52,19 @@ const News = () => {
   };
 
   useEffect(() => {
+    const filteredVacancies = vacancies.filter((v: any) => v.category === vacancyId)
+    setFilteredVacancies(filteredVacancies)
+    console.log('ozgardi')
+  }, [vacancyId])
+
+  useEffect(() => {
     (async () => {
       const blog = await axios.get('https://admin.imaratgroup.uz/api/blogs')
       setBlogs(blog.data)
-      const vacancie = await axios.get('https://admin.imaratgroup.uz/api/vacancies')
-      setVacancies(vacancie.data)
+      const categories = await axios.get('https://admin.imaratgroup.uz/api/categories')
+      setCategories(categories.data)
+      const vacancies = await axios.get('https://admin.imaratgroup.uz/api/vacancies')
+      setVacancies(vacancies.data)
     })()
   }, [])
 
@@ -94,12 +120,14 @@ const News = () => {
             })
           }
         </div>
-        <button onClick={() => setEnd(end + 6)} className="blog__view">
+        {
+          blogs.length > end ? <button onClick={() => setEnd(end + 6)} className="blog__view">
           <p>View more</p>
           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" fill="none">
             <path d="M21.0773 10.2223L12.2773 1.42231C12.0698 1.22193 11.792 1.11106 11.5036 1.11357C11.2152 1.11607 10.9393 1.23176 10.7353 1.43571C10.5314 1.63966 10.4157 1.91555 10.4132 2.20397C10.4107 2.49238 10.5215 2.77025 10.7219 2.97771L17.6442 9.90001L2.69961 9.90001C2.40787 9.90001 2.12808 10.0159 1.92179 10.2222C1.7155 10.4285 1.59961 10.7083 1.59961 11C1.59961 11.2917 1.7155 11.5715 1.92179 11.7778C2.12808 11.9841 2.40787 12.1 2.69961 12.1L17.6442 12.1L10.7219 19.0223C10.6168 19.1238 10.533 19.2452 10.4754 19.3794C10.4177 19.5136 10.3874 19.6579 10.3861 19.804C10.3849 19.95 10.4127 20.0949 10.468 20.2301C10.5233 20.3652 10.605 20.4881 10.7083 20.5913C10.8116 20.6946 10.9344 20.7763 11.0696 20.8316C11.2047 20.8869 11.3496 20.9148 11.4957 20.9135C11.6417 20.9122 11.7861 20.8819 11.9203 20.8242C12.0545 20.7666 12.1758 20.6828 12.2773 20.5777L21.0773 11.7777C21.2835 11.5714 21.3994 11.2917 21.3994 11C21.3994 10.7083 21.2835 10.4286 21.0773 10.2223Z" fill="white"/>
           </svg>
-        </button>
+        </button> : <></>
+        }
       </div>
       <div className="shorts">
         <div className="title">
@@ -116,6 +144,46 @@ const News = () => {
           <span className="title__left"></span>
           <h2 className="title__content">Vacancies</h2>
           <span className="title__right"></span>
+        </div>
+        <div className="vacancies__wrapper">
+          <div className="vacancies__list">
+            {
+              categories.map((v: vacancyType) => {
+                return <>
+                  <span onClick={(e: any) => setVacancyId(e.target.id)} className="vacancies__item" id={ v.category } key={v._id}>
+                    <p>{ v.category }</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                      <g clip-path="url(#clip0_506_222)">
+                        <path d="M55.6299 27.1028L42.9029 14.3757C42.4457 13.8418 41.6423 13.7796 41.1084 14.2369C40.5746 14.6941 40.5123 15.4975 40.9696 16.0314C41.0123 16.0811 41.0587 16.1276 41.1084 16.1702L51.6591 26.7336H1.27267C0.569834 26.7336 0 27.3035 0 28.0064C0 28.7093 0.569834 29.2791 1.27267 29.2791H51.6591L41.1084 39.8297C40.5746 40.2869 40.5123 41.0904 40.9696 41.6242C41.4269 42.1581 42.2303 42.2203 42.7641 41.763C42.8139 41.7204 42.8604 41.674 42.9029 41.6242L55.63 28.8971C56.1234 28.4009 56.1234 27.5992 55.6299 27.1028Z" fill="#1C1C1C"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_506_222">
+                          <rect width="56" height="56" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                </>
+              })
+            }
+          </div>
+          <div className="vacancy">
+            {
+              vacancyId ? <>
+                {
+                  filteredVacancies.map((f: any) => {
+                    return <>
+                      <div className="vacancy__item">
+                        <p className="vacancy__item-title">{ f.title }</p>
+                        <p className="vacancy__item-price">{ f.price }</p>
+                        <p className="vacancy__item-text">{ f.description }</p>
+                      </div>
+                    </>
+                  })
+                }
+              </> : <></>
+            }
+          </div>
         </div>
       </div>
     </div>
