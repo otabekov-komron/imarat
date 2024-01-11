@@ -48,7 +48,7 @@
         .gallery_images {
           width: 77%;
           position: relative;
-          img{
+          img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -108,6 +108,7 @@
     .wrapper_360 {
       margin: 10% 0;
       .cards_360 {
+        margin-top: 5%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 4%;
@@ -183,6 +184,33 @@
               }
             }
           }
+        }
+      }
+    }
+    .process_wrapper {
+      .process_wrapper_title {
+        display: flex;
+        width: 50%;
+        justify-content: flex-start;
+        align-items: center;
+        p {
+          font-size: 64px;
+          width: 100%;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 72px; /* 112.5% */
+          color: #fff;
+        }
+        svg {
+          place-self: start;
+          width: 15%;
+        }
+      }
+      .process_wrapper_contents {
+        display: flex;
+
+        .steps {
+          width: 10%;
         }
       }
     }

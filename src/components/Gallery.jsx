@@ -12,6 +12,7 @@ import "swiper/css/thumbs";
 // import required modules
 import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper/modules";
 import Image from "next/image";
+import { photo1 } from "@/assets/images";
 
 export default function Gallery({ images }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -31,6 +32,14 @@ export default function Gallery({ images }) {
         modules={[FreeMode, Navigation, Thumbs]}
         className="gallery_images"
       >
+        <SwiperSlide>
+          <Image
+            src={photo1}
+            alt={'Slide'}
+            width={1000}
+            height={1000}
+          />
+        </SwiperSlide>
         {images.slice(0, 8).map((product, index) => (
           <SwiperSlide key={index}>
             <Image
@@ -114,6 +123,14 @@ export default function Gallery({ images }) {
         modules={[FreeMode, Navigation, Thumbs]}
         className="thumbs_images"
       >
+        <SwiperSlide>
+          <Image
+            src={photo1}
+            alt={'Slide'}
+            width={1000}
+            height={1000}
+          />
+        </SwiperSlide>
         {images.slice(0, 8).map((product, index) => (
           <SwiperSlide key={index}>
             <Image
