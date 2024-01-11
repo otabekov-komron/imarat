@@ -39,6 +39,7 @@ export default function Gallery({ images }) {
               width={1000}
               height={1000}
               placeholder="blur"
+              blurDataURL={product.photo}
             />
           </SwiperSlide>
         ))}
@@ -117,6 +118,7 @@ export default function Gallery({ images }) {
           <SwiperSlide key={index}>
             <Image
               placeholder="blur"
+              blurDataURL={product.photo}
               src={`https://admin.imaratgroup.uz/${product.photo}`}
               alt={`Slide ${index}`}
               width={200}

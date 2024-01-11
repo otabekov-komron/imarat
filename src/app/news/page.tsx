@@ -7,9 +7,13 @@ import Link from 'next/link';
 
 const News = () => {
   const [blogs, setBlogs] = useState([])
+  const [categories, setCategories] = useState([])
   const [vacancies, setVacancies] = useState([])
-  
+  const [filteredVacancies, setFilteredVacancies] = useState<filtered[]>([])
+
   const [end, setEnd] = useState(6)
+
+  const [vacancyId, setVacancyId] = useState(null)
 
   type BlogType = {
     _id: string,
@@ -19,8 +23,22 @@ const News = () => {
     hashtag: string,
     createdAt: string,
     updatedAt: string
-  };  
+  }; 
 
+  type vacancyType = {
+    _id: string,
+    category: string,
+  };
+
+  type filtered = {
+    _id: string,
+    title: string,
+    description: string,
+    photo: string,
+    hashtag: string,
+    createdAt: string,
+    updatedAt: string
+  }
 
   const parseDate = (date: string) => {
     const formattedDate = new Date(date).toLocaleDateString('en-US', {
@@ -34,11 +52,19 @@ const News = () => {
   };
 
   useEffect(() => {
+    const filteredVacancies = vacancies.filter((v: any) => v.category === vacancyId)
+    setFilteredVacancies(filteredVacancies)
+    console.log('ozgardi')
+  }, [vacancyId])
+
+  useEffect(() => {
     (async () => {
       const blog = await axios.get('https://admin.imaratgroup.uz/api/blogs')
       setBlogs(blog.data)
-      const vacancie = await axios.get('https://admin.imaratgroup.uz/api/vacancies')
-      setVacancies(vacancie.data)
+      const categories = await axios.get('https://admin.imaratgroup.uz/api/categories')
+      setCategories(categories.data)
+      const vacancies = await axios.get('https://admin.imaratgroup.uz/api/vacancies')
+      setVacancies(vacancies.data)
     })()
   }, [])
 
@@ -118,6 +144,46 @@ const News = () => {
           <span className="title__left"></span>
           <h2 className="title__content">Vacancies</h2>
           <span className="title__right"></span>
+        </div>
+        <div className="vacancies__wrapper">
+          <div className="vacancies__list">
+            {
+              categories.map((v: vacancyType) => {
+                return <>
+                  <span onClick={(e: any) => setVacancyId(e.target.id)} className="vacancies__item" id={ v.category } key={v._id}>
+                    <p>{ v.category }</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                      <g clip-path="url(#clip0_506_222)">
+                        <path d="M55.6299 27.1028L42.9029 14.3757C42.4457 13.8418 41.6423 13.7796 41.1084 14.2369C40.5746 14.6941 40.5123 15.4975 40.9696 16.0314C41.0123 16.0811 41.0587 16.1276 41.1084 16.1702L51.6591 26.7336H1.27267C0.569834 26.7336 0 27.3035 0 28.0064C0 28.7093 0.569834 29.2791 1.27267 29.2791H51.6591L41.1084 39.8297C40.5746 40.2869 40.5123 41.0904 40.9696 41.6242C41.4269 42.1581 42.2303 42.2203 42.7641 41.763C42.8139 41.7204 42.8604 41.674 42.9029 41.6242L55.63 28.8971C56.1234 28.4009 56.1234 27.5992 55.6299 27.1028Z" fill="#1C1C1C"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_506_222">
+                          <rect width="56" height="56" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                </>
+              })
+            }
+          </div>
+          <div className="vacancy">
+            {
+              vacancyId ? <>
+                {
+                  filteredVacancies.map((f: any) => {
+                    return <>
+                      <div className="vacancy__item">
+                        <p className="vacancy__item-title">{ f.title }</p>
+                        <p className="vacancy__item-price">{ f.price }</p>
+                        <p className="vacancy__item-text">{ f.description }</p>
+                      </div>
+                    </>
+                  })
+                }
+              </> : <></>
+            }
+          </div>
         </div>
       </div>
     </div>
