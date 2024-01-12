@@ -20,6 +20,7 @@ const News = () => {
     title: string,
     description: string,
     photo: string,
+    views: number,
     hashtag: string,
     createdAt: string,
     updatedAt: string
@@ -109,7 +110,7 @@ const News = () => {
                             <path d="M7.77451 6.22406C7.77451 7.17927 7.00262 7.95116 6.04741 7.95116C5.0922 7.95116 4.32031 7.17927 4.32031 6.22406C4.32031 5.26885 5.0922 4.49696 6.04741 4.49696C7.00262 4.49696 7.77451 5.26885 7.77451 6.22406Z" stroke="#969696" stroke-width="0.635792" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M6.04675 10.2137C7.74972 10.2137 9.33692 9.2103 10.4417 7.47355C10.8759 6.79332 10.8759 5.64996 10.4417 4.96974C9.33692 3.23299 7.74972 2.22954 6.04675 2.22954C4.34377 2.22954 2.75658 3.23299 1.65181 4.96974C1.21763 5.64996 1.21763 6.79332 1.65181 7.47355C2.75658 9.2103 4.34377 10.2137 6.04675 10.2137Z" stroke="#969696" stroke-width="0.635792" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>
-                          <p>345</p>
+                          <p>{ blog.views }</p>
                         </span>
                       </div>
                     </Link>
