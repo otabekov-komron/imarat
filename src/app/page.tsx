@@ -6,8 +6,12 @@ import Image from "next/image";
 import { lists } from "@/utils/data";
 import ProjectSwiper from "@/components/ProjectSwiper";
 import TeamSwiper from "@/components/TeamSwiper";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 
 export default function Home() {
+
   return (
     <div className="home">
       <section className="first_section">

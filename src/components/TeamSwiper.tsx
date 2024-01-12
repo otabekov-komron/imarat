@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay, Navigation } from "swiper/modules";
 import Image from "next/image";
-import { teamLead } from "@/assets/images";
+import { team1, team2, team3, team4, team5, team6, team7, team8} from "@/assets/images";
 const TeamSwiper = () => {
   const [autoplayEnabled, setAutoplayEnabled] = useState(true); // State to control autoplay
   const swiperRef = useRef(null);
@@ -49,13 +49,54 @@ const TeamSwiper = () => {
       className="teamSwiper"
     >
       <SwiperSlide className="ts-slide">
-        <Image width={400} height={400} src={teamLead} alt="ts-item" />
+        <Image  src={team1} alt="ts-item" />
         <span className="ts-slide-title">
           <p className="ts-slide-name">G&apos;ulom Maxkamov</p>
           <p className="ts-slide-desc">Imarat group Founder</p>
         </span>
       </SwiperSlide>
-      
+      <SwiperSlide className="ts-slide">
+        <Image width={400} height={400} src={team2} alt="ts-item" />
+        <span className="ts-slide-title">
+          <p className="ts-slide-name">Abduxalilov Xurshid</p>
+          <p className="ts-slide-desc">Supplier</p>
+        </span>
+      </SwiperSlide>
+      <SwiperSlide className="ts-slide">
+        <Image width={400} height={400} src={team3} alt="ts-item" />
+        <span className="ts-slide-title">
+          <p className="ts-slide-name">Abduxalilov Omad</p>
+          <p className="ts-slide-desc">Warehouse manager</p>
+        </span>
+      </SwiperSlide>
+      <SwiperSlide className="ts-slide">
+        <Image width={400} height={400} src={team4} alt="ts-item" />
+        <span className="ts-slide-title">
+          <p className="ts-slide-name">Kazaxbayev Yerlan</p>
+          <p className="ts-slide-desc">Gas block stacker</p>
+        </span>
+      </SwiperSlide>
+      <SwiperSlide className="ts-slide">
+        <Image width={400} height={400} src={team5} alt="ts-item" />
+        <span className="ts-slide-title">
+          <p className="ts-slide-name">Ishkabilov Ibragim</p>
+          <p className="ts-slide-desc">Tiler</p>
+        </span>
+      </SwiperSlide>
+      <SwiperSlide className="ts-slide">
+        <Image width={400} height={400} src={team6} alt="ts-item" />
+        <span className="ts-slide-title">
+          <p className="ts-slide-name">Atamurotov Javlon</p>
+          <p className="ts-slide-desc">Plasterer</p>
+        </span>
+      </SwiperSlide>
+      <SwiperSlide className="ts-slide">
+        <Image width={400} height={400} src={team7} alt="ts-item" />
+        <span className="ts-slide-title">
+          <p className="ts-slide-name">Mirsolihov Mirg&apos;ani</p>
+          <p className="ts-slide-desc">AC installation wizard</p>
+        </span>
+      </SwiperSlide>
 
       <div className="ts">
         <div className="ts_left">

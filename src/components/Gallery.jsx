@@ -12,16 +12,29 @@ import "swiper/css/thumbs";
 // import required modules
 import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper/modules";
 import Image from "next/image";
-import { photo1 } from "@/assets/images";
+import {
+  bathroom,
+  bedroom,
+  diningRoom,
+  homeOffice,
+  kitchen,
+  livingRoom,
+  photo1,
+} from "@/assets/images";
 
 export default function Gallery({ images }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
   return (
     <div className="swiper_gallery">
       <Swiper
         direction="vertical"
         loop={true}
+        speed={2000}
+        autoplay={{
+          delay: 5000,
+          enabled: true,
+          disableOnInteraction: false
+        }}
         spaceBetween={10}
         navigation={{
           nextEl: ".gs-button-next",
@@ -29,16 +42,36 @@ export default function Gallery({ images }) {
           enabled: true,
         }}
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[FreeMode, Navigation, Thumbs, Autoplay]}
         className="gallery_images"
       >
         <SwiperSlide>
-          <Image
-            src={photo1}
-            alt={'Slide'}
-            width={1000}
-            height={1000}
-          />
+          <div className="intro_slide">
+            <div>
+              <Image src={kitchen} alt="kitchen image" />
+            </div>
+            <div>
+              <Image src={bedroom} alt="bedroom image" />
+            </div>
+            <div>
+              <Image src={bathroom} alt="bathroom image" />
+            </div>
+            <div>
+              <Image src={livingRoom} alt="living room image" />
+            </div>
+            <div>
+              <Image src={diningRoom} alt="dining room image" />
+            </div>
+            <div>
+              <Image src={homeOffice} alt="home office image" />
+            </div>
+          </div>
+          <div className="slide_gradient"></div>
+          <span className="title_slide">
+            {images.slice(0, 1).map((category, index) => (
+              <p key={index}>{category.category}</p>
+            ))}
+          </span>
         </SwiperSlide>
         {images.slice(0, 8).map((product, index) => (
           <SwiperSlide key={index}>
@@ -123,13 +156,7 @@ export default function Gallery({ images }) {
         modules={[FreeMode, Navigation, Thumbs]}
         className="thumbs_images"
       >
-        <SwiperSlide>
-          <Image
-            src={photo1}
-            alt={'Slide'}
-            width={1000}
-            height={1000}
-          />
+        <SwiperSlide style={{display: 'none'}}>
         </SwiperSlide>
         {images.slice(0, 8).map((product, index) => (
           <SwiperSlide key={index}>

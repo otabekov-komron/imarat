@@ -279,14 +279,14 @@ const Projects = () => {
           </svg>
         </div>
         <div className="process_wrapper_contents">
-          <div className="steps">
+          <span className="steps">
             <span className="steps_number">01</span>
             <span className="steps_line"></span>
             <span className="steps_number">02</span>
             <span className="steps_line"></span>
             <span className="steps_number">03</span>
-          </div>
-          <div className="content_texts">
+          </span>
+          <span className="content_texts">
             <div>
               <p>Briefing</p>
               <p>
@@ -311,10 +311,10 @@ const Projects = () => {
                 no mistakes.
               </p>
             </div>
-          </div>
-          <div className="content_image">
+          </span>
+          <span className="content_image">
             <Image src={project} alt="project image" />
-          </div>
+          </span>
         </div>
       </div>
     </div>
