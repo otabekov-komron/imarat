@@ -1,14 +1,14 @@
 import React from "react";
-
 interface HTMLTagProps {
   title: string;
   desc: string;
+  idCard: number;
   svgContent: React.ReactNode; // Accept SVG content as React Node
 }
 
-const Card: React.FC<HTMLTagProps> = ({ title, desc, svgContent }) => {
+const Card: React.FC<HTMLTagProps> = ({ title, desc, svgContent, idCard }) => {
     return (
-    <div className="card">
+    <div id={`card-${idCard}`} className="card">
       <span className="card_svg">
         {svgContent}
       </span>

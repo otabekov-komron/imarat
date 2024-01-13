@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { design } from "../assets/images/index";
+import { bathroom, bedroom, design, livingRoom } from "../assets/images/index";
 
 import "../styles/main.scss";
 
@@ -16,6 +16,7 @@ export default function SwiperComponent() {
     <>
       <Swiper
         spaceBetween={20}
+        speed={2000}
         autoplay={{
           delay: 4000,
           disableOnInteraction: true,
@@ -30,13 +31,13 @@ export default function SwiperComponent() {
           <Image  src={design} alt="design" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image  src={design} alt="design" />
+          <Image  src={bedroom} alt="design" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image  src={design} alt="design" />
+          <Image  src={bathroom} alt="design" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image  src={design} alt="design" />
+          <Image  src={livingRoom} alt="design" />
         </SwiperSlide>
       </Swiper>
     </>

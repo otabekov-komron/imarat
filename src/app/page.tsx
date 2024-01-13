@@ -9,9 +9,7 @@ import TeamSwiper from "@/components/TeamSwiper";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-
 export default function Home() {
-
   return (
     <div className="home">
       <section className="first_section">
@@ -2971,7 +2969,38 @@ export default function Home() {
       </section>
       <section className="fourth_section">
         <div className="fourth_section_container">
-          <div className="fourth_section_container_left">
+          <span className="imarat_svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1036"
+              height="200"
+              viewBox="0 0 1036 200"
+              fill="none"
+            >
+              <path d="M0 199.715V0.230468H35.6236V199.715H0Z" fill="white" />
+              <path
+                d="M263.61 0.230468V199.715H227.987V72.6172L192.933 99.4095L163.861 121.929L134.79 99.4095L99.7362 72.6172V199.715H64.1126V0.230468L163.861 76.8904L263.61 0.230468Z"
+                fill="white"
+              />
+              <path
+                d="M484.459 199.715H444.563L426.33 164.091L382.73 78.5997L339.13 164.091L320.897 199.715H281.001L299.233 164.091L382.73 0.230468L466.227 164.091L484.459 199.715Z"
+                fill="white"
+              />
+              <path
+                d="M876.088 199.715H836.191L817.959 164.091L774.358 78.5997L730.758 164.091L712.526 199.715H672.629L690.861 164.091L774.358 0.230468L857.855 164.091L876.088 199.715Z"
+                fill="white"
+              />
+              <path
+                d="M1035.96 0.516112V36.1397H954.172V200H918.549V36.1397H836.761V0.516112H1035.96Z"
+                fill="white"
+              />
+              <path
+                d="M652.593 199.118H617.051L575.296 126.582H536.932V199.118H504.496V0H583.489C601.165 0 616.115 6.2538 628.338 18.775C640.75 30.9163 646.95 45.9878 646.95 64.0031C646.95 76.7142 643.328 88.3265 636.084 98.8535C628.84 109.381 619.398 117.018 607.731 121.752L652.58 199.118H652.593ZM583.476 30.7264H536.932V92.464H583.476C592.117 92.464 599.456 89.2354 605.479 82.7917C611.489 76.3479 614.243 69.7279 614.243 60.4353C614.243 53.5846 611.503 46.8425 605.479 40.3852C599.456 33.9415 592.117 30.7128 583.476 30.7128V30.7264Z"
+                fill="white"
+              />
+            </svg>
+          </span>
+          <div id="left_cards" className="fourth_section_container_left">
             <h1>Our services</h1>
             <p>we provide the best services for our customers</p>
             <button className="btn_component">
@@ -2992,16 +3021,40 @@ export default function Home() {
               </span>
             </button>
           </div>
-          <div className="fourth_section_container_right">
-            {lists.map((card) => (
-              <div key={card.id}>
-                <Card
-                  svgContent={card.svgContent}
-                  title={card.title}
-                  desc={card.desc}
-                />
-              </div>
-            ))}
+          <div className="fourth_section_container_right" id="cards">
+            <Card
+              idCard={lists[1].id}
+              svgContent={lists[1].svgContent}
+              title={lists[1].title}
+              desc={lists[1].desc}
+            />
+            <Card
+              idCard={lists[2].id}
+              svgContent={lists[2].svgContent}
+              title={lists[2].title}
+              desc={lists[2].desc}
+            />
+
+            <Card
+              idCard={lists[3].id}
+              svgContent={lists[3].svgContent}
+              title={lists[3].title}
+              desc={lists[3].desc}
+            />
+
+            <Card
+              idCard={lists[4].id}
+              svgContent={lists[4].svgContent}
+              title={lists[4].title}
+              desc={lists[4].desc}
+            />
+
+            <Card
+              idCard={lists[5].id}
+              svgContent={lists[5].svgContent}
+              title={lists[5].title}
+              desc={lists[5].desc}
+            />
           </div>
         </div>
       </section>

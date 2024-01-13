@@ -9,7 +9,6 @@ import '../styles/_projects.scss'
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
-import FixedNavbar from "@/components/FixedNavbar";
 
 export const metadata: Metadata = {
   title: "IMARAT Group",

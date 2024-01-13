@@ -55,7 +55,7 @@ const News = () => {
   useEffect(() => {
     const filteredVacancies = vacancies.filter((v: any) => v.category === vacancyId)
     setFilteredVacancies(filteredVacancies)
-  }, [vacancyId])
+  }, [vacancyId, vacancies])
 
   useEffect(() => {
     (async () => {
@@ -82,7 +82,7 @@ const News = () => {
               return (
                 <>
                   <div className="blogs__item" key={blog._id}>
-                    <Link href={`/blog/${blog._id}`}>
+                    <Link href={`/news/${blog._id}`}>
                       <div className="blog__item-img">
                         <Image src={`https://admin.imaratgroup.uz/${blog.photo}`} alt={"blog img"} width={400} height={400} />
                         <p className="blog__item-hashtag">{ blog.hashtag }</p>

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function  BlogDetails({ params } : {
-        params: { blogId: string },
+        params: { newsId: string },
     }) {
     type BlogType = {
         _id: string,
@@ -17,18 +17,18 @@ export default function  BlogDetails({ params } : {
         createdAt: string,
     }
 
-    const { blogId } = params;
+    const { newsId } = params;
     const [blog, setBlog] = useState<BlogType>();
     const [blogs, setBlogs] = useState<BlogType[]>([])
 
     useEffect(() => {
         (async () => {
-            const res = await axios.get(`https://admin.imaratgroup.uz/api/blogs/${blogId}`)
+            const res = await axios.get(`https://admin.imaratgroup.uz/api/blogs/${newsId}`)
             setBlog(res.data)
             const response = await axios.get(`https://admin.imaratgroup.uz/api/blogs`)
             setBlogs(response.data)
         })()
-    }, [])
+    }, [newsId])
 
     const parseDate = (date: string) => {
         const formattedDate = new Date(date).toLocaleDateString('en-US', {
@@ -84,7 +84,7 @@ export default function  BlogDetails({ params } : {
               return (
                 <>
                   <div className="blogs__item" key={blog._id}>
-                    <Link href={`/blog/${blog._id}`}>
+                    <Link href={`/news/${blog._id}`}>
                       <div className="blog__item-img">
                         <Image src={`https://admin.imaratgroup.uz/${blog.photo}`} alt={"blog img"} width={400} height={400} />
                         <p className="blog__item-hashtag">{ blog.hashtag }</p>
