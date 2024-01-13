@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import { group } from "@/assets/images";
 import Card from "@/components/Card";
 import SwiperComponent from "@/components/SwiperComponent";
@@ -6,10 +6,37 @@ import Image from "next/image";
 import { lists } from "@/utils/data";
 import ProjectSwiper from "@/components/ProjectSwiper";
 import TeamSwiper from "@/components/TeamSwiper";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 
 export default function Home() {
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const containerRef = useRef();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const containerRect = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY;
+
+      // Calculate the scroll progress within the container starting from 70%
+      const progress = Math.max(0, Math.min(1, (scrollPosition - containerRect.top + containerRect.height * 0.7) / containerRect.height));
+
+      setScrollProgress(progress);
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Calculate animation duration based on container height
+  const containerHeight = containerRef.current?.getBoundingClientRect().height || 1; // Set a minimum height to avoid division by zero
+  const animationDuration = containerHeight / window.innerHeight;
   return (
     <div className="home">
       <section className="first_section">
@@ -2967,9 +2994,9 @@ export default function Home() {
           <TeamSwiper />
         </div>
       </section>
-      <section className="fourth_section">
+      <section className="fourth_section" ref={containerRef}>
         <div className="fourth_section_container">
-          <span className="imarat_svg">
+          <span style={{ right: `${100 - scrollProgress * 100}%`, transition: `right ${animationDuration}s ease-in-out` }} className='imarat_svg'>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1036"

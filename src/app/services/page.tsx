@@ -26,6 +26,7 @@ const Services = () => {
         {lists.map((card) => (
           <div key={card.id}>
             <Card
+              idCard={card.id}
               svgContent={card.svgContent}
               title={card.title}
               desc={card.desc}
