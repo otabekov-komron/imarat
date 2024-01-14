@@ -194,7 +194,7 @@ export default function Home() {
       </section>
       <section className="second_section">
         <div className="second_section_left">
-          <p className="second_section_left_title">About us</p>
+          <p className="second_section_left_title">{lang === 'en' ? en.About.Title : ru.About.Title}</p>
           <span className="left_quote">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -214,17 +214,7 @@ export default function Home() {
             </svg>
           </span>
           <p className="second_section_left_desc">
-            Welcome to Imarat group. We are a passionate team of design h
-            dedicated to delivering excellence in every project. Our main goal
-            is to understand and cater to each client&apos;s needs, providing
-            exceptional design services tailored to their vision
-          </p>
-          <p className="second_section_left_desc">
-            At Imarat group, we consider ourselves pioneers in design, always
-            pushing boundaries and seeking the latest trends. Our team,
-            consisting of industry experts and creative minds, is here to leave
-            a lasting impact on every project we undertake. Choose us for a
-            collaborative and visionary design journey
+            {lang === 'en' ? en.About.Text : ru.About.Text}
           </p>
         </div>
         <div className="second_section_right">
@@ -2803,7 +2793,7 @@ export default function Home() {
           </div>
           <div className="blur_content">
             <div className="second_section_right_blur">
-              we have experienced professionals in our team
+              {lang === 'en' ? en.About.Team : ru.About.Team}
             </div>
             <p className="second_section_right_count">30+</p>
           </div>

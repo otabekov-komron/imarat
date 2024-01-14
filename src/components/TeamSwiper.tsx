@@ -98,7 +98,7 @@ const TeamSwiper = () => {
         <Image width={400} height={400} src={team7} alt="ts-item" />
         <span className="ts-slide-title">
           <p className="ts-slide-name">{lang === 'en' ? en.Team.user7.Name : ru.Team.user7.Name}</p>
-          <p className="ts-slide-desc">{lang === 'en' ? en.Team.user1.Role : ru.Team.user1.Role}</p>
+          <p className="ts-slide-desc">{lang === 'en' ? en.Team.user7.Role : ru.Team.user7.Role}</p>
         </span>
       </SwiperSlide>
       <div className="ts">

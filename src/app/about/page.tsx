@@ -4,12 +4,14 @@ import ProjectsVertical from "@/components/ProjectsVertical";
 import ProjectsVerticalRV from "@/components/ProjectsVerticalRV";
 import TeamCard from "@/components/TeamCard";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import en from '../../../public/locales/en.json'
+import ru from '../../../public/locales/ru.json'
 
 const About = () => {
+  const [lang, setLang] = useState()
   useEffect(()=> {
     let lang = localStorage.getItem('lang')
-    console.log(lang)
   }, [])
 
   return (
@@ -2073,12 +2075,12 @@ const About = () => {
                 />
               </svg>
             </span>
-            <p>About us. Our team.</p>
+            <p>{lang === 'en' ? `${en.About.Title} ${en.About.OurTeam}` : `${ru.About.Title} ${ru.About.OurTeam}`}</p>
           </div>
           <div className="top_right">
             <p className="top_right_title">
               <span />
-              About us
+              {lang === 'en' ? en.About.Title : ru.About.Title}
               <span />
             </p>
             <div className="top_right_container">
@@ -2116,18 +2118,7 @@ const About = () => {
                   </svg>
                 </span>
                 <p>
-                  Welcome to Imarat group. We are a passionate team of design
-                  enthusiasts dedicated to delivering excellence in every
-                  project. Our main goal is to understand and cater to each
-                  clien&apos;ts needs, providing exceptional design services
-                  tailored to their vision
-                </p>
-                <p>
-                  At Imarat group, we consider ourselves pioneers in design,
-                  always pushing boundaries and seeking the latest trends. Our
-                  team, consisting of industry experts and creative minds, is
-                  here to leave a lasting impact on every project we undertake.
-                  Choose us for a collaborative and visionary design journey
+                  {lang === 'en' ? en.About.Text : ru.About.Text}
                 </p>
               </div>
             </div>
@@ -2139,7 +2130,7 @@ const About = () => {
         <div className="bottom">
           <div className="blur_content_another">
             <div className="second_section_right_blur">
-              we have experienced professionals in our team
+              {lang === 'en' ? en.About.Team : ru.About.Team}
             </div>
             <p className="second_section_right_count">40+</p>
           </div>
