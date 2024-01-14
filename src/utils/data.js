@@ -1,3 +1,11 @@
+import en from "../../public/locales/en.json"
+import ru from "../../public/locales/ru.json"
+
+if(typeof localStorage !== 'undefined') {
+  const lang = localStorage.getItem('lang');
+}
+
+
 export const lists = [
   {
     id: 1,

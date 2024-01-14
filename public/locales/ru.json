@@ -30,24 +30,24 @@
         "Text": "Мы предоставляем лучшие услуги для наших клиентов",
         "LearnMore": "Узнать больше",
         "Minimalism": {
-            "Title": "Minimalism",
-            "Text": "Our Minimalism service offers sleek, functional designs with an emphasis on space and simplicity, delivering serene, uncluttered environments"
+            "Title": "Неоклассика",
+            "Text": "это стиль, который сочетает в себе функциональность и респектабельность. Неоклассические интерьеры выделяет гармоничность и благородство"
         },
         "HighTech": {
-            "Title": "High Tech",
-            "Text": "Our High Tech service delivers futuristic, efficient designs with a focus on innovative technology and sleek aesthetics"
+            "Title": "Хай-Тек",
+            "Text": "Ремонт  квартир  в стиле Хай-Тек  Стал одним из самых  популярных стилей ремонта в последнее  время.  Стиль Хай-Тек является символом экономичности и простоты, черты стиля это множественное использование бетона, стекла и пластика"
         },
         "Modern": {
-            "Title": "Modern",
-            "Text": "Our Modern service provides contemporary, stylish designs, emphasizing clean lines and functional elegance."
+            "Title": "luxury",
+            "Text": "luxury используется для обозначения чего-то роскошного, эксклюзивного и статусного. Это всегда дорого, шикарно и изысканно. Дизайн интерьера лакшери — обычно создается профессиональными и именитыми дизайнерами, умеющими тонко и без напыщенности передать высокий статус владельца апартаментов."
         },
         "Contemporary": {
             "Title": "Contemporary",
             "Text": "Our Contemporary service offers dynamic, up-to-date designs that combine current trends with timeless functionality"
         },
         "Classical": {
-            "Title": "Classical",
-            "Text": "Classical interior design features intricate furniture, luxurious materials like marble and fine textiles, and a balanced, symmetrical layout"
+            "Title": "Классика",
+            "Text": "классическом стиле на каждом этапе требует исключительно профессионального подхода. Классика предполагает использование в отделке достаточно дорогих отделочных материалов."
         }
     },
     "Projects": {
@@ -62,7 +62,7 @@
         "Email": "Электронная почта",
         "Phone": "Мобильный телефон",
         "Address": "Адрес",
-        "Map": "Ташкент, район Мирзо-Улугбек",
+        "Map": "Ташкент,район Мирзо-Улугбек",
         "Send": "Отправить"
     },
     "Footer": {

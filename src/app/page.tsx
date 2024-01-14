@@ -22,28 +22,15 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const containerRect = containerRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const scrollPosition = window.scrollY;
-
-      // Calculate the scroll progress within the container starting from 70%
-      const progress = Math.max(0, Math.min(1, (scrollPosition - containerRect.top + containerRect.height * 0.7) / containerRect.height));
-
-      setScrollProgress(progress);
     };
 
-    // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  // Calculate animation duration based on container height
-  const containerHeight = containerRef.current?.getBoundingClientRect().height || 1; // Set a minimum height to avoid division by zero
-  const animationDuration = containerHeight / window.innerHeight;
 
   const [showFirstDiv, setShowFirstDiv] = useState(true);
   const toggleDiv = () => {
@@ -3030,7 +3017,7 @@ export default function Home() {
             <h1>{lang === 'en' ? en.OurServices.Title : ru.OurServices.Title}</h1>
             <p>{lang === 'en' ? en.OurServices.Text : ru.OurServices.Text}</p>
             <button className="btn_component">
-              <span className="btn_component_text">Learn more</span>
+              <span className="btn_component_text">{lang === 'en' ? en.OurServices.LearnMore : ru.OurServices.LearnMore}</span>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -3091,7 +3078,7 @@ export default function Home() {
         </div>
         <div className="fifth_section_btn">
           <button className="btn_component">
-            <span className="btn_component_text">Learn more</span>
+            <span className="btn_component_text">{lang === 'en' ? en.Projects.LearnMore : ru.Projects.LearnMore}</span>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -3307,37 +3294,37 @@ export default function Home() {
       </section>
       <section className="seventh_section">
         <div className="seventh_section_content">
-          <p>Contact</p>
+          <p>{lang === 'en' ? en.Contact.Title : ru.Contact.Title}</p>
           <div className="form_content">
             <form className="content_left" action="#">
-              <input type="text" placeholder="Name" name="name" id="name" />
-              <input type="email" placeholder="Email" name="name" id="name" />
+              <input type="text" placeholder={lang === 'en' ? en.Contact.InputName : ru.Contact.InputName} name="name" id="name" />
+              <input type="email" placeholder={lang === 'en' ? en.Contact.InputEmail : ru.Contact.InputEmail} name="name" id="name" />
               <textarea
                 name="message"
-                placeholder="Message"
+                placeholder={lang === 'en' ? en.Contact.Message : ru.Contact.Message}
                 cols={30}
                 rows={10}
               ></textarea>
               <button className="btn_component">
-                <span className="btn_component_text">Send message</span>
+                <span className="btn_component_text">{lang === 'en' ? en.Contact.Send : ru.Contact.Send}</span>
               </button>
             </form>
 
             <div className="content_right">
               <div className="content_right_links">
                 <div>
-                  <p className="title_links">email</p>
+                  <p className="title_links">{lang === 'en' ? en.Contact.Email : ru.Contact.Email}</p>
                   <a href="mailto:imaratgroup@gmail.com">
                     Imaratgroup@gmail.com{" "}
                   </a>
                 </div>
                 <div className="title_links">
-                  <p className="title_links">phone</p>
+                  <p className="title_links">{lang === 'en' ? en.Contact.Phone : ru.Contact.Phone}</p>
                   <a href="tel:+998332202200">+99 833 8808800</a>
                 </div>
                 <div>
-                  <p className="title_links">address</p>
-                  <a href="/something">Tashkent ,Mirzo-Ulugbek district</a>
+                  <p className="title_links">{lang === 'en' ? en.Contact.Address : ru.Contact.Address}</p>
+                  <a href="/something">{lang === 'en' ? en.Contact.Map : ru.Contact.Map}</a>
                 </div>
               </div>
               <span className="seventh_pattern">
