@@ -2,10 +2,16 @@
 import Card from "@/components/Card";
 import { lists } from "@/utils/data";
 import faq from "@/utils/faq";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Services = () => {
   const [expandedIds, setExpandedIds] = useState<number[]>([]);
+  const [lang, setLang] = useState('en')
+
+  useEffect(() => {
+    const getLang: any = localStorage.getItem('lang')
+    setLang(getLang)
+  }, [])
 
   const toggleDescription = (id: number) => {
     if (expandedIds.includes(id)) {
@@ -19,7 +25,7 @@ const Services = () => {
     <div className="services">
       <div className="title">
         <span className="title__left"></span>
-        <h2 className="title__content">Services</h2>
+        <h2 className="title__content">{lang === 'en' ? "Services" : "Услуги"}</h2>
         <span className="title__right"></span>
       </div>
       <div className="wrapper">
@@ -36,7 +42,7 @@ const Services = () => {
       </div>
       <div className="title">
         <span className="title__left"></span>
-        <h2 className="title__content">Frequently Asked Questions</h2>
+        <h2 className="title__content">{lang === 'en' ? "Frequently Asked Questions" : "Часто задаваемые вопросы"}</h2>
         <span className="title__right"></span>
       </div>
       <ul className="list">
@@ -49,7 +55,7 @@ const Services = () => {
                   onClick={() => toggleDescription(e.id)}
                   className="btn_component"
                 >
-                  {expandedIds.includes(e.id) ? "Hide" : "View more"}
+                  {lang === 'en' ? expandedIds.includes(e.id) ? "Hide" : "View more" : expandedIds.includes(e.id) ? "Скрыть" : "Показать"}
                 </button>
               </div>
               {expandedIds.includes(e.id) && (

@@ -5,6 +5,8 @@ import Gallery from "@/components/Gallery";
 import Image from "next/image";
 import { photo1, photo2, photo3, photo4, project } from "@/assets/images";
 import Link from "next/link";
+import en from "../../../public/locales/en.json"
+import ru from "../../../public/locales/ru.json"
 
 interface Project {
   _id: string;
@@ -16,8 +18,11 @@ const Projects = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("Bedroom");
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
+  const [lang, setLang] = useState()
 
   useEffect(() => {
+    const getLang: any = localStorage.getItem('lang')
+    setLang(getLang)
     const fetchProjects = async () => {
       try {
         const response = await axios.get<Project[]>(
@@ -28,7 +33,6 @@ const Projects = () => {
         console.error("Error fetching projects:", error);
       }
     };
-
     fetchProjects();
   }, []);
 
@@ -53,7 +57,7 @@ const Projects = () => {
       <div className="gallery-wrapper">
         <div className="title">
           <span className="title__left"></span>
-          <h2 className="title__content">Projects</h2>
+          <h2 className="title__content">{lang === "en" ? "Projects" : "Проекты"}</h2>
           <span className="title__right"></span>
         </div>
         <div className="buttons">
@@ -61,7 +65,7 @@ const Projects = () => {
             className={selectedCategory === "Bedroom" ? "active" : ""}
             onClick={() => handleCategoryClick("Bedroom")}
           >
-            <p>Bedroom</p>
+            <p>{lang === 'en' ? "Bedroom" : "Спальня"}</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -79,7 +83,7 @@ const Projects = () => {
             className={selectedCategory === "Kitchen" ? "active" : ""}
             onClick={() => handleCategoryClick("Kitchen")}
           >
-            <p>Kitchen</p>
+            <p>{lang === 'en' ? "Kitchen" : "Кухня"}</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -97,7 +101,7 @@ const Projects = () => {
             className={selectedCategory === "Home office" ? "active" : ""}
             onClick={() => handleCategoryClick("Home office")}
           >
-            <p>Home office</p>
+            <p>{lang === 'en' ? "Home office" : "Домашний офис"}</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -115,7 +119,7 @@ const Projects = () => {
             className={selectedCategory === "Living room" ? "active" : ""}
             onClick={() => handleCategoryClick("Living room")}
           >
-            <p>Living room</p>
+            <p>{lang === 'en' ? "Living room" : "Гостиная"}</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -133,7 +137,7 @@ const Projects = () => {
             className={selectedCategory === "Dining Room" ? "active" : ""}
             onClick={() => handleCategoryClick("Dining Room")}
           >
-            <p>Dining room</p>
+            <p>{lang === 'en' ? "Dining room" : "Столовая"}</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -151,7 +155,7 @@ const Projects = () => {
             className={selectedCategory === "Bathroom" ? "active" : ""}
             onClick={() => handleCategoryClick("Bathroom")}
           >
-            <p>Bathroom</p>
+            <p>{lang === 'en' ? "Bathroom" : "Ванная"}</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -173,7 +177,7 @@ const Projects = () => {
       <div className="wrapper_360">
         <div className="title">
           <span className="title__left"></span>
-          <h2 className="title__content">Project 360°</h2>
+          <h2 className="title__content">{lang === 'en' ? "Project 360°" : "Проект 360°."}</h2>
           <span className="title__right"></span>
         </div>
         <div className="cards_360">
@@ -183,7 +187,7 @@ const Projects = () => {
               <span>360°</span>
             </div>
             <Link className="link_button" href={"/3601"}>
-              <p>View project 360°</p>
+              <p>{lang === 'en' ? "View project 360°" : "Просмотреть 360°"}</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"
@@ -204,7 +208,7 @@ const Projects = () => {
               <span>360°</span>
             </div>
             <Link className="link_button" href={"/3601"}>
-              <p>View project 360°</p>
+              <p>{lang === 'en' ? "View project 360°" : "Просмотреть 360°"}</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"
@@ -225,7 +229,7 @@ const Projects = () => {
               <span>360°</span>
             </div>
             <Link className="link_button" href={"/3601"}>
-              <p>View project 360°</p>
+              <p>{lang === 'en' ? "View project 360°" : "Просмотреть 360°"}</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"
@@ -246,7 +250,7 @@ const Projects = () => {
               <span>360°</span>
             </div>
             <Link className="link_button" href={"/3601"}>
-              <p>View project 360°</p>
+              <p>{lang === 'en' ? "View project 360°" : "Просмотреть 360°"}</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"
@@ -265,8 +269,7 @@ const Projects = () => {
       </div>
       <div className="process_wrapper">
         <div className="process_wrapper_title">
-          <p>We provide the best process experience</p>
-
+          <p>{lang === 'en' ? en.Process.Title : ru.Process.Title}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 73 74"
@@ -288,27 +291,21 @@ const Projects = () => {
           </span>
           <span className="content_texts">
             <div>
-              <p>Briefing</p>
+              <p>{lang === 'en' ? en.Process.first.Title : ru.Process.first.Title}</p>
               <p>
-                First thing you determine the consept and model you want, then
-                choose what colors and materials you want to use in your
-                furniture.
+              {lang === 'en' ? en.Process.first.Text : ru.Process.first.Text}
               </p>
             </div>
             <div>
-              <p>Processing</p>
+              <p>{lang === 'en' ? en.Process.second.Title : ru.Process.second.Title}</p>
               <p>
-                When the briefing process in complete and what the client wants
-                has been achieved. then we carr out the execution of the desired
-                consept.
+                {lang === 'en' ? en.Process.second.Text : ru.Process.second.Text}
               </p>
             </div>
             <div>
-              <p>Finishing</p>
+              <p>{lang === 'en' ? en.Process.three.Title : ru.Process.three.Title}</p>
               <p>
-                After the process is complete, we will immediately carry out the
-                finishing stage and we do it carefully and make sure there are
-                no mistakes.
+              {lang === 'en' ? en.Process.three.Text : ru.Process.three.Text}
               </p>
             </div>
           </span>

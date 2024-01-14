@@ -19,7 +19,8 @@
     "About": {
         "Title": "About us",
         "Text": "Welcome to Imarat group. We are a passionate team of design h dedicated to delivering excellence in every project. Our main goal is to understand and cater to each client's needs, providing exceptional design services tailored to their vision At Imarat group, we consider ourselves pioneers in design, always pushing boundaries and seeking the latest trends. Our team, consisting of industry experts and creative minds, is here to leave a lasting impact on every project we undertake. Choose us for a collaborative and visionary design journey.",
-        "Team": "we have experienced professionals in our team."
+        "Team": "we have experienced professionals in our team.",
+        "OurTeam": "About us. Our team."
     },
     "OurTeam": {
         "Title": "We’ve got an entire team dedicated to supporting you and your business",
@@ -63,7 +64,8 @@
         "Phone": "Phone",
         "Address": "address",
         "Map": "Tashkent, Mirzo-Ulugbek district",
-        "Send": "Send" 
+        "Send": "Send",
+        "Social": "Social media"
     },
     "Footer": {
         "Navigations": "Navigations",
@@ -82,5 +84,80 @@
         "Contact": "Contact",
         "Map": "Tashkent, Mirzo-Ulugbek district",
         "Since": "© 2023 SquareUp. All rights reserved."
+    },
+    "FAQ": {
+        "faq1": {
+            "Title": "Do we submit projects on time ?",
+            "Text": "It depends on both parties."
+        },
+        "faq2": {
+            "Title": "Do we guarantee quality ?",
+            "Text": "We guarantee quality for one year. If something happens due to our fault, we will redo it at our expense."
+        },
+        "faq3": {
+            "Title": "How is the payment processed ?",
+            "Text": "The payment will be divided into 4 stages, with 25% due at."
+        },
+        "faq4": {
+            "Title": "For approximately 100 square meters, how many months will the renovation take ?",
+            "Text": "It depends on the design, but on average, it will take 4-5 months."
+        },
+        "faq5": {
+            "Title": "Is the design project included as a bonus ?",
+            "Text": "Unfortunately, no. The design project is a separate payment."
+        },
+        "faq6": {
+            "Title": "Do we do renovations without a design project ?",
+            "Text": "No, we do not. There are nuances that need to be considered, and while there are many advantages, the only drawback is financial."
+        }
+    },
+    "Process": {
+        "Title": "We provide the best process experience",
+        "first": {
+            "Title": "Briefing",
+            "Text": "First thing you determine the consept and model you want, then choose what colors and materials you want to use in your furniture."
+        },
+        "second": {
+            "Title": "Processing",
+            "Text": "When the briefing process in complete and what the client wants has been achieved. then we carr out the execution of the desired consept."
+        },
+        "three": {
+            "Title": "Finishing",
+            "Text": "After the process is complete, we will immediately carry out the finishing stage and we do it carefully and make sure there are no mistakes."
+        }
+    },
+    "Team": {
+        "StartTitle": "We’ve got an entire",
+        "CenterTitle": "team",
+        "EndTitle": "dedicated to supporting you and your business",
+        "LearnMore": "Learn more",
+        "user1": {
+            "Name": "G'ulom Maxkamov",
+            "Role": "Imarat group Founder"
+        },
+        "user2": {
+            "Name": "Abduxalilov Xurshid",
+            "Role": "Supplier"
+        },
+        "user3": {
+            "Name": "Abduxalilov Omad",
+            "Role": "Warehouse manager"
+        },
+        "user4": {
+            "Name": "Kazaxbayev Yerlan",
+            "Role": "Gas block stacker"
+        },
+        "user5": {
+            "Name": "Ishkabilov Ibragim",
+            "Role": "Tiler"
+        },
+        "user6": {
+            "Name": "Atamurotov Javlon",
+            "Role": "Plasterer"
+        },
+        "user7": {
+            "Name": "Mirsolihov Mirg'ani",
+            "Role": "AC installation wizard"
+        }
     }
 }

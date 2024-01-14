@@ -1,40 +1,48 @@
-import React from "react";
+'use client'
+import React, { useEffect, useState } from "react";
+import en from "../../../public/locales/en.json"
+import ru from "../../../public/locales/ru.json"
 
 const Contacts = () => {
+  const [lang, setLang] = useState()
+  useEffect(() => {
+    const getLang: any = localStorage.getItem('lang')
+    setLang(getLang)
+  }, [])
   return (
     <div className="contacts">
       <div className="contacts_container">
         <div className="contacts_details">
           <form action="">
-            <p>Contact</p>
-            <input placeholder="Your name" type="text" />
-            <input placeholder="Your email" type="email" name="" id="" />
+            <p>{lang === 'en' ? en.Contact.Title : ru.Contact.Title}</p>
+            <input placeholder={lang === 'en' ? en.Contact.InputName : ru.Contact.InputName} type="text" />
+            <input placeholder={lang === 'en' ? en.Contact.InputEmail : ru.Contact.InputEmail} type="email" name="" id="" />
             <textarea
-              placeholder="Your message"
+              placeholder={lang === 'en' ? en.Contact.Message : ru.Contact.Message}
               name=""
               id=""
               cols={30}
               rows={10}
             ></textarea>
             <span className="form_btn">
-            <button className="btn_component">Send message</button>
+            <button className="btn_component">{lang === 'en' ? en.Contact.Send : ru.Contact.Send}</button>
             </span>
           </form>
           <div className="contacts_details_right">
             <div className="email contact_sectors">
-              <p className="title">email</p>
+              <p className="title">{lang === 'en' ? en.Contact.Email : ru.Contact.Email}</p>
               <p className="desc">Imaratgroup@gmail.com </p>
             </div>
             <div className="tel contact_sectors">
-              <p className="title">phone</p>
+              <p className="title">{lang === 'en' ? en.Contact.Phone : ru.Contact.Phone}</p>
               <p className="desc">+99 833 8808800</p>
             </div>
             <div className="address contact_sectors">
-              <p className="title">Address</p>
-              <p className="desc">Tashkent ,Mirzo-Ulugbek district</p>
+              <p className="title">{lang === 'en' ? en.Contact.Address : ru.Contact.Address}</p>
+              <p className="desc">{lang === 'en' ? en.Contact.Map : ru.Contact.Map}</p>
             </div>
             <div className="social contact_sectors">
-              <p className="title">Social media</p>
+              <p className="title">{lang === 'en' ? en.Contact.Social : ru.Contact.Social}</p>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -2924,9 +2924,9 @@ export default function Home() {
       <section className="third_section">
         <div className="third_section_title">
           <p>
-            We’ve got an entire{" "}
+            {lang === 'en' ? en.Team.StartTitle : ru.Team.StartTitle}{" "}
             <span>
-              team
+            {lang === 'en' ? en.Team.CenterTitle : ru.Team.CenterTitle}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="207"
@@ -2959,7 +2959,7 @@ export default function Home() {
                 </defs>
               </svg>
             </span>{" "}
-            dedicated to supporting you and your business
+            {lang === 'en' ? en.Team.EndTitle : ru.Team.EndTitle}
           </p>
           <span>
             <svg

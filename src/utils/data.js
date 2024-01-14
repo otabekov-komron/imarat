@@ -1,16 +1,13 @@
 import en from "../../public/locales/en.json"
 import ru from "../../public/locales/ru.json"
 
-if(typeof localStorage !== 'undefined') {
-  const lang = localStorage.getItem('lang');
-}
-
+let lang = localStorage.getItem('lang');
 
 export const lists = [
   {
     id: 1,
-    title: "Neoclassicism",
-    desc: "Our Neoclassicism service merges traditional Greek and Roman elegance with modern design, creating timeless, tailored projects for our clients",
+    title: lang === 'en' ? en.OurServices.Minimalism.Title : ru.OurServices.Minimalism.Title,
+    desc: lang === 'en' ? en.OurServices.Minimalism.Text : ru.OurServices.Minimalism.Text,
     svgContent: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -30,8 +27,8 @@ export const lists = [
   },
   {
     id: 2,
-    title: "Minimalism",
-    desc: "Our Minimalism service offers sleek, functional designs with an emphasis on space and simplicity, delivering serene, uncluttered environments",
+    title: lang === 'en' ? en.OurServices.HighTech.Title : ru.OurServices.HighTech.Title,
+    desc: lang === 'en' ? en.OurServices.HighTech.Text : ru.OurServices.HighTech.Text,
     svgContent: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -64,8 +61,8 @@ export const lists = [
   },
   {
     id: 3,
-    title: "High Tech",
-    desc: "Our High Tech service delivers futuristic, efficient designs with a focus on innovative technology and sleek aesthetics",
+    title: lang === 'en' ? en.OurServices.Modern.Title : ru.OurServices.Modern.Title,
+    desc: lang === 'en' ? en.OurServices.Modern.Text : ru.OurServices.Modern.Text,
     svgContent: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -110,8 +107,8 @@ export const lists = [
   },
   {
     id: 4,
-    title: "Modern",
-    desc: "Our Modern service provides contemporary, stylish designs, emphasizing clean lines and functional elegance",
+    title: lang === 'en' ? en.OurServices.Contemporary.Title : ru.OurServices.Contemporary.Title,
+    desc: lang === 'en' ? en.OurServices.Contemporary.Text : ru.OurServices.Contemporary.Text,
     svgContent: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -177,8 +174,8 @@ export const lists = [
   },
   {
     id: 5,
-    title: "Contemporary",
-    desc: "Our Contemporary service offers dynamic, up-to-date designs that combine current trends with timeless functionality",
+    title: lang === 'en' ? en.OurServices.Minimalism.Title : ru.OurServices.Minimalism.Title,
+    desc: lang === 'en' ? en.OurServices.Minimalism.Text : ru.OurServices.Minimalism.Text,
     svgContent: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -264,8 +261,8 @@ export const lists = [
   },
   {
     id: 6,
-    title: "Classical",
-    desc: "Classical interior design features intricate furniture, luxurious materials like marble and fine textiles, and a balanced, symmetrical layout",
+    title: lang === 'en' ? en.OurServices.Classical.Title : ru.OurServices.Classical.Title,
+    desc: lang === 'en' ? en.OurServices.Classical.Text : ru.OurServices.Classical.Text,
     svgContent: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

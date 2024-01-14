@@ -2141,7 +2141,7 @@ const About = () => {
             <div className="second_section_right_blur">
               we have experienced professionals in our team
             </div>
-            <p className="second_section_right_count">30+</p>
+            <p className="second_section_right_count">40+</p>
           </div>
         </div>
       </div>
