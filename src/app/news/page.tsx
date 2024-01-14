@@ -17,6 +17,7 @@ const News = () => {
   const [selectedCategory, setSelectedCategory] = useState<any>(null);
   const [filteredVacancies, setFilteredVacancies] = useState<Vacancy[]>([]);
   const [lang, setLang] = useState();
+  const [activeCategory, setActiveCategory] = useState<any>(null);
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -42,6 +43,7 @@ const News = () => {
 
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
+    setActiveCategory(category);
   };
 
   const [end, setEnd] = useState(6);
@@ -71,9 +73,6 @@ const News = () => {
     (async () => {
       const blog = await axios.get("https://admin.imaratgroup.uz/api/blogs");
       setBlogs(blog.data);
-      const categories = await axios.get(
-        "https://admin.imaratgroup.uz/api/categories"
-      );
       const vacancies = await axios.get(
         "https://admin.imaratgroup.uz/api/vacancies"
       );
@@ -288,11 +287,12 @@ const News = () => {
         <div className="vacancies__wrapper">
           <div className="vacancies__list">
             {vacancies.map((item, index) => (
-              <div
-                onClick={() => handleCategoryClick(item.category)}
+              
+                <span  onClick={() => handleCategoryClick(item.category)}
                 key={index}
-              >
-                <span className="vacancies__item">
+                className={`vacancies__item ${
+                  activeCategory === item.category ? "active" : ""
+                }`}>
                   <p>{item.category}</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -314,17 +314,22 @@ const News = () => {
                     </defs>
                   </svg>
                 </span>
-              </div>
             ))}
           </div>
-          {filteredVacancies.map((item) => (
-            <div key={item._id} className="vacancy">
-              <p>{item.title}</p>
-              <p>{item.price}</p>
-              <p>{item.description}</p>
-              <p></p>
+          {selectedCategory == null ? (
+            <p>Choose type vacancy</p>
+          ) : (
+            <div className="vacancies_items">
+              {filteredVacancies.map((item) => (
+                <div key={item._id} className="vacancy_item">
+                  <p className="vacancy__item-title">{item.title}</p>
+                  <p className="vacancy__item-price">{item.price}</p>
+                  <p className="vacancy__item-text">{item.description}</p>
+                  <Link href={'/contacts'}>Send</Link>
+                </div>
+              ))}
             </div>
-          ))}
+          )}
         </div>
       </div>
     </div>

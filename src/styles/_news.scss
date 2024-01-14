@@ -31,7 +31,7 @@
               border-radius: 8px;
               font-weight: bold;
               color: #ffffff;
-              background-color: rgba(255, 255, 255, 0.35);;
+              background-color: rgba(255, 255, 255, 0.35);
             }
           }
           padding: 2%;
@@ -44,7 +44,7 @@
             font-style: normal;
             font-weight: 500;
             line-height: 13.564px;
-            color: #1C1C1C;
+            color: #1c1c1c;
           }
           .blog__item-text {
             max-height: 68px;
@@ -56,7 +56,7 @@
             font-weight: 400;
             line-height: normal;
             letter-spacing: 0.055px;
-            color: #1C1C1C;
+            color: #1c1c1c;
           }
           .blog__item-footer {
             display: flex;
@@ -95,7 +95,7 @@
         p {
           margin: 0;
           margin-right: 16px;
-          color:#FFF;
+          color: #fff;
           font-family: SangBleu Sans;
           font-size: 24px;
           font-style: normal;
@@ -115,11 +115,15 @@
           -o-transition: transform 0.3s ease-in-out;
           height: 100%;
           .swiper-wrapper {
-            height: 60vh;
+            height: 80vh;
           }
           .swiper-slide {
             height: 100%;
-            &:hover {
+            iframe {
+              object-fit: cover !important;
+            }
+            &:hover,
+            &:active {
               .overlay {
                 visibility: hidden;
               }
@@ -134,6 +138,34 @@
             -moz-border-radius: 40px;
             -ms-border-radius: 40px;
             -o-border-radius: 40px;
+            &:nth-child(n) {
+              .overlay {
+                background: url("../assets/images/design.jpg");
+                background-position: center;
+                background-size: cover;
+              }
+            }
+            &:nth-child(2n) {
+              .overlay {
+                background: url("../assets/images/bedroom.webp");
+                background-position: center;
+                background-size: cover;
+              }
+            }
+            &:nth-child(3n) {
+              .overlay {
+                background: url("../assets/images/bathroom.webp");
+                background-position: center;
+                background-size: cover;
+              }
+            }
+            &:nth-child(4) {
+              .overlay {
+                background: url("../assets/images/dining\ room.webp");
+                background-position: center;
+                background-size: cover;
+              }
+            }
             .overlay {
               transition: visibility 0.7s ease-in-out;
               -webkit-transition: visibility 0.7s ease-in-out;
@@ -142,16 +174,6 @@
               -o-transition: visibility 0.7s ease-in-out;
               visibility: visible;
               position: absolute;
-              &:nth-child(odd) {
-                background: url("../assets/images/design.jpg");
-                background-position: center;
-                background-size: cover;
-              }
-              &:nth-child(2n) {
-                background-position: center;
-                background-size: cover;
-              }
-
               width: 100%;
               height: 100%;
               display: flex;
@@ -216,10 +238,15 @@
       .vacancies__wrapper {
         margin-top: 50px;
         display: flex;
-        justify-content: space-between;
-        align-self: start;
+        width: 100%;
+        position: relative;
+        height: 100%;
+        gap: 5%;
         .vacancies__list {
           width: 50%;
+          height: 100%;
+          position: sticky;
+          top: 10%;
           .vacancies__item {
             display: flex;
             justify-content: space-between;
@@ -256,24 +283,34 @@
               }
             }
           }
+          .active {
+            background-color: $primary-yellow;
+            color: #000;
+            svg {
+              path {
+                fill: #000;
+              }
+            }
+          }
         }
-        .vacancy {
-          width: 40%;
-          .vacancy__item {
-            display: block;
+        .vacancies_items {
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+          .vacancy_item {
+            width: 100%;
             margin-bottom: 35px;
             color: #fff;
             .vacancy__item-title {
-              margin-bottom: 15px;
-              font-family: SangBleu Sans;
+              margin-bottom: 30px;
+              color: $primary-yellow;
               font-size: 28px;
               font-style: normal;
               font-weight: 500;
               line-height: 32px;
             }
             .vacancy__item-price {
-              margin-bottom: 15px;
-              font-family: SangBleu Sans;
+              margin-bottom: 30px;
               font-size: 20px;
               font-style: normal;
               font-weight: 400;
@@ -281,15 +318,30 @@
               letter-spacing: 0.1px;
             }
             .vacancy__item-text {
-              max-height: 265px;
-              text-overflow: ellipsis;
-              overflow: hidden;
-              white-space: wrap;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
               line-height: normal;
               letter-spacing: 0.055px;
+            }
+            a {
+              width: fit-content;
+              color: black;
+
+              display: flex;
+              padding: 16px 32px;
+              justify-content: center;
+              align-items: center;
+              align-content: center;
+              gap: 16px;
+              flex-wrap: wrap;
+              background-color: $primary-yellow;
+              border-radius: 20px;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 32px;
+              margin-top: 30px;
             }
           }
         }
