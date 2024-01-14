@@ -7,11 +7,18 @@ import { lists } from "@/utils/data";
 import ProjectSwiper from "@/components/ProjectSwiper";
 import TeamSwiper from "@/components/TeamSwiper";
 import { useEffect, useRef, useState } from "react";
-import axios from "axios";
+import en from "../../public/locales/en.json"
+import ru from "../../public/locales/ru.json"
 
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const containerRef = useRef();
+  const [lang, setLang] = useState('en')
+
+  useEffect(() => {
+    const getLang: any = localStorage.getItem('lang')
+    setLang(getLang)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,13 +50,10 @@ export default function Home() {
         <div className="first_section_container">
           <div className="first_section_container_left">
             <div className="left_top">
-              <p className="left_top_title">Interior design</p>
-              <p className="left_top_desc">
-                We offer you great comfort and great design in apartment
-                renovation
-              </p>
+              <p className="left_top_title">{lang === 'en' ? en.Hero.Title : ru.Hero.Title}</p>
+              <p className="left_top_desc">{lang === 'en' ? en.Hero.Text : ru.Hero.Text}</p>
               <button className="left_top_btn">
-                <span>Connect with us</span>
+                <span>{lang === 'en' ? en.Hero.Connect : ru.Hero.Connect}</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="36"
@@ -85,7 +89,7 @@ export default function Home() {
             </div>
             <div className="left_bottom">
               <div className="left_bottom_live">
-                <p>You can follow us live</p>
+                <p>{lang === 'en' ? en.Hero.Live : ru.Hero.Live}</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="150"
@@ -112,7 +116,7 @@ export default function Home() {
                 </svg>
               </div>
               <div className="left_bottom_360">
-                <p>Projects 360</p>
+                <p>{lang === 'en' ? en.Hero.Projects : ru.Hero.Projects}</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="170"
@@ -161,46 +165,36 @@ export default function Home() {
           <div className="scrolling_text">
             <div className="text">
               <span>
-                · we are happy to make your dream home a reality · we are happy
-                to make your dream home a reality
+                · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                · we are happy to make your dream home a reality · we are happy
-                to make your dream home a reality
+                · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                · we are happy to make your dream home a reality · we are happy
-                to make your dream home a reality
+                · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                · we are happy to make your dream home a reality · we are happy
-                to make your dream home a reality
+                · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                · we are happy to make your dream home a reality · we are happy
-                to make your dream home a reality
+                · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
               </span>
             </div>
             <div className="text">
               <span>
-                we are happy to make your dream home a reality we are happy to
-                make your dream home a reality
+                {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                we are happy to make your dream home a reality we are happy to
-                make your dream home a reality
+                {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                we are happy to make your dream home a reality we are happy to
-                make your dream home a reality
+                {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                we are happy to make your dream home a reality we are happy to
-                make your dream home a reality
+                {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                we are happy to make your dream home a reality we are happy to
-                make your dream home a reality
+                {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
               </span>
             </div>
           </div>
@@ -3028,8 +3022,8 @@ export default function Home() {
             </svg>
           </span>
           <div id="left_cards" className="fourth_section_container_left">
-            <h1>Our services</h1>
-            <p>we provide the best services for our customers</p>
+            <h1>{lang === 'en' ? en.OurServices.Title : ru.OurServices.Title}</h1>
+            <p>{lang === 'en' ? en.OurServices.Text : ru.OurServices.Text}</p>
             <button className="btn_component">
               <span className="btn_component_text">Learn more</span>
               <span>
@@ -3086,7 +3080,7 @@ export default function Home() {
         </div>
       </section>
       <section className="fifth_section">
-        <p className="fifth_section_title">Projects</p>
+        <p className="fifth_section_title">{lang === 'en' ? en.Projects.Title : ru.Projects.Title}</p>
         <div className="fifth_section_swiper">
           <ProjectSwiper />
         </div>

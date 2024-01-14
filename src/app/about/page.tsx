@@ -1,11 +1,17 @@
+'use client'
 import { group } from "@/assets/images";
 import ProjectsVertical from "@/components/ProjectsVertical";
 import ProjectsVerticalRV from "@/components/ProjectsVerticalRV";
 import TeamCard from "@/components/TeamCard";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 const About = () => {
+  useEffect(()=> {
+    let lang = localStorage.getItem('lang')
+    console.log(lang)
+  }, [])
+
   return (
     <div className="about">
       <div className="first_section">

@@ -1,0 +1,86 @@
+{
+    "NavBar": {
+        "About": "About us",
+        "Services": "Services",
+        "Projects": "Projects",
+        "News": "News",
+        "Contacts": "Contacts",
+        "Showroom": "Showroom",
+        "Connect": "Connect with us"
+    },
+    "Hero": {
+        "Title": "Interior Design",
+        "Text": "we offer you great comfort and great design in apartment renovation.",
+        "Connect": "Connect with us",
+        "Live": "You can follow us live",
+        "Projects": "Projects 360",
+        "LineText": "we are happy to make your dream home a reality"
+    },
+    "About": {
+        "Title": "About us",
+        "Text": "Welcome to Imarat group. We are a passionate team of design h dedicated to delivering excellence in every project. Our main goal is to understand and cater to each client's needs, providing exceptional design services tailored to their vision At Imarat group, we consider ourselves pioneers in design, always pushing boundaries and seeking the latest trends. Our team, consisting of industry experts and creative minds, is here to leave a lasting impact on every project we undertake. Choose us for a collaborative and visionary design journey.",
+        "Team": "we have experienced professionals in our team."
+    },
+    "OurTeam": {
+        "Title": "We’ve got an entire team dedicated to supporting you and your business",
+        "LearnMore": "Learn more"
+    },
+    "OurServices": {
+        "Title": "Our services",
+        "Text": "we provide the best services for our customers",
+        "LearnMore": "Learn more",
+        "Minimalism": {
+            "Title": "Minimalism",
+            "Text": "Our Minimalism service offers sleek, functional designs with an emphasis on space and simplicity, delivering serene, uncluttered environments"
+        },
+        "HighTech": {
+            "Title": "High Tech",
+            "Text": "Our High Tech service delivers futuristic, efficient designs with a focus on innovative technology and sleek aesthetics"
+        },
+        "Modern": {
+            "Title": "Modern",
+            "Text": "Our Modern service provides contemporary, stylish designs, emphasizing clean lines and functional elegance."
+        },
+        "Contemporary": {
+            "Title": "Contemporary",
+            "Text": "Our Contemporary service offers dynamic, up-to-date designs that combine current trends with timeless functionality"
+        },
+        "Classical": {
+            "Title": "Classical",
+            "Text": "Classical interior design features intricate furniture, luxurious materials like marble and fine textiles, and a balanced, symmetrical layout"
+        }
+    },
+    "Projects": {
+        "Title": "Projects",
+        "LearnMore": "Learn more"
+    },
+    "Contact": {
+        "Title": "Contact",
+        "InputName": "Name",
+        "InputEmail": "Email",
+        "Message": "Message",
+        "Email": "email",
+        "Phone": "Phone",
+        "Address": "address",
+        "Map": "Tashkent, Mirzo-Ulugbek district",
+        "Send": "Send" 
+    },
+    "Footer": {
+        "Navigations": "Navigations",
+        "Services": {
+            "Title": "Services",
+            "Neoclassicism": "Neoclassicism",
+            "Minimalism": "Minimalism",
+            "HighTech": "High Tech",
+            "Modern": "Modern",
+            "Contemporary": "Contemporary",
+            "Classical": "Classical",
+            "VersaceStyle": "Versace Style",
+            "Loft": "Loft",
+            "Baroque": "Baroque"
+        },
+        "Contact": "Contact",
+        "Map": "Tashkent, Mirzo-Ulugbek district",
+        "Since": "© 2023 SquareUp. All rights reserved."
+    }
+}

@@ -1,17 +1,34 @@
 'use client'
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import en from "../../public/locales/en.json"
+import ru from "../../public/locales/ru.json"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(0);
   const [showFixedDiv, setShowFixedDiv] = useState(false);
 
+  const [lang, setLang] = useState('en')
+
+  const changeLang = (e: any) => {
+    const id = e.target.id
+    if(id === 'ru') {
+      localStorage.setItem('lang', 'ru')
+      window.location.reload()
+    } else if (id === 'en') {
+      localStorage.setItem('lang', 'en')
+      window.location.reload()
+    }
+  }
+
+  useEffect(() => {
+    const getLang: any = localStorage.getItem('lang')
+    setLang(getLang)
+  }, [])
+
   useEffect(() => {
     const handleScroll = () => {
-      // Calculate the scroll position
       const scrollPosition = window.scrollY || window.pageYOffset;
-
-      // Show the fixed div when scrolling beyond 100vh
       setShowFixedDiv(scrollPosition > window.innerHeight);
     };
 
@@ -32,7 +49,8 @@ const Header = () => {
     setIsOpen(2);
     document.body.classList.remove('menu-open');
   };
-  
+
+
   return (
     <>
     <div>
@@ -88,8 +106,8 @@ const Header = () => {
         </Link>
         <div className="right">
           <span className="lang">
-            <button className="lang-btn">EN</button>
-            <button className="lang-btn">RU</button>
+            <button onClick={changeLang} id="en" className="lang-btn">EN</button>
+            <button onClick={changeLang} id="ru" className="lang-btn">RU</button>
           </span>
           <button onClick={toggleNavbar} className="burger">
             <svg
@@ -128,7 +146,7 @@ const Header = () => {
               </svg>
             </span>
             <div className="navbar_top_item_title">
-              <p>About us</p>
+              <p>{ lang === 'en' ? en.NavBar.About : ru.NavBar.About}</p>
               <span className="navbar_top_item_title_arrow">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +179,7 @@ const Header = () => {
               </svg>
             </span>
             <div className="navbar_top_item_title">
-              <p>Services</p>
+              <p>{ lang === 'en' ? en.NavBar.Services : ru.NavBar.Services}</p>
               <span className="navbar_top_item_title_arrow">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +212,7 @@ const Header = () => {
               </svg>
             </span>
             <div className="navbar_top_item_title">
-              <p>Projects</p>
+              <p>{ lang === 'en' ? en.NavBar.Projects : ru.NavBar.Projects}</p>
               <span className="navbar_top_item_title_arrow">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +245,7 @@ const Header = () => {
               </svg>
             </span>
             <div className="navbar_top_item_title">
-              <p>News</p>
+              <p>{ lang === 'en' ? en.NavBar.News : ru.NavBar.News}</p>
               <span className="navbar_top_item_title_arrow">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -260,7 +278,7 @@ const Header = () => {
               </svg>
             </span>
             <div className="navbar_top_item_title">
-              <p>Contacts</p>
+              <p>{ lang === 'en' ? en.NavBar.Contacts : ru.NavBar.Contacts}</p>
               <span className="navbar_top_item_title_arrow">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -293,7 +311,7 @@ const Header = () => {
               </svg>
             </span>
             <div className="navbar_top_item_title">
-              <p>Showroom</p>
+              <p>{ lang === 'en' ? en.NavBar.Showroom : ru.NavBar.Showroom}</p>
               <span className="navbar_top_item_title_arrow">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -313,7 +331,7 @@ const Header = () => {
         </div>
         <div className="navbar_bottom">
           <div className="navbar_bottom_left">
-            <p>Connect with us</p>
+            <p>{ lang === 'en' ? en.NavBar.Connect : ru.NavBar.Connect}</p>
             <span className="navbar_bottom_left_arrow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
