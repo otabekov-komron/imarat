@@ -1,34 +1,39 @@
+import en from "../../public/locales/en.json"
+import ru from "../../public/locales/ru.json"
+
+let lang = localStorage.getItem('lang');
+
 const FAQ = [
     {
         id: 1,
-        title: 'What range of interior design services do you offer?',
-        desc: 'Welcome to Imarat group. We are a passionate team of design enthusiasts dedicated to delivering excellence in'
+        title: lang === 'en' ? en.FAQ.faq1.Title : ru.FAQ.faq1.Title,
+        desc: lang === 'en' ? en.FAQ.faq1.Text : ru.FAQ.faq1.Text
     },
     {
         id: 2,
-        title: 'Can you outline the different types of interior design projects your company handles?',
-        desc: 'Welcome to Imarat group. We are a passionate team of design enthusiasts dedicated to delivering excellence in'
+        title: lang === 'en' ? en.FAQ.faq2.Title : ru.FAQ.faq2.Title,
+        desc: lang === 'en' ? en.FAQ.faq2.Text : ru.FAQ.faq2.Text
     },
     {
         id: 3,
-        title: 'How does the design process work from start to finish?',
-        desc: 'Welcome to Imarat group. We are a passionate team of design enthusiasts dedicated to delivering excellence in'
+        title: lang === 'en' ? en.FAQ.faq3.Title : ru.FAQ.faq3.Title,
+        desc: lang === 'en' ? en.FAQ.faq3.Text : ru.FAQ.faq3.Text
     },
     {
         id: 4,
-        title: 'How much involvement is expected from me during the design process?',
-        desc: 'Welcome to Imarat group. We are a passionate team of design enthusiasts dedicated to delivering excellence in'
+        title: lang === 'en' ? en.FAQ.faq4.Title : ru.FAQ.faq4.Title,
+        desc: lang === 'en' ? en.FAQ.faq4.Text : ru.FAQ.faq4.Text
     },
     {
         id: 5,
-        title: 'What design styles does your company specialize in?',
-        desc: 'Welcome to Imarat group. We are a passionate team of design enthusiasts dedicated to delivering excellence in'
+        title: lang === 'en' ? en.FAQ.faq5.Title : ru.FAQ.faq5.Title,
+        desc: lang === 'en' ? en.FAQ.faq5.Text : ru.FAQ.faq5.Text
     },
     {
         id: 6,
-        title: 'Is there a fee for the initial consultation?',
-        desc: 'Welcome to Imarat group. We are a passionate team of design enthusiasts dedicated to delivering excellence in'
-    },
+        title: lang === 'en' ? en.FAQ.faq6.Title : ru.FAQ.faq6.Title,
+        desc: lang === 'en' ? en.FAQ.faq6.Text : ru.FAQ.faq6.Text
+    }
 ]
 
 export default FAQ;

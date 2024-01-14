@@ -1,85 +1,94 @@
+'use client'
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import en from "../../public/locales/en.json"
+import ru from "../../public/locales/ru.json"
 
 const Footer = () => {
+  const [lang, setLang] = useState('en')
+
+  useEffect(() => {
+    const getLang: any = localStorage.getItem('lang')
+    setLang(getLang)
+  }, [])
   const links = [
     {
       navigation: [
         {
           id: 0,
-          name: "Home",
+          name: lang === 'en' ? "Home" : "Главная страница",
           url: "/",
         },
         {
           id: 1,
-          name: "About us",
+          name: lang === 'en' ? en.NavBar.About : ru.NavBar.About,
           url: "/about",
         },
         {
           id: 2,
-          name: "Services",
+          name: lang === 'en' ? en.NavBar.Services : ru.NavBar.Services,
           url: "/services",
         },
         {
           id: 3,
-          name: "Projects",
+          name: lang === 'en' ? en.NavBar.Projects : ru.NavBar.Projects,
           url: "/projects",
         },
         {
           id: 4,
-          name: "News",
+          name: lang === 'en' ? en.NavBar.News : ru.NavBar.News,
           url: "/news",
         },
         {
           id: 5,
-          name: "Contacts",
+          name: lang === 'en' ? en.NavBar.Contacts : ru.NavBar.Contacts,
           url: "/contact",
         },
       ],
       services: [
         {
           id: 0,
-          name: "Neoclassicism",
+          name: lang === 'en' ? en.Footer.Services.Neoclassicism : ru.Footer.Services.Neoclassicism,
           url: "/",
         },
         {
           id: 1,
-          name: "Minimalism",
+          name: lang === 'en' ? en.Footer.Services.Minimalism : ru.Footer.Services.Minimalism,
           url: "/about",
         },
         {
           id: 2,
-          name: "High Tech",
+          name: lang === 'en' ? en.Footer.Services.HighTech : ru.Footer.Services.HighTech,
           url: "/services",
         },
         {
           id: 3,
-          name: "Modern",
+          name: lang === 'en' ? en.Footer.Services.Modern : ru.Footer.Services.Modern,
           url: "/projects",
         },
         {
           id: 4,
-          name: "Contemporary",
+          name: lang === 'en' ? en.Footer.Services.Contemporary : ru.Footer.Services.Contemporary,
           url: "/news",
         },
         {
           id: 5,
-          name: "Classical",
+          name: lang === 'en' ? en.Footer.Services.Classical : ru.Footer.Services.Classical,
           url: "/contact",
         },
         {
           id: 6,
-          name: "Versace Style",
+          name: lang === 'en' ? en.Footer.Services.VersaceStyle : ru.Footer.Services.VersaceStyle,
           url: "/contact",
         },
         {
           id: 7,
-          name: "Loft",
+          name: lang === 'en' ? en.Footer.Services.Loft : ru.Footer.Services.Loft,
           url: "/contact",
         },
         {
           id: 8,
-          name: "Baroque",
+          name: lang === 'en' ? en.Footer.Services.Baroque : ru.Footer.Services.Baroque,
           url: "/contact",
         },
       ],
@@ -89,7 +98,7 @@ const Footer = () => {
     <div className="footer">
       <div className="footer_columns">
         <div className="footer_columns_navigation">
-          <span>Navigations</span>
+          <span>{lang === 'en' ? en.Footer.Navigations : ru.Footer.Navigations}</span>
           <div className="navigation_list">
             {links[0].navigation.map((link) => (
               <Link key={link.id} href={link.url}>
@@ -99,7 +108,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer_columns_services">
-          <span>Services</span>
+          <span>{lang === 'en' ? en.Footer.Services.Title : ru.Footer.Services.Title}</span>
           <div className="navigation_list">
             {links[0].services.map((link) => (
                 <Link key={link.id} href={link.url}>{link.name}</Link>
@@ -108,9 +117,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer_columns_contact">
-          <span>Contact</span>
+          <span>{ lang === 'en' ? en.Footer.Contact : ru.Footer.Contact }</span>
           <a href="mailto:imaratgroup@gmail.com">
-            
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -146,7 +154,6 @@ const Footer = () => {
             Imaratgroup@gmail.com
           </a>
           <a href="tel:+998338808800">
-            
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -186,7 +193,7 @@ const Footer = () => {
                   fill="#ffffff8f"
                 />
               </svg>
-            <p>Tashkent, Mirzo-Ulugbek district</p>
+            <p>{lang === 'en' ? en.Footer.Map : ru.Footer.Map}</p>
             {/* <a className="map" href="/something">
               map
             </a> */}
@@ -265,7 +272,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer_text">
-        <p>© 2023 SquareUp. All rights reserved.</p>
+        <p>{lang === 'en' ? en.Footer.Since : ru.Footer.Since}</p>
       </div>
     </div>
   );

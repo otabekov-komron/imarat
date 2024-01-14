@@ -1,47 +1,81 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
+import en from "../../../public/locales/en.json";
+import ru from "../../../public/locales/ru.json";
 
 const Contacts = () => {
+  const [lang, setLang] = useState();
+  useEffect(() => {
+    const getLang: any = localStorage.getItem("lang");
+    setLang(getLang);
+  }, []);
   return (
     <div className="contacts">
       <div className="contacts_container">
         <div className="contacts_details">
           <form action="">
-            <p>Contact</p>
-            <input placeholder="Your name" type="text" />
-            <input placeholder="Your email" type="email" name="" id="" />
+            <p>{lang === "en" ? en.Contact.Title : ru.Contact.Title}</p>
+            <input
+              placeholder={
+                lang === "en" ? en.Contact.InputName : ru.Contact.InputName
+              }
+              type="text"
+            />
+            <input
+              placeholder={
+                lang === "en" ? en.Contact.InputEmail : ru.Contact.InputEmail
+              }
+              type="email"
+              name=""
+              id=""
+            />
             <textarea
-              placeholder="Your message"
+              placeholder={
+                lang === "en" ? en.Contact.Message : ru.Contact.Message
+              }
               name=""
               id=""
               cols={30}
               rows={10}
             ></textarea>
             <span className="form_btn">
-            <button className="btn_component">Send message</button>
+              <button className="btn_component">
+                {lang === "en" ? en.Contact.Send : ru.Contact.Send}
+              </button>
             </span>
           </form>
           <div className="contacts_details_right">
             <div className="email contact_sectors">
-              <p className="title">email</p>
+              <p className="title">
+                {lang === "en" ? en.Contact.Email : ru.Contact.Email}
+              </p>
               <p className="desc">Imaratgroup@gmail.com </p>
             </div>
             <div className="tel contact_sectors">
-              <p className="title">phone</p>
+              <p className="title">
+                {lang === "en" ? en.Contact.Phone : ru.Contact.Phone}
+              </p>
               <p className="desc">+99 833 8808800</p>
             </div>
             <div className="address contact_sectors">
-              <p className="title">Address</p>
-              <p className="desc">Tashkent ,Mirzo-Ulugbek district</p>
+              <p className="title">
+                {lang === "en" ? en.Contact.Address : ru.Contact.Address}
+              </p>
+              <p className="desc">
+                {lang === "en" ? en.Contact.Map : ru.Contact.Map}
+              </p>
             </div>
             <div className="social contact_sectors">
-              <p className="title">Social media</p>
+              <p className="title">
+                {lang === "en" ? en.Contact.Social : ru.Contact.Social}
+              </p>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 48 48"
                   fill="none"
                 >
-                  <g clip-path="url(#clip0_360_1271)">
+                  <g clipPath="url(#clip0_360_1271)">
                     <path
                       d="M37.4949 48H10.5051C4.71277 48 0 43.2872 0 37.4949V10.5051C0 4.71277 4.71277 0 10.5051 0H37.4949C43.2872 0 48 4.71277 48 10.5051V37.4949C48 43.2872 43.2872 48 37.4949 48ZM10.5051 2.8125C6.26331 2.8125 2.8125 6.26331 2.8125 10.5051V37.4949C2.8125 41.7367 6.26331 45.1875 10.5051 45.1875H37.4949C41.7367 45.1875 45.1875 41.7367 45.1875 37.4949V10.5051C45.1875 6.26331 41.7367 2.8125 37.4949 2.8125H10.5051Z"
                       fill="#1C1C1C"
@@ -66,7 +100,7 @@ const Contacts = () => {
                   viewBox="0 0 48 48"
                   fill="none"
                 >
-                  <g clip-path="url(#clip0_360_1275)">
+                  <g clipPath="url(#clip0_360_1275)">
                     <path
                       d="M24 48C37.234 48 48 37.234 48 24C48 10.766 37.234 0 24 0C10.766 0 0 10.766 0 24C0 37.234 10.766 48 24 48ZM24 3C35.58 3 45 12.42 45 24C45 35.58 35.58 45 24 45C12.42 45 3 35.58 3 24C3 12.42 12.42 3 24 3Z"
                       fill="#1C1C1C"
