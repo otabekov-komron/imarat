@@ -9,6 +9,8 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay } from "swiper/modules";
+import Image from "next/image";
+import { bathroom, bedroom, design, homeOffice, kitchen, livingRoom } from "@/assets/images";
 
 export default function ProjectsVerticalRV() {
   return (
@@ -30,16 +32,27 @@ export default function ProjectsVerticalRV() {
         modules={[Autoplay]}
         className="pv"
       >
-        
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+            <Image width={400} height={400} src={bedroom} alt="image"/>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image width={400} height={400} src={bathroom} alt="image"/>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image width={400} height={400} src={kitchen} alt="image"/>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image width={400} height={400} src={design} alt="image"/>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image width={400} height={400} src={livingRoom} alt="image"/>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image width={400} height={400} src={homeOffice} alt="image"/>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image width={400} height={400} src={design} alt="image"/>
+          </SwiperSlide>
       </Swiper>
     </>
   );

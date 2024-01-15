@@ -18,10 +18,9 @@
         position: absolute;
         top: 24px;
         right: 24px;
-        font-family: SangBleu Sans;
         font-size: 24px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 54.669px; /* 227.788% */
         letter-spacing: 0.12px;
         padding: 3px 24px;
@@ -75,12 +74,31 @@
     padding: 30px 0;
     overflow-x: scroll;
     background-color: #272727;
-    ::-webkit-scrollbar {
-        display: none;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+     
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888; 
+    }
+    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555; 
     }
     .blogs__item {
+       box-sizing: content-box; /* So the width will be 100% + 17px */
         border-radius: 26px !important;
-        min-width: 533px;
+        min-width: 25%;
         margin-left: 20px;
         .blog__item-img {
           position: relative;
