@@ -8,6 +8,7 @@ import TeamSwiper from "@/components/TeamSwiper";
 import { useEffect, useState } from "react";
 import en from "../../public/locales/en.json";
 import ru from "../../public/locales/ru.json";
+import Link from "next/link";
 
 export default function Home() {
   
@@ -3298,7 +3299,7 @@ export default function Home() {
               {lang === "en" ? en.OurServices.Title : ru.OurServices.Title}
             </h1>
             <p>{lang === "en" ? en.OurServices.Text : ru.OurServices.Text}</p>
-            <button className="btn_component">
+            <Link href={'/services'} className="btn_component">
               <span className="btn_component_text">
                 {lang === "en"
                   ? en.OurServices.LearnMore
@@ -3318,7 +3319,7 @@ export default function Home() {
                   />
                 </svg>
               </span>
-            </button>
+            </Link>
           </div>
           <div className="fourth_section_container_right" id="cards">
             <Card

@@ -71,29 +71,35 @@
 }
 .blogs-wrapper {
     display: flex;
-    padding: 30px 0;
+    padding: 30px 15px;
     overflow-x: scroll;
     background-color: #272727;
     &::-webkit-scrollbar {
-        width: 0;
-    }
-    &::-webkit-scrollbar {
-      width: 10px;
+      width: 5px;
+      height: 10px;
+
     }
     
     /* Track */
     &::-webkit-scrollbar-track {
-      background: #f1f1f1; 
+      background: transparent; 
+
     }
      
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      background: #888; 
-    }
+      background: $primary-yellow-50;
+      border-radius:15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius:15px;
+      -ms-border-radius:15px;
+      -o-border-radius:15px;
+      -webkit-border-radius:15px;
+}
     
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-      background: #555; 
+      background: $primary-yellow; 
     }
     .blogs__item {
        box-sizing: content-box; /* So the width will be 100% + 17px */
