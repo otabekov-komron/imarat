@@ -19,6 +19,11 @@ import axios from "axios";
 import Link from "next/link";
 const ProjectSwiper = () => {
   const [images, setImages] = useState<Imag[]>([]);
+  const [lang, setLang] = useState()
+  useEffect(() => {
+    const getLang: any = localStorage.getItem('lang')
+    setLang(getLang)
+  }, [])
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -91,7 +96,26 @@ const ProjectSwiper = () => {
                 alt="image"
               />
               <span className="sw-slide-title">
-                <p>{image.category}</p>
+                <p>
+                {(() => {
+                  switch (image.category) {
+                    case 'Bedroom':
+                      return lang === 'en' ? "Bedroom" : "Спальня";
+                    case 'Kitchen':
+                      return lang === 'en' ? "Kitchen" : "Кухня";
+                    case 'Home office':
+                      return lang === 'en' ? "Home office" : "Домашний офис";
+                    case 'Living room':
+                      return lang === 'en' ? "Living room" : "Гостиная";
+                    case 'Dining room':
+                      return lang === 'en' ? "Dining room" : "Столовая";
+                    case 'Bathroom':
+                      return lang === 'en' ? "Bathroom" : "Ванная";
+                    default:
+                      return image.category;
+                  }
+                })()}
+                </p>
                 <span className="sw-slide-title-svg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
