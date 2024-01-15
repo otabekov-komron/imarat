@@ -7,18 +7,18 @@ import { lists } from "@/utils/data";
 import ProjectSwiper from "@/components/ProjectSwiper";
 import TeamSwiper from "@/components/TeamSwiper";
 import { useEffect, useRef, useState } from "react";
-import en from "../../public/locales/en.json"
-import ru from "../../public/locales/ru.json"
+import en from "../../public/locales/en.json";
+import ru from "../../public/locales/ru.json";
 
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const containerRef = useRef();
-  const [lang, setLang] = useState('en')
+  const [lang, setLang] = useState("en");
 
   useEffect(() => {
-    const getLang: any = localStorage.getItem('lang')
-    setLang(getLang)
-  }, [])
+    const getLang: any = localStorage.getItem("lang");
+    setLang(getLang);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,9 +26,9 @@ export default function Home() {
       const scrollPosition = window.scrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -42,10 +42,14 @@ export default function Home() {
         <div className="first_section_container">
           <div className="first_section_container_left">
             <div className="left_top">
-              <p className="left_top_title">{lang === 'en' ? en.Hero.Title : ru.Hero.Title}</p>
-              <p className="left_top_desc">{lang === 'en' ? en.Hero.Text : ru.Hero.Text}</p>
+              <p className="left_top_title">
+                {lang === "en" ? en.Hero.Title : ru.Hero.Title}
+              </p>
+              <p className="left_top_desc">
+                {lang === "en" ? en.Hero.Text : ru.Hero.Text}
+              </p>
               <button className="left_top_btn">
-                <span>{lang === 'en' ? en.Hero.Connect : ru.Hero.Connect}</span>
+                <span>{lang === "en" ? en.Hero.Connect : ru.Hero.Connect}</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="36"
@@ -81,7 +85,7 @@ export default function Home() {
             </div>
             <div className="left_bottom">
               <div className="left_bottom_live">
-                <p>{lang === 'en' ? en.Hero.Live : ru.Hero.Live}</p>
+                <p>{lang === "en" ? en.Hero.Live : ru.Hero.Live}</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="150"
@@ -108,7 +112,7 @@ export default function Home() {
                 </svg>
               </div>
               <div className="left_bottom_360">
-                <p>{lang === 'en' ? en.Hero.Projects : ru.Hero.Projects}</p>
+                <p>{lang === "en" ? en.Hero.Projects : ru.Hero.Projects}</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="170"
@@ -157,36 +161,46 @@ export default function Home() {
           <div className="scrolling_text">
             <div className="text">
               <span>
-                · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
+                · {lang === "en" ? en.Hero.LineText : ru.Hero.LineText} ·{" "}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
+                · {lang === "en" ? en.Hero.LineText : ru.Hero.LineText} ·{" "}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
+                · {lang === "en" ? en.Hero.LineText : ru.Hero.LineText} ·{" "}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
+                · {lang === "en" ? en.Hero.LineText : ru.Hero.LineText} ·{" "}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
+                · {lang === "en" ? en.Hero.LineText : ru.Hero.LineText} ·{" "}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText}
               </span>
             </div>
             <div className="text">
               <span>
-                {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText} ·{" "}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText} ·{" "}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText} ·{" "}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText} ·{" "}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText}
               </span>
               <span>
-                {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText} · {lang === 'en' ? en.Hero.LineText : ru.Hero.LineText}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText} ·{" "}
+                {lang === "en" ? en.Hero.LineText : ru.Hero.LineText}
               </span>
             </div>
           </div>
@@ -2914,9 +2928,9 @@ export default function Home() {
       <section className="third_section">
         <div className="third_section_title">
           <p>
-            {lang === 'en' ? en.Team.StartTitle : ru.Team.StartTitle}{" "}
+            {lang === "en" ? en.Team.StartTitle : ru.Team.StartTitle}{" "}
             <span>
-            {lang === 'en' ? en.Team.CenterTitle : ru.Team.CenterTitle}
+              {lang === "en" ? en.Team.CenterTitle : ru.Team.CenterTitle}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="207"
@@ -2949,7 +2963,7 @@ export default function Home() {
                 </defs>
               </svg>
             </span>{" "}
-            {lang === 'en' ? en.Team.EndTitle : ru.Team.EndTitle}
+            {lang === "en" ? en.Team.EndTitle : ru.Team.EndTitle}
           </p>
           <span>
             <svg
@@ -3004,10 +3018,16 @@ export default function Home() {
         </span>
         <div className="fourth_section_container">
           <div id="left_cards" className="fourth_section_container_left">
-            <h1>{lang === 'en' ? en.OurServices.Title : ru.OurServices.Title}</h1>
-            <p>{lang === 'en' ? en.OurServices.Text : ru.OurServices.Text}</p>
+            <h1>
+              {lang === "en" ? en.OurServices.Title : ru.OurServices.Title}
+            </h1>
+            <p>{lang === "en" ? en.OurServices.Text : ru.OurServices.Text}</p>
             <button className="btn_component">
-              <span className="btn_component_text">{lang === 'en' ? en.OurServices.LearnMore : ru.OurServices.LearnMore}</span>
+              <span className="btn_component_text">
+                {lang === "en"
+                  ? en.OurServices.LearnMore
+                  : ru.OurServices.LearnMore}
+              </span>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -3062,13 +3082,17 @@ export default function Home() {
         </div>
       </section>
       <section className="fifth_section">
-        <p className="fifth_section_title">{lang === 'en' ? en.Projects.Title : ru.Projects.Title}</p>
+        <p className="fifth_section_title">
+          {lang === "en" ? en.Projects.Title : ru.Projects.Title}
+        </p>
         <div className="fifth_section_swiper">
           <ProjectSwiper />
         </div>
         <div className="fifth_section_btn">
           <button className="btn_component">
-            <span className="btn_component_text">{lang === 'en' ? en.Projects.LearnMore : ru.Projects.LearnMore}</span>
+            <span className="btn_component_text">
+              {lang === "en" ? en.Projects.LearnMore : ru.Projects.LearnMore}
+            </span>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -3102,7 +3126,7 @@ export default function Home() {
                     stroke="white"
                     strokeWidth="30"
                     strokeMiterlimit="10"
-                    strokeLinecap="round"
+                    strokeMiterlimit="round"
                     strokeLinejoin="round"
                   />
                 </svg>
@@ -3284,37 +3308,63 @@ export default function Home() {
       </section>
       <section className="seventh_section">
         <div className="seventh_section_content">
-          <p>{lang === 'en' ? en.Contact.Title : ru.Contact.Title}</p>
+          <p>{lang === "en" ? en.Contact.Title : ru.Contact.Title}</p>
           <div className="form_content">
             <form className="content_left" action="#">
-              <input type="text" placeholder={lang === 'en' ? en.Contact.InputName : ru.Contact.InputName} name="name" id="name" />
-              <input type="email" placeholder={lang === 'en' ? en.Contact.InputEmail : ru.Contact.InputEmail} name="name" id="name" />
+              <input
+                type="text"
+                placeholder={
+                  lang === "en" ? en.Contact.InputName : ru.Contact.InputName
+                }
+                name="name"
+                id="name"
+              />
+              <input
+                type="email"
+                placeholder={
+                  lang === "en" ? en.Contact.InputEmail : ru.Contact.InputEmail
+                }
+                name="name"
+                id="name"
+              />
               <textarea
                 name="message"
-                placeholder={lang === 'en' ? en.Contact.Message : ru.Contact.Message}
+                placeholder={
+                  lang === "en" ? en.Contact.Message : ru.Contact.Message
+                }
                 cols={30}
                 rows={10}
               ></textarea>
               <button className="btn_component">
-                <span className="btn_component_text">{lang === 'en' ? en.Contact.Send : ru.Contact.Send}</span>
+                <span className="btn_component_text">
+                  {lang === "en" ? en.Contact.Send : ru.Contact.Send}
+                </span>
               </button>
             </form>
 
             <div className="content_right">
               <div className="content_right_links">
                 <div>
-                  <p className="title_links">{lang === 'en' ? en.Contact.Email : ru.Contact.Email}</p>
+                  <p className="title_links">
+                    {lang === "en" ? en.Contact.Email : ru.Contact.Email}
+                  </p>
                   <a href="mailto:imaratgroup@gmail.com">
                     Imaratgroup@gmail.com{" "}
                   </a>
                 </div>
                 <div className="title_links">
-                  <p className="title_links">{lang === 'en' ? en.Contact.Phone : ru.Contact.Phone}</p>
+                  <p className="title_links">
+                    {lang === "en" ? en.Contact.Phone : ru.Contact.Phone}
+                  </p>
                   <a href="tel:+998332202200">+99 833 8808800</a>
                 </div>
                 <div>
-                  <p className="title_links">{lang === 'en' ? en.Contact.Address : ru.Contact.Address}</p>
-                  <a href="/something">{lang === 'en' ? en.Contact.Map : ru.Contact.Map}</a>
+                  <p className="title_links">
+                    {lang === "en" ? en.Contact.Address : ru.Contact.Address}
+                  </p>
+                  <a href="/something">
+                    {lang === "en" ? en.Contact.Map : ru.Contact.Map}
+                  </a>
                 </div>
               </div>
               <span className="seventh_pattern">
