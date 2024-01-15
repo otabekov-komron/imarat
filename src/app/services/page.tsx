@@ -1,18 +1,17 @@
 "use client";
 import Card from "@/components/Card";
-import faq from "@/utils/faq";
 import React, { useEffect, useState } from "react";
-import en from '../../../public/locales/en.json'
-import ru from '../../../public/locales/ru.json'
+import en from "../../../public/locales/en.json";
+import ru from "../../../public/locales/ru.json";
 
 const Services = () => {
   const [expandedIds, setExpandedIds] = useState<number[]>([]);
-  const [lang, setLang] = useState('en')
+  const [lang, setLang] = useState("en");
 
   useEffect(() => {
-    const getLang: any = localStorage.getItem('lang')
-    setLang(getLang)
-  }, [])
+    const getLang: any = localStorage.getItem("lang");
+    setLang(getLang);
+  }, []);
 
   const toggleDescription = (id: number) => {
     if (expandedIds.includes(id)) {
@@ -21,11 +20,49 @@ const Services = () => {
       setExpandedIds([...expandedIds, id]);
     }
   };
+  const FAQ = [
+    {
+      id: 1,
+      title: lang === "en" ? en.FAQ.faq1.Title : ru.FAQ.faq1.Title,
+      desc: lang === "en" ? en.FAQ.faq1.Text : ru.FAQ.faq1.Text,
+    },
+    {
+      id: 2,
+      title: lang === "en" ? en.FAQ.faq2.Title : ru.FAQ.faq2.Title,
+      desc: lang === "en" ? en.FAQ.faq2.Text : ru.FAQ.faq2.Text,
+    },
+    {
+      id: 3,
+      title: lang === "en" ? en.FAQ.faq3.Title : ru.FAQ.faq3.Title,
+      desc: lang === "en" ? en.FAQ.faq3.Text : ru.FAQ.faq3.Text,
+    },
+    {
+      id: 4,
+      title: lang === "en" ? en.FAQ.faq4.Title : ru.FAQ.faq4.Title,
+      desc: lang === "en" ? en.FAQ.faq4.Text : ru.FAQ.faq4.Text,
+    },
+    {
+      id: 5,
+      title: lang === "en" ? en.FAQ.faq5.Title : ru.FAQ.faq5.Title,
+      desc: lang === "en" ? en.FAQ.faq5.Text : ru.FAQ.faq5.Text,
+    },
+    {
+      id: 6,
+      title: lang === "en" ? en.FAQ.faq6.Title : ru.FAQ.faq6.Title,
+      desc: lang === "en" ? en.FAQ.faq6.Text : ru.FAQ.faq6.Text,
+    },
+  ];
   const lists = [
     {
       id: 1,
-      title: lang === 'en' ? en.OurServices.Minimalism.Title : ru.OurServices.Minimalism.Title,
-      desc: lang === 'en' ? en.OurServices.Minimalism.Text : ru.OurServices.Minimalism.Text,
+      title:
+        lang === "en"
+          ? en.OurServices.Minimalism.Title
+          : ru.OurServices.Minimalism.Title,
+      desc:
+        lang === "en"
+          ? en.OurServices.Minimalism.Text
+          : ru.OurServices.Minimalism.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -45,8 +82,14 @@ const Services = () => {
     },
     {
       id: 2,
-      title: lang === 'en' ? en.OurServices.HighTech.Title : ru.OurServices.HighTech.Title,
-      desc: lang === 'en' ? en.OurServices.HighTech.Text : ru.OurServices.HighTech.Text,
+      title:
+        lang === "en"
+          ? en.OurServices.HighTech.Title
+          : ru.OurServices.HighTech.Title,
+      desc:
+        lang === "en"
+          ? en.OurServices.HighTech.Text
+          : ru.OurServices.HighTech.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -79,8 +122,12 @@ const Services = () => {
     },
     {
       id: 3,
-      title: lang === 'en' ? en.OurServices.Modern.Title : ru.OurServices.Modern.Title,
-      desc: lang === 'en' ? en.OurServices.Modern.Text : ru.OurServices.Modern.Text,
+      title:
+        lang === "en"
+          ? en.OurServices.Modern.Title
+          : ru.OurServices.Modern.Title,
+      desc:
+        lang === "en" ? en.OurServices.Modern.Text : ru.OurServices.Modern.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -125,8 +172,14 @@ const Services = () => {
     },
     {
       id: 4,
-      title: lang === 'en' ? en.OurServices.Contemporary.Title : ru.OurServices.Contemporary.Title,
-      desc: lang === 'en' ? en.OurServices.Contemporary.Text : ru.OurServices.Contemporary.Text,
+      title:
+        lang === "en"
+          ? en.OurServices.Contemporary.Title
+          : ru.OurServices.Contemporary.Title,
+      desc:
+        lang === "en"
+          ? en.OurServices.Contemporary.Text
+          : ru.OurServices.Contemporary.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -192,8 +245,14 @@ const Services = () => {
     },
     {
       id: 5,
-      title: lang === 'en' ? en.OurServices.Minimalism.Title : ru.OurServices.Minimalism.Title,
-      desc: lang === 'en' ? en.OurServices.Minimalism.Text : ru.OurServices.Minimalism.Text,
+      title:
+        lang === "en"
+          ? en.OurServices.Minimalism.Title
+          : ru.OurServices.Minimalism.Title,
+      desc:
+        lang === "en"
+          ? en.OurServices.Minimalism.Text
+          : ru.OurServices.Minimalism.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -279,8 +338,14 @@ const Services = () => {
     },
     {
       id: 6,
-      title: lang === 'en' ? en.OurServices.Classical.Title : ru.OurServices.Classical.Title,
-      desc: lang === 'en' ? en.OurServices.Classical.Text : ru.OurServices.Classical.Text,
+      title:
+        lang === "en"
+          ? en.OurServices.Classical.Title
+          : ru.OurServices.Classical.Title,
+      desc:
+        lang === "en"
+          ? en.OurServices.Classical.Text
+          : ru.OurServices.Classical.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -316,7 +381,9 @@ const Services = () => {
     <div className="services">
       <div className="title">
         <span className="title__left"></span>
-        <h2 className="title__content">{lang === 'en' ? "Services" : "Услуги"}</h2>
+        <h2 className="title__content">
+          {lang === "en" ? "Services" : "Услуги"}
+        </h2>
         <span className="title__right"></span>
       </div>
       <div className="wrapper">
@@ -333,11 +400,15 @@ const Services = () => {
       </div>
       <div className="title">
         <span className="title__left"></span>
-        <h2 className="title__content">{lang === 'en' ? "Frequently Asked Questions" : "Часто задаваемые вопросы"}</h2>
+        <h2 className="title__content">
+          {lang === "en"
+            ? "Frequently Asked Questions"
+            : "Часто задаваемые вопросы"}
+        </h2>
         <span className="title__right"></span>
       </div>
       <ul className="list">
-        {faq.map((e) => (
+        {FAQ.map((e) => (
           <li className="list__item" id={`${e.id}`} key={e.id}>
             <div className="list__item-wrapper">
               <div className="list__item-header">
@@ -346,7 +417,13 @@ const Services = () => {
                   onClick={() => toggleDescription(e.id)}
                   className="btn_component"
                 >
-                  {lang === 'en' ? expandedIds.includes(e.id) ? "Hide" : "View more" : expandedIds.includes(e.id) ? "Скрыть" : "Показать"}
+                  {lang === "en"
+                    ? expandedIds.includes(e.id)
+                      ? "Hide"
+                      : "View more"
+                    : expandedIds.includes(e.id)
+                    ? "Скрыть"
+                    : "Показать"}
                 </button>
               </div>
               {expandedIds.includes(e.id) && (
