@@ -6,30 +6,16 @@ import Image from "next/image";
 import { lists } from "@/utils/data";
 import ProjectSwiper from "@/components/ProjectSwiper";
 import TeamSwiper from "@/components/TeamSwiper";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import en from "../../public/locales/en.json";
 import ru from "../../public/locales/ru.json";
 
 export default function Home() {
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const containerRef = useRef();
   const [lang, setLang] = useState("en");
 
   useEffect(() => {
     const getLang: any = localStorage.getItem("lang");
     setLang(getLang);
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const windowHeight = window.innerHeight;
-      const scrollPosition = window.scrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
   const [showFirstDiv, setShowFirstDiv] = useState(true);
@@ -3126,7 +3112,6 @@ export default function Home() {
                     stroke="white"
                     strokeWidth="30"
                     strokeMiterlimit="10"
-                    strokeMiterlimit="round"
                     strokeLinejoin="round"
                   />
                 </svg>

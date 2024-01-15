@@ -2,7 +2,7 @@
 import { group } from "@/assets/images";
 import ProjectsVertical from "@/components/ProjectsVertical";
 import ProjectsVerticalRV from "@/components/ProjectsVerticalRV";
-import TeamCard from "@/components/TeamCard";
+import Team from "@/components/Team";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import en from '../../../public/locales/en.json'
@@ -2143,16 +2143,7 @@ const About = () => {
           <h2 className="title__content">Team members</h2>
           <span className="title__right"></span>
         </div>
-        <div className="second_section_members">
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-        </div>
+        <Team />
       </div>
       <div className="third_section">
         <div className="third_section_projects_done">
@@ -2183,112 +2174,110 @@ const About = () => {
                     d="M40.272 38.8893C40.272 41.3275 38.295 43.3044 35.8566 43.3044C33.4184 43.3044 31.4414 41.3275 31.4414 38.8893C31.4414 36.4509 33.4184 34.4739 35.8566 34.4739C38.295 34.4739 40.272 36.4509 40.272 38.8893Z"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
+                    
                     strokeLinejoin="round"
                   />
                   <path
                     d="M31.4423 38.8893H29.2343C27.7753 38.8893 26.3796 39.4881 25.3744 40.5456L18.9825 47.2694C16.789 49.5768 15.566 52.6384 15.566 55.8219V61.4057L6.01618 83.6898C5.76821 84.268 6.19266 84.9114 6.82149 84.9114H11.7984C12.1315 84.9114 12.4359 84.7225 12.5838 84.4236L23.3641 62.6305C23.5856 62.1833 24.0413 61.9004 24.5402 61.9004H28.0861C28.9711 61.9004 29.602 62.7587 29.3381 63.6034L27.0023 71.0814C26.8259 71.6455 27.2475 72.2188 27.8386 72.2188H32.1734C32.543 72.2188 32.873 71.987 32.9981 71.639L37.3791 59.4515C38.1192 57.3922 36.5934 55.2222 34.4051 55.2222H30.2888C29.4694 55.2222 29.0344 54.2544 29.5784 53.6413L33.2705 49.4828C33.5679 49.1476 33.9947 48.9559 34.4428 48.9559H47.3813C49.3566 48.9559 50.9576 47.3547 50.9576 45.3794C50.9576 43.4045 49.3566 41.8033 47.3813 41.8033H39.5663"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
                     strokeLinejoin="round"
                   />
                   <path
                     d="M56.7358 50.3739C60.6525 50.9402 64.7624 50.5619 68.733 49.0853C81.3864 44.38 87.8296 30.3079 83.1241 17.6542C78.4188 5.00078 64.3464 -1.44242 51.6928 3.26289C41.4295 7.07946 35.2525 17.0584 35.7958 27.4445C35.8164 27.4445 35.8364 27.4427 35.857 27.4427"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
                     strokeLinejoin="round"
                   />
                   <path
                     d="M31.0449 118.275V103.781"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
+                    
                     strokeLinejoin="round"
                   />
                   <path
                     d="M31.0441 96.29V86.5672C31.0441 85.6527 30.303 84.9116 29.3887 84.9116H9.17883C8.26453 84.9116 7.52344 85.6527 7.52344 86.5672V118.275"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
+                    
                     strokeLinejoin="round"
                   />
                   <path
                     d="M69.4619 118.31V77.6805"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
+                    
                     strokeLinejoin="round"
                   />
                   <path
                     d="M69.4621 70.1891V59.9649C69.4621 59.0509 68.7208 58.3093 67.8067 58.3093H47.5968C46.6827 58.3093 45.9414 59.0509 45.9414 59.9649V72.2188"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
+                    
                     strokeLinejoin="round"
                   />
                   <path
                     d="M49.258 118.274V73.8744C49.258 72.9599 48.5169 72.2188 47.6026 72.2188H27.3927C26.4786 72.2188 25.7373 72.9599 25.7373 73.8744V84.9114"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
+                    
                     strokeLinejoin="round"
                   />
                   <path
                     d="M49.258 118.274V73.8744C49.258 72.9599 48.5169 72.2188 47.6026 72.2188H27.3927C26.4786 72.2188 25.7373 72.9599 25.7373 73.8744V84.9114"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
+                    
                     strokeLinejoin="round"
                   />
                   <path
                     d="M90.6503 118.31V41.6158C90.6503 40.7015 89.9092 39.9601 88.9949 39.9601H80.4004"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
+                    
                     strokeLinejoin="round"
                   />
                   <path
                     d="M67.1289 49.6185V58.3093"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
+                    
                     strokeLinejoin="round"
                   />
                   <path
                     d="M114.171 118.31V48.9475"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
+                    
                     strokeLinejoin="round"
                   />
                   <path
                     d="M114.172 41.4559V31.2144C114.172 30.3001 113.431 29.5588 112.517 29.5588H92.3068C91.3927 29.5588 90.6514 30.3001 90.6514 31.2144V118.31"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
+                    
                     strokeLinejoin="round"
                   />
                   <path
                     d="M118.326 118.31H1.72168"
                     stroke="#F0E18F"
                     strokeWidth="3.44727"
-                    stroke-miterlimit="10"
-                    strokeMiterlimit="round"
+                    strokeMiterlimit="10"
+                    
                     strokeLinejoin="round"
                   />
                 </g>

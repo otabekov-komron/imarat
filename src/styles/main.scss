@@ -48,6 +48,10 @@ ul {
         display: flex;
         align-items: center;
         gap: 8px;
+        .lang-btn--active {
+          background-color: $primary-yellow !important;
+          color: $primary-black !important;
+        }
         .lang-btn {
           font-family: "Sans-Medium";
           background: $primary-black-90;

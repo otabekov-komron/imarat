@@ -23,6 +23,16 @@ const Header = () => {
 
   useEffect(() => {
     const getLang: any = localStorage.getItem('lang')
+    if(getLang === 'en') {
+      const enBtn: any = document.querySelector('#en')
+      enBtn.classList.add('lang-btn--active')
+    } else if(getLang === 'ru') {
+      const ruBtn: any = document.querySelector('#ru')
+      ruBtn.classList.add('lang-btn--active')
+    } else {
+      const ruBtn: any = document.querySelector('#ru')
+      ruBtn.classList.add('lang-btn--active')
+    }
     setLang(getLang)
   }, [])
 
@@ -34,7 +44,6 @@ const Header = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

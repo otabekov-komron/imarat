@@ -28,7 +28,7 @@ const Projects = () => {
         const response = await axios.get<Project[]>(
           "https://admin.imaratgroup.uz/api/projects"
         ); // Replace with your API endpoint
-        setProjects(response.data);
+        setProjects(response?.data);
       } catch (error) {
         console.error("Error fetching projects:", error);
       }

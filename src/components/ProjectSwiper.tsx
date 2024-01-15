@@ -25,7 +25,7 @@ const ProjectSwiper = () => {
         const response = await axios.get<[]>(
           "https://admin.imaratgroup.uz/api/projects"
         ); // Replace with your API endpoint
-        setImages(response.data);
+        setImages(response?.data);
       } catch (error) {
         console.error("Error fetching projects:", error);
       }
