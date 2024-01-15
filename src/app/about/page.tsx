@@ -2140,7 +2140,7 @@ const About = () => {
       <div className="second_section">
         <div className="title">
           <span className="title__left"></span>
-          <h2 className="title__content">Team members</h2>
+          <h2 className="title__content">{lang === 'en' ? en.Team.TeamMembers : ru.Team.TeamMembers}</h2>
           <span className="title__right"></span>
         </div>
         <Team />
@@ -2288,7 +2288,7 @@ const About = () => {
                 </clipPath>
               </defs>
             </svg>
-            <p>Projects done</p>
+            <p>{lang === 'en' ? 'Projects done' : 'Завершенные проекты'}</p>
           </div>
           <div className="count">50+</div>
         </div>
