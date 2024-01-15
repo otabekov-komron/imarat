@@ -1,7 +1,9 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import en from '../../public/locales/en.json'
+import ru from '../../public/locales/ru.json'
 
 // Import Swiper styles
 import "swiper/css";
@@ -24,6 +26,11 @@ import {
 
 export default function Gallery({ images }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [lang, setLang] = useState()
+  useEffect(() => {
+    const getLang = localStorage.getItem('lang')
+    setLang(getLang)
+  }, [])
   return (
     <div className="swiper_gallery">
       <Swiper
@@ -69,7 +76,26 @@ export default function Gallery({ images }) {
           <div className="slide_gradient"></div>
           <span className="title_slide">
             {images.slice(0, 1).map((category, index) => (
-              <p key={index}>{category.category}</p>
+              <p key={index}>
+                {(() => {
+                  switch (category.category) {
+                    case 'Bedroom':
+                      return lang === 'en' ? "Bedroom" : "Спальня";
+                    case 'Kitchen':
+                      return lang === 'en' ? "Kitchen" : "Кухня";
+                    case 'Home office':
+                      return lang === 'en' ? "Home office" : "Домашний офис";
+                    case 'Living room':
+                      return lang === 'en' ? "Living room" : "Гостиная";
+                    case 'Dining room':
+                      return lang === 'en' ? "Dining room" : "Столовая";
+                    case 'Bathroom':
+                      return lang === 'en' ? "Bathroom" : "Ванная";
+                    default:
+                      return category.category;
+                  }
+                })()}
+              </p>
             ))}
           </span>
         </SwiperSlide>
