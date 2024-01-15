@@ -9,10 +9,100 @@ import { useEffect, useState } from "react";
 import en from "../../public/locales/en.json";
 import ru from "../../public/locales/ru.json";
 import Link from "next/link";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  
   const [lang, setLang] = useState("en");
+  useEffect(() => {
+    gsap.fromTo(
+      ".imarat_svg", // Replace with the actual CSS selector of your element
+      {
+        x: 800,
+        // Initial translation value
+      },
+      {
+        x: 0,
+        scrollTrigger: {
+          trigger: ".fourth_section", // Replace with the actual CSS selector of your trigger element
+          start: "top center",
+          end: "bottom center",
+          scrub: 1, // Smooth scrolling effect
+        },
+      }
+    );
+    gsap.fromTo(
+      ".left_top", // Replace with the actual CSS selector of your element
+      { x: 0, opacity: 1 }, // Initial translation value
+      {
+        x: -40,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".first_section", // Replace with the actual CSS selector of your container
+          start: "top",
+          end: "bottom center",
+          scrub: 2, // Smooth scrolling effect
+        },
+      }
+    );
+    gsap.fromTo(
+      ".left_bottom_live", // Replace with the actual CSS selector of your element
+      { y: 0, opacity: 1 }, // Initial translation value
+      {
+        y: 40,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".first_section", // Replace with the actual CSS selector of your container
+          start: "top",
+          end: "bottom center",
+          scrub: 2, // Smooth scrolling effect
+        },
+      }
+    );
+    gsap.fromTo(
+      ".left_bottom_360", // Replace with the actual CSS selector of your element
+      { y: 0, opacity: 1 }, // Initial translation value
+      {
+        y: 40,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".first_section", // Replace with the actual CSS selector of your container
+          start: "top",
+          end: "bottom center",
+          scrub: 2, // Smooth scrolling effect
+        },
+      }
+    );
+    gsap.fromTo(
+      ".swiper", // Replace with the actual CSS selector of your element
+      { x: 0, opacity: 1 }, // Initial translation value
+      {
+        x: 40,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".first_section", // Replace with the actual CSS selector of your container
+          start: "top",
+          end: "bottom center",
+          scrub: 2, // Smooth scrolling effect
+        },
+      }
+    );
+    gsap.fromTo(
+      ".first_section_text", // Replace with the actual CSS selector of your element
+      { y: 0, opacity: 1 }, // Initial translation value
+      {
+        y: 40,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".first_section", // Replace with the actual CSS selector of your container
+          start: "top",
+          end: "bottom center",
+          scrub: 2, // Smooth scrolling effect
+        },
+      }
+    );
+  }, []);
 
   useEffect(() => {
     const getLang: any = localStorage.getItem("lang");
@@ -26,8 +116,14 @@ export default function Home() {
   const lists = [
     {
       id: 1,
-      title: lang === 'en' ? en.OurServices.Minimalism.Title : ru.OurServices.Minimalism.Title,
-      desc: lang === 'en' ? en.OurServices.Minimalism.Text : ru.OurServices.Minimalism.Text,
+      title:
+        lang === "en"
+          ? en.OurServices.Minimalism.Title
+          : ru.OurServices.Minimalism.Title,
+      desc:
+        lang === "en"
+          ? en.OurServices.Minimalism.Text
+          : ru.OurServices.Minimalism.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -47,8 +143,14 @@ export default function Home() {
     },
     {
       id: 2,
-      title: lang === 'en' ? en.OurServices.HighTech.Title : ru.OurServices.HighTech.Title,
-      desc: lang === 'en' ? en.OurServices.HighTech.Text : ru.OurServices.HighTech.Text,
+      title:
+        lang === "en"
+          ? en.OurServices.HighTech.Title
+          : ru.OurServices.HighTech.Title,
+      desc:
+        lang === "en"
+          ? en.OurServices.HighTech.Text
+          : ru.OurServices.HighTech.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -81,8 +183,12 @@ export default function Home() {
     },
     {
       id: 3,
-      title: lang === 'en' ? en.OurServices.Modern.Title : ru.OurServices.Modern.Title,
-      desc: lang === 'en' ? en.OurServices.Modern.Text : ru.OurServices.Modern.Text,
+      title:
+        lang === "en"
+          ? en.OurServices.Modern.Title
+          : ru.OurServices.Modern.Title,
+      desc:
+        lang === "en" ? en.OurServices.Modern.Text : ru.OurServices.Modern.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -127,8 +233,14 @@ export default function Home() {
     },
     {
       id: 4,
-      title: lang === 'en' ? en.OurServices.Contemporary.Title : ru.OurServices.Contemporary.Title,
-      desc: lang === 'en' ? en.OurServices.Contemporary.Text : ru.OurServices.Contemporary.Text,
+      title:
+        lang === "en"
+          ? en.OurServices.Contemporary.Title
+          : ru.OurServices.Contemporary.Title,
+      desc:
+        lang === "en"
+          ? en.OurServices.Contemporary.Text
+          : ru.OurServices.Contemporary.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -194,8 +306,14 @@ export default function Home() {
     },
     {
       id: 5,
-      title: lang === 'en' ? en.OurServices.Minimalism.Title : ru.OurServices.Minimalism.Title,
-      desc: lang === 'en' ? en.OurServices.Minimalism.Text : ru.OurServices.Minimalism.Text,
+      title:
+        lang === "en"
+          ? en.OurServices.Minimalism.Title
+          : ru.OurServices.Minimalism.Title,
+      desc:
+        lang === "en"
+          ? en.OurServices.Minimalism.Text
+          : ru.OurServices.Minimalism.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -281,8 +399,14 @@ export default function Home() {
     },
     {
       id: 6,
-      title: lang === 'en' ? en.OurServices.Classical.Title : ru.OurServices.Classical.Title,
-      desc: lang === 'en' ? en.OurServices.Classical.Text : ru.OurServices.Classical.Text,
+      title:
+        lang === "en"
+          ? en.OurServices.Classical.Title
+          : ru.OurServices.Classical.Title,
+      desc:
+        lang === "en"
+          ? en.OurServices.Classical.Text
+          : ru.OurServices.Classical.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -313,9 +437,10 @@ export default function Home() {
       ),
     },
   ];
+
   return (
     <div className="home">
-      <section className="first_section">
+      <section className="first_section ">
         <div className="first_section_container">
           <div className="first_section_container_left">
             <div className="left_top">
@@ -325,7 +450,7 @@ export default function Home() {
               <p className="left_top_desc">
                 {lang === "en" ? en.Hero.Text : ru.Hero.Text}
               </p>
-              <button className="left_top_btn">
+              <Link href={"/contacts"} className="left_top_btn">
                 <span>{lang === "en" ? en.Hero.Connect : ru.Hero.Connect}</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -358,7 +483,7 @@ export default function Home() {
                     </clipPath>
                   </defs>
                 </svg>
-              </button>
+              </Link>
             </div>
             <div className="left_bottom">
               <div className="left_bottom_live">
@@ -432,6 +557,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+
           <SwiperComponent />
         </div>
         <div className="first_section_text">
@@ -483,9 +609,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="second_section">
+      <section className="second_section ">
         <div className="second_section_left">
-          <p className="second_section_left_title">{lang === 'en' ? en.About.Title : ru.About.Title}</p>
+          <p className="second_section_left_title">
+            {lang === "en" ? en.About.Title : ru.About.Title}
+          </p>
           <span className="left_quote">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -505,7 +633,7 @@ export default function Home() {
             </svg>
           </span>
           <p className="second_section_left_desc">
-            {lang === 'en' ? en.About.Text : ru.About.Text}
+            {lang === "en" ? en.About.Text : ru.About.Text}
           </p>
         </div>
         <div className="second_section_right">
@@ -3084,7 +3212,7 @@ export default function Home() {
           </div>
           <div className="blur_content">
             <div className="second_section_right_blur">
-              {lang === 'en' ? en.About.Team : ru.About.Team}
+              {lang === "en" ? en.About.Team : ru.About.Team}
             </div>
             <p className="second_section_right_count">30+</p>
           </div>
@@ -3299,7 +3427,7 @@ export default function Home() {
               {lang === "en" ? en.OurServices.Title : ru.OurServices.Title}
             </h1>
             <p>{lang === "en" ? en.OurServices.Text : ru.OurServices.Text}</p>
-            <Link href={'/services'} className="btn_component">
+            <Link href={"/services"} className="btn_component">
               <span className="btn_component_text">
                 {lang === "en"
                   ? en.OurServices.LearnMore

@@ -4,6 +4,7 @@
   .home {
     display: flex;
     flex-direction: column;
+    overflow: clip;
     .first_section {
       padding: 1% 6%;
       background-color: $primary-black;
@@ -20,7 +21,6 @@
             padding: 50px;
             border-radius: 20px;
             background-color: $primary-yellow;
-
             -webkit-border-radius: 20px;
             -moz-border-radius: 20px;
             -ms-border-radius: 20px;
@@ -44,6 +44,7 @@
             .left_top_btn {
               background: $primary-yellow-70;
               font-family: "Sans-Regular";
+              width: fit-content;
               font-weight: 400;
               border: none;
               outline: none;
@@ -62,6 +63,25 @@
               -moz-border-radius: 20px;
               -ms-border-radius: 20px;
               -o-border-radius: 20px;
+              transition: all 0.7s ease-in-out;
+              -webkit-transition: all 0.7s ease-in-out;
+              -moz-transition: all 0.7s ease-in-out;
+              -ms-transition: all 0.7s ease-in-out;
+              -o-transition: all 0.7s ease-in-out;
+              &:hover {
+                cursor: pointer;
+                background-color: $primary-black;
+                span {
+                  color: $primary-yellow;
+                }
+                svg {
+                  g {
+                    path {
+                      fill: $primary-yellow;
+                    }
+                  }
+                }
+              }
             }
           }
           .left_bottom {
@@ -322,7 +342,6 @@
       margin: 6%;
       padding: 45px;
       position: relative;
-      height: 100%;
       border-radius: 40px;
       background: #e5e5e5;
       .fourth_section_container {
@@ -653,16 +672,10 @@
     top: 45%;
   }
   .imarat_svg {
-    object-fit: cover;
     display: flex;
     justify-content: flex-end;
     position: sticky;
     top: 10%;
     margin-top: 10%;
-    transition: all ease-in-out 1.5s;
-    -webkit-transition: all ease-in-out 1.5s;
-    -moz-transition: all ease-in-out 1.5s;
-    -ms-transition: all ease-in-out 1.5s;
-    -o-transition: all ease-in-out 1.5s;
   }
 }
