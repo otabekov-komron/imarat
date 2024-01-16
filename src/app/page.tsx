@@ -11,6 +11,7 @@ import ru from "../../public/locales/ru.json";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import sendForm from '@/utils/sendForm';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -583,6 +584,14 @@ export default function Home() {
     },
   ];
 
+  function sendOrder (e: any) {
+    e.preventDefault()
+    const userName = document.querySelector('#userName')
+    const userEmail = document.querySelector('#userEmail')
+    const userMessage = document.querySelector('#userMessage')
+    sendForm(userName.value, userEmail.value, userMessage.value)
+  }
+
   return (
 
   <div className="home">
@@ -777,9 +786,8 @@ export default function Home() {
             />
           </svg>
         </span>
-        <p className="second_section_left_desc">
-          {lang === "en" ? en.About.Text : ru.About.Text}
-        </p>
+          <p className="second_section_left_desc">{lang === "en" ? en.About.FirstText : ru.About.FirstText}</p>
+          <p className="second_section_left_desc">{lang === "en" ? en.About.SecondText : ru.About.SecondText}</p>
       </div>
       <div className="second_section_right">
         <span className="second_section_right_texture">
@@ -3857,14 +3865,14 @@ export default function Home() {
       <div className="seventh_section_content">
         <p>{lang === "en" ? en.Contact.Title : ru.Contact.Title}</p>
         <div className="form_content">
-          <form className="content_left" action="#">
+          <form onSubmit={sendOrder} className="content_left" action="#">
             <input
               type="text"
               placeholder={
                 lang === "en" ? en.Contact.InputName : ru.Contact.InputName
               }
               name="name"
-              id="name"
+              id="userName"
             />
             <input
               type="email"
@@ -3872,7 +3880,7 @@ export default function Home() {
                 lang === "en" ? en.Contact.InputEmail : ru.Contact.InputEmail
               }
               name="name"
-              id="name"
+              id="userEmail"
             />
             <textarea
               name="message"
@@ -3881,8 +3889,9 @@ export default function Home() {
               }
               cols={30}
               rows={10}
+              id="userMessage"
             ></textarea>
-            <button className="btn_component">
+            <button onClick={sendOrder} className="btn_component">
               <span className="btn_component_text">
                 {lang === "en" ? en.Contact.Send : ru.Contact.Send}
               </span>

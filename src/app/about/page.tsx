@@ -2078,8 +2078,15 @@ const About = () => {
             </span>
             <p>
               {lang === "en"
-                ? `${en.About.Title} ${en.About.OurTeam}`
-                : `${ru.About.Title} ${ru.About.OurTeam}`}
+                ? en.About.Title
+                : ru.About.Title
+              }
+            </p>
+            <p>
+            {lang === "en"
+                ? en.About.OurTeam
+                : ru.About.OurTeam
+            }
             </p>
           </div>
           <div className="top_right">
@@ -2122,7 +2129,8 @@ const About = () => {
                     />
                   </svg>
                 </span>
-                <p>{lang === "en" ? en.About.Text : ru.About.Text}</p>
+                <p>{lang === "en" ? en.About.FirstText : ru.About.FirstText}</p>
+                <p>{lang === "en" ? en.About.SecondText : ru.About.SecondText}</p>
               </div>
             </div>
           </div>
