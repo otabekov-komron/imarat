@@ -1,95 +1,120 @@
-'use client'
+"use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import en from "../../public/locales/en.json"
-import ru from "../../public/locales/ru.json"
+import en from "../../public/locales/en.json";
+import ru from "../../public/locales/ru.json";
 
 const Footer = () => {
-  const [lang, setLang] = useState('en')
+  const [lang, setLang] = useState("en");
 
   useEffect(() => {
-    const getLang: any = localStorage.getItem('lang')
-    setLang(getLang)
-  }, [])
+    const getLang: any = localStorage.getItem("lang");
+    setLang(getLang);
+  }, []);
   const links = [
     {
       navigation: [
         {
           id: 0,
-          name: lang === 'en' ? "Home" : "Главная страница",
+          name: lang === "en" ? "Home" : "Главная страница",
           url: "/",
         },
         {
           id: 1,
-          name: lang === 'en' ? en.NavBar.About : ru.NavBar.About,
+          name: lang === "en" ? en.NavBar.About : ru.NavBar.About,
           url: "/about",
         },
         {
           id: 2,
-          name: lang === 'en' ? en.NavBar.Services : ru.NavBar.Services,
+          name: lang === "en" ? en.NavBar.Services : ru.NavBar.Services,
           url: "/services",
         },
         {
           id: 3,
-          name: lang === 'en' ? en.NavBar.Projects : ru.NavBar.Projects,
+          name: lang === "en" ? en.NavBar.Projects : ru.NavBar.Projects,
           url: "/projects",
         },
         {
           id: 4,
-          name: lang === 'en' ? en.NavBar.News : ru.NavBar.News,
+          name: lang === "en" ? en.NavBar.News : ru.NavBar.News,
           url: "/news",
         },
         {
           id: 5,
-          name: lang === 'en' ? en.NavBar.Contacts : ru.NavBar.Contacts,
+          name: lang === "en" ? en.NavBar.Contacts : ru.NavBar.Contacts,
           url: "/contact",
         },
       ],
       services: [
         {
           id: 0,
-          name: lang === 'en' ? en.Footer.Services.Neoclassicism : ru.Footer.Services.Neoclassicism,
-          url: "/",
+          name:
+            lang === "en"
+              ? en.Footer.Services.Neoclassicism
+              : ru.Footer.Services.Neoclassicism,
+          url: "/services",
         },
         {
           id: 1,
-          name: lang === 'en' ? en.Footer.Services.Minimalism : ru.Footer.Services.Minimalism,
-          url: "/about",
+          name:
+            lang === "en"
+              ? en.Footer.Services.Minimalism
+              : ru.Footer.Services.Minimalism,
+          url: "/services",
         },
         {
           id: 2,
-          name: lang === 'en' ? en.Footer.Services.HighTech : ru.Footer.Services.HighTech,
+          name:
+            lang === "en"
+              ? en.Footer.Services.HighTech
+              : ru.Footer.Services.HighTech,
           url: "/services",
         },
         {
           id: 3,
-          name: lang === 'en' ? en.Footer.Services.Modern : ru.Footer.Services.Modern,
-          url: "/projects",
+          name:
+            lang === "en"
+              ? en.Footer.Services.Modern
+              : ru.Footer.Services.Modern,
+          url: "/services",
         },
         {
           id: 4,
-          name: lang === 'en' ? en.Footer.Services.Contemporary : ru.Footer.Services.Contemporary,
-          url: "/news",
+          name:
+            lang === "en"
+              ? en.Footer.Services.Contemporary
+              : ru.Footer.Services.Contemporary,
+          url: "/services",
         },
         {
           id: 5,
-          name: lang === 'en' ? en.Footer.Services.Classical : ru.Footer.Services.Classical,
-          url: "/contact",
+          name:
+            lang === "en"
+              ? en.Footer.Services.Classical
+              : ru.Footer.Services.Classical,
+          url: "/services",
         },
         {
           id: 6,
-          name: lang === 'en' ? en.Footer.Services.VersaceStyle : ru.Footer.Services.VersaceStyle,
-          url: "/contact",
+          name:
+            lang === "en"
+              ? en.Footer.Services.VersaceStyle
+              : ru.Footer.Services.VersaceStyle,
+          url: "/services",
         },
         {
           id: 7,
-          name: lang === 'en' ? en.Footer.Services.Loft : ru.Footer.Services.Loft,
-          url: "/contact",
+          name:
+            lang === "en" ? en.Footer.Services.Loft : ru.Footer.Services.Loft,
+          url: "/services",
         },
         {
           id: 8,
-          name: lang === 'en' ? en.Footer.Services.Baroque : ru.Footer.Services.Baroque,
-          url: "/contact",
+          name:
+            lang === "en"
+              ? en.Footer.Services.Baroque
+              : ru.Footer.Services.Baroque,
+          url: "/services",
         },
       ],
     },
@@ -98,7 +123,9 @@ const Footer = () => {
     <div className="footer">
       <div className="footer_columns">
         <div className="footer_columns_navigation">
-          <span>{lang === 'en' ? en.Footer.Navigations : ru.Footer.Navigations}</span>
+          <span>
+            {lang === "en" ? en.Footer.Navigations : ru.Footer.Navigations}
+          </span>
           <div className="navigation_list">
             {links[0].navigation.map((link) => (
               <Link key={link.id} href={link.url}>
@@ -108,71 +135,76 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer_columns_services">
-          <span>{lang === 'en' ? en.Footer.Services.Title : ru.Footer.Services.Title}</span>
+          <span>
+            {lang === "en"
+              ? en.Footer.Services.Title
+              : ru.Footer.Services.Title}
+          </span>
           <div className="navigation_list">
             {links[0].services.map((link) => (
-                <Link key={link.id} href={link.url}>{link.name}</Link>
-              
+              <Link key={link.id} href={link.url}>
+                {link.name}
+              </Link>
             ))}
           </div>
         </div>
         <div className="footer_columns_contact">
-          <span>{ lang === 'en' ? en.Footer.Contact : ru.Footer.Contact }</span>
+          <span>{lang === "en" ? en.Footer.Contact : ru.Footer.Contact}</span>
           <a href="mailto:imaratgroup@gmail.com">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 14 14"
-                fill="none"
-              >
-                <g clipPath="url(#clip0_626_304)">
-                  <g opacity="0.64">
-                    <path
-                      d="M6.97388 0.333008C3.30356 0.333008 0.333252 3.30306 0.333252 6.97363C0.333252 10.6167 3.27661 13.6663 6.97388 13.6663C10.6365 13.6663 13.6666 10.6477 13.6666 6.97363C13.6666 3.27233 10.613 0.333008 6.97388 0.333008ZM6.97388 12.8903C3.74302 12.8903 1.10929 10.2332 1.10929 6.97363C1.10929 3.74277 3.74302 1.10905 6.97388 1.10905C10.2335 1.10905 12.8905 3.74277 12.8905 6.97363C12.8905 10.2332 10.2335 12.8903 6.97388 12.8903Z"
-                      fill="white"
-                    />
-                  </g>
-                  <g opacity="0.64">
-                    <path
-                      d="M6.97388 2.67676C4.60458 2.67676 2.677 4.60434 2.677 6.97363C2.677 9.35184 4.60062 11.3226 6.97388 11.3226C7.93414 11.3226 8.90552 10.9999 9.63895 10.4371C9.81013 10.3058 9.84242 10.0606 9.71109 9.88944C9.57976 9.71827 9.33453 9.68598 9.16338 9.8173C8.56367 10.2774 7.76562 10.5465 6.97388 10.5465C5.03536 10.5465 3.45825 8.94087 3.45825 6.97363C3.45825 5.03512 5.03536 3.4528 6.97388 3.4528C8.94112 3.4528 10.5416 5.03512 10.5416 6.97363V7.36426C10.5416 7.79504 10.1911 8.14551 9.76033 8.14551C9.32955 8.14551 8.97908 7.79504 8.97908 7.36426C8.97908 7.17077 8.97908 5.6152 8.97908 5.41113C8.97908 5.1954 8.80419 5.02051 8.58846 5.02051C8.37273 5.02051 8.19783 5.1954 8.19783 5.41113V5.4359C7.84507 5.16691 7.41836 5.02051 6.97388 5.02051C5.89692 5.02051 5.02075 5.89668 5.02075 6.97363C5.02075 8.05059 5.89692 8.92676 6.97388 8.92676C7.55781 8.92676 8.0952 8.67618 8.47739 8.25457C8.75989 8.6604 9.22948 8.92676 9.76033 8.92676C10.6219 8.92676 11.3228 8.22582 11.3228 7.36426V6.97363C11.3228 4.59723 9.34914 2.67676 6.97388 2.67676ZM6.97388 8.15072C6.3277 8.15072 5.802 7.6198 5.802 6.97363C5.802 6.32746 6.3277 5.79655 6.97388 5.79655C7.63734 5.79655 8.19783 6.3384 8.19783 6.97363C8.19783 7.60887 7.63734 8.15072 6.97388 8.15072Z"
-                      fill="white"
-                    />
-                  </g>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 14 14"
+              fill="none"
+            >
+              <g clipPath="url(#clip0_626_304)">
+                <g opacity="0.64">
+                  <path
+                    d="M6.97388 0.333008C3.30356 0.333008 0.333252 3.30306 0.333252 6.97363C0.333252 10.6167 3.27661 13.6663 6.97388 13.6663C10.6365 13.6663 13.6666 10.6477 13.6666 6.97363C13.6666 3.27233 10.613 0.333008 6.97388 0.333008ZM6.97388 12.8903C3.74302 12.8903 1.10929 10.2332 1.10929 6.97363C1.10929 3.74277 3.74302 1.10905 6.97388 1.10905C10.2335 1.10905 12.8905 3.74277 12.8905 6.97363C12.8905 10.2332 10.2335 12.8903 6.97388 12.8903Z"
+                    fill="white"
+                  />
                 </g>
-                <defs>
-                  <clipPath id="clip0_626_304">
-                    <rect
-                      width="13.3333"
-                      height="13.3333"
-                      fill="white"
-                      transform="translate(0.333252 0.333008)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
+                <g opacity="0.64">
+                  <path
+                    d="M6.97388 2.67676C4.60458 2.67676 2.677 4.60434 2.677 6.97363C2.677 9.35184 4.60062 11.3226 6.97388 11.3226C7.93414 11.3226 8.90552 10.9999 9.63895 10.4371C9.81013 10.3058 9.84242 10.0606 9.71109 9.88944C9.57976 9.71827 9.33453 9.68598 9.16338 9.8173C8.56367 10.2774 7.76562 10.5465 6.97388 10.5465C5.03536 10.5465 3.45825 8.94087 3.45825 6.97363C3.45825 5.03512 5.03536 3.4528 6.97388 3.4528C8.94112 3.4528 10.5416 5.03512 10.5416 6.97363V7.36426C10.5416 7.79504 10.1911 8.14551 9.76033 8.14551C9.32955 8.14551 8.97908 7.79504 8.97908 7.36426C8.97908 7.17077 8.97908 5.6152 8.97908 5.41113C8.97908 5.1954 8.80419 5.02051 8.58846 5.02051C8.37273 5.02051 8.19783 5.1954 8.19783 5.41113V5.4359C7.84507 5.16691 7.41836 5.02051 6.97388 5.02051C5.89692 5.02051 5.02075 5.89668 5.02075 6.97363C5.02075 8.05059 5.89692 8.92676 6.97388 8.92676C7.55781 8.92676 8.0952 8.67618 8.47739 8.25457C8.75989 8.6604 9.22948 8.92676 9.76033 8.92676C10.6219 8.92676 11.3228 8.22582 11.3228 7.36426V6.97363C11.3228 4.59723 9.34914 2.67676 6.97388 2.67676ZM6.97388 8.15072C6.3277 8.15072 5.802 7.6198 5.802 6.97363C5.802 6.32746 6.3277 5.79655 6.97388 5.79655C7.63734 5.79655 8.19783 6.3384 8.19783 6.97363C8.19783 7.60887 7.63734 8.15072 6.97388 8.15072Z"
+                    fill="white"
+                  />
+                </g>
+              </g>
+              <defs>
+                <clipPath id="clip0_626_304">
+                  <rect
+                    width="13.3333"
+                    height="13.3333"
+                    fill="white"
+                    transform="translate(0.333252 0.333008)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
             Imaratgroup@gmail.com
           </a>
           <a href="tel:+998338808800">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 15 15"
-                fill="none"
-              >
-                <g opacity="0.64">
-                  <path
-                    d="M13.7593 11.2016C13.7593 11.4216 13.7104 11.6477 13.6065 11.8677C13.5026 12.0877 13.3682 12.2955 13.191 12.4911C12.8915 12.8211 12.5615 13.0594 12.1888 13.2122C11.8221 13.3649 11.4249 13.4444 10.9971 13.4444C10.3738 13.4444 9.70764 13.2977 9.00486 12.9983C8.30209 12.6988 7.59931 12.2955 6.90264 11.7883C6.19986 11.2749 5.53375 10.7066 4.8982 10.0772C4.26875 9.44161 3.70042 8.7755 3.1932 8.07883C2.69209 7.38217 2.28875 6.6855 1.99542 5.99495C1.70209 5.29828 1.55542 4.63217 1.55542 3.99661C1.55542 3.58106 1.62875 3.18383 1.77542 2.81717C1.92209 2.44439 2.15431 2.10217 2.4782 1.79661C2.86931 1.41161 3.29709 1.22217 3.74931 1.22217C3.92042 1.22217 4.09153 1.25883 4.24431 1.33217C4.4032 1.4055 4.54375 1.5155 4.65375 1.67439L6.07153 3.67272C6.18153 3.8255 6.26098 3.96606 6.31598 4.1005C6.37098 4.22883 6.40153 4.35717 6.40153 4.47328C6.40153 4.61995 6.35875 4.76661 6.2732 4.90717C6.19375 5.04772 6.07764 5.19439 5.93098 5.34106L5.46653 5.82383C5.39931 5.89106 5.36875 5.9705 5.36875 6.06828C5.36875 6.11717 5.37486 6.15995 5.38709 6.20883C5.40542 6.25772 5.42375 6.29439 5.43598 6.33106C5.54598 6.53272 5.73542 6.7955 6.00431 7.11328C6.27931 7.43106 6.57264 7.75495 6.89042 8.07883C7.22042 8.40272 7.5382 8.70217 7.86209 8.97717C8.17986 9.24606 8.44264 9.42939 8.65042 9.53939C8.68098 9.55161 8.71764 9.56994 8.76042 9.58828C8.80931 9.60661 8.8582 9.61272 8.9132 9.61272C9.01709 9.61272 9.09653 9.57606 9.16375 9.50883L9.6282 9.0505C9.78098 8.89772 9.92764 8.78161 10.0682 8.70828C10.2088 8.62272 10.3493 8.57994 10.5021 8.57994C10.6182 8.57994 10.7404 8.60439 10.8749 8.65939C11.0093 8.71439 11.1499 8.79383 11.3026 8.89772L13.3254 10.3338C13.4843 10.4438 13.5943 10.5722 13.6615 10.7249C13.7226 10.8777 13.7593 11.0305 13.7593 11.2016Z"
-                    stroke="white"
-                    strokeMiterlimit="10"
-                  />
-                </g>
-              </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 15 15"
+              fill="none"
+            >
+              <g opacity="0.64">
+                <path
+                  d="M13.7593 11.2016C13.7593 11.4216 13.7104 11.6477 13.6065 11.8677C13.5026 12.0877 13.3682 12.2955 13.191 12.4911C12.8915 12.8211 12.5615 13.0594 12.1888 13.2122C11.8221 13.3649 11.4249 13.4444 10.9971 13.4444C10.3738 13.4444 9.70764 13.2977 9.00486 12.9983C8.30209 12.6988 7.59931 12.2955 6.90264 11.7883C6.19986 11.2749 5.53375 10.7066 4.8982 10.0772C4.26875 9.44161 3.70042 8.7755 3.1932 8.07883C2.69209 7.38217 2.28875 6.6855 1.99542 5.99495C1.70209 5.29828 1.55542 4.63217 1.55542 3.99661C1.55542 3.58106 1.62875 3.18383 1.77542 2.81717C1.92209 2.44439 2.15431 2.10217 2.4782 1.79661C2.86931 1.41161 3.29709 1.22217 3.74931 1.22217C3.92042 1.22217 4.09153 1.25883 4.24431 1.33217C4.4032 1.4055 4.54375 1.5155 4.65375 1.67439L6.07153 3.67272C6.18153 3.8255 6.26098 3.96606 6.31598 4.1005C6.37098 4.22883 6.40153 4.35717 6.40153 4.47328C6.40153 4.61995 6.35875 4.76661 6.2732 4.90717C6.19375 5.04772 6.07764 5.19439 5.93098 5.34106L5.46653 5.82383C5.39931 5.89106 5.36875 5.9705 5.36875 6.06828C5.36875 6.11717 5.37486 6.15995 5.38709 6.20883C5.40542 6.25772 5.42375 6.29439 5.43598 6.33106C5.54598 6.53272 5.73542 6.7955 6.00431 7.11328C6.27931 7.43106 6.57264 7.75495 6.89042 8.07883C7.22042 8.40272 7.5382 8.70217 7.86209 8.97717C8.17986 9.24606 8.44264 9.42939 8.65042 9.53939C8.68098 9.55161 8.71764 9.56994 8.76042 9.58828C8.80931 9.60661 8.8582 9.61272 8.9132 9.61272C9.01709 9.61272 9.09653 9.57606 9.16375 9.50883L9.6282 9.0505C9.78098 8.89772 9.92764 8.78161 10.0682 8.70828C10.2088 8.62272 10.3493 8.57994 10.5021 8.57994C10.6182 8.57994 10.7404 8.60439 10.8749 8.65939C11.0093 8.71439 11.1499 8.79383 11.3026 8.89772L13.3254 10.3338C13.4843 10.4438 13.5943 10.5722 13.6615 10.7249C13.7226 10.8777 13.7593 11.0305 13.7593 11.2016Z"
+                  stroke="white"
+                  strokeMiterlimit="10"
+                />
+              </g>
+            </svg>
             +998 33 8808800
           </a>
-          <a href="/something">
-            
+          <div>
+            <a href="/something">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -193,11 +225,12 @@ const Footer = () => {
                   fill="#ffffff8f"
                 />
               </svg>
-            <p>{lang === 'en' ? en.Footer.Map : ru.Footer.Map}</p>
-            {/* <a className="map" href="/something">
+              <p>{lang === "en" ? en.Footer.Map : ru.Footer.Map}</p>
+            </a>
+            <a className="map" href="/something">
               map
-            </a> */}
-          </a>
+            </a>
+          </div>
           <div>
             <a href="/something">
               <svg
@@ -272,7 +305,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer_text">
-        <p>{lang === 'en' ? en.Footer.Since : ru.Footer.Since}</p>
+        <p>{lang === "en" ? en.Footer.Since : ru.Footer.Since}</p>
+        <div className="hypernova_logo"></div>
       </div>
     </div>
   );

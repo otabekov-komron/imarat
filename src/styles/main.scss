@@ -6,7 +6,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  // cursor: none;
+  cursor: none;
   font-family: "Sans-Regular";
 }
 body{
@@ -442,10 +442,28 @@ ul {
     }
     .footer_text {
       width: 100%;
-      justify-content: flex-end;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
       font-size: 12px;
       padding: 44px 0;
+      .hypernova_logo {
+        background-image: url("../assets/images/hypernova.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        height: 62px;
+        width: 101px;
+        &:hover {
+          background-image: url("../assets/images/hypernova.gif");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          cursor: pointer;
+          height: 62px;
+          width: 101px;
+        }
+      }
     }
   }
 
@@ -661,16 +679,17 @@ ul {
     }
   }
   .team_card {
+    height: 500px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5%;
-    margin-bottom: 35%;
+    margin-bottom: 55%;
     &:hover {
       .team_card_desc {
         opacity: 1;
       }
       .team_card_img {
-        height: 200%;
         box-shadow: -1px 1px 112px 46px rgba(61, 61, 61, 0.7);
         -webkit-box-shadow: -1px 1px 112px 46px rgba(61, 61, 61, 0.7);
         -moz-box-shadow: -1px 1px 112px 46px rgba(61, 61, 61, 0.7);
@@ -680,7 +699,7 @@ ul {
     .team_card_img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       padding: 40px 0 0 0;
       border-radius: 40px;
       background-color: $primary-black-90;

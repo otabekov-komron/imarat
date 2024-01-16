@@ -50,7 +50,7 @@ const ProjectSwiper = () => {
         prevEl: ".sw-button-prev",
       }}
       modules={[Navigation, Autoplay]}
-      className="mySwiper"
+      className="projectSwiper"
     >
       <SwiperSlide
         className="sw-slide"
