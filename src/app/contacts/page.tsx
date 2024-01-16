@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import en from "../../../public/locales/en.json";
 import ru from "../../../public/locales/ru.json";
+import sendForm from '@/utils/sendForm'
 
 const Contacts = () => {
   const [lang, setLang] = useState();
@@ -9,17 +10,25 @@ const Contacts = () => {
     const getLang: any = localStorage.getItem("lang");
     setLang(getLang);
   }, []);
+  function sendOrder (e: any) {
+    e.preventDefault()
+    const userName = document.querySelector('#userName')
+    const userEmail = document.querySelector('#userEmail')
+    const userMessage = document.querySelector('#userMessage')
+    sendForm(userName.value, userEmail.value, userMessage.value)
+  }
   return (
     <div className="contacts">
       <div className="contacts_container">
         <div className="contacts_details">
-          <form action="">
+          <form onSubmit={sendOrder} action="">
             <p>{lang === "en" ? en.Contact.Title : ru.Contact.Title}</p>
             <input
               placeholder={
                 lang === "en" ? en.Contact.InputName : ru.Contact.InputName
               }
               type="text"
+              id="userName"
             />
             <input
               placeholder={
@@ -27,19 +36,19 @@ const Contacts = () => {
               }
               type="email"
               name=""
-              id=""
+              id="userEmail"
             />
             <textarea
               placeholder={
                 lang === "en" ? en.Contact.Message : ru.Contact.Message
               }
               name=""
-              id=""
+              id="userMessage"
               cols={30}
               rows={10}
             ></textarea>
             <span className="form_btn">
-              <button className="btn_component">
+              <button onClick={sendOrder} className="btn_component">
                 {lang === "en" ? en.Contact.Send : ru.Contact.Send}
               </button>
             </span>

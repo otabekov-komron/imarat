@@ -11,6 +11,7 @@ import ru from "../../public/locales/ru.json";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import sendForm from '@/utils/sendForm';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -583,6 +584,14 @@ export default function Home() {
     },
   ];
 
+  function sendOrder (e: any) {
+    e.preventDefault()
+    const userName = document.querySelector('#userName')
+    const userEmail = document.querySelector('#userEmail')
+    const userMessage = document.querySelector('#userMessage')
+    sendForm(userName.value, userEmail.value, userMessage.value)
+  }
+
   return (
     <div className="home">
       <section className="first_section">
@@ -780,7 +789,10 @@ export default function Home() {
             </svg>
           </span>
           <p className="second_section_left_desc">
-            {lang === "en" ? en.About.Text : ru.About.Text}
+            {lang === "en" ? en.About.FirstText : ru.About.FirstText}
+          </p>
+          <p className="second_section_left_desc">
+            {lang === "en" ? en.About.SecondText : ru.About.SecondText}
           </p>
         </div>
         <div className="second_section_right">
