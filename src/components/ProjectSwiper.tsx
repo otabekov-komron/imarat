@@ -40,6 +40,23 @@ const ProjectSwiper = () => {
   }, []);
   return (
     <Swiper
+      breakpoints={{
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            slideToClickedSlide: true,
+        },
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            slideToClickedSlide: true,
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            slideToClickedSlide: true,
+          }
+      }}
       slidesPerView={5.4}
       spaceBetween={50}
       loop={true}

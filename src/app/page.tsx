@@ -3659,7 +3659,7 @@ export default function Home() {
             <span className="btn_component_text">
               {lang === "en" ? en.Projects.LearnMore : ru.Projects.LearnMore}
             </span>
-            <span>
+            {/* <span> */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="36"
@@ -3672,7 +3672,7 @@ export default function Home() {
                   fill="black"
                 />
               </svg>
-            </span>
+            {/* </span>w */}
           </Link>
         </div>
       </section>

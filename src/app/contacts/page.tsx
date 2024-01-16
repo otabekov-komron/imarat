@@ -45,6 +45,7 @@ const Contacts = () => {
               name=""
               id="userMessage"
               cols={30}
+              
               rows={10}
             ></textarea>
             <span className="form_btn">

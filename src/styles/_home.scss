@@ -1053,16 +1053,16 @@
           font-family: "Sans-Regular";
           h1 {
             color: $primary-black;
-            font-size: 64px;
+            font-size: 41px;
             font-style: normal;
             font-weight: 400;
             line-height: 72px; /* 112.5% */
           }
           p {
-            font-size: 40px;
+            font-size: 25px;
             font-style: normal;
             font-weight: 400;
-            line-height: 50px; /* 125% */
+            line-height: 32px; /* 125% */
             text-transform: lowercase;
           }
         }
@@ -1084,7 +1084,7 @@
       background: $primary-black;
 
       .fifth_section_title {
-        font-size: 64px;
+        font-size: 42px;
         font-style: normal;
         font-weight: 400;
         line-height: 72px;
@@ -1092,9 +1092,10 @@
       }
       .fifth_section_btn {
         padding-left: 6%;
+        width: fit-content;
       }
       .swiper-wrapper {
-        height: 600px;
+        height: 400px;
         .sw-slide {
           width: 100%;
           &:hover {
@@ -1115,7 +1116,7 @@
               -moz-border-radius: 20px;
               -ms-border-radius: 20px;
               -o-border-radius: 20px;
-              height: 500px;
+              height: 400px;
               object-fit: cover;
               width: 100%;
             }
@@ -1132,13 +1133,13 @@
               border-radius: 20px;
               display: flex;
               margin: 0 0 10px 0;
-              padding: 8px 20px;
+              padding: 1px 20px;
               background: $primary-yellow;
               align-items: center;
               justify-content: space-between;
               color: $primary-black;
               font-family: "Sans-Regular";
-              font-size: 40px;
+              font-size: 26px;
               font-style: normal;
               font-weight: 400;
               line-height: 50px;
@@ -1154,7 +1155,7 @@
     .sixth_section {
       padding: 6% 6%;
       .sixth_section_video {
-        height: 1000px;
+        height: 600px;
         border-radius: 40px;
         -webkit-border-radius: 40px;
         -moz-border-radius: 40px;
@@ -1179,7 +1180,7 @@
           background: white;
           position: absolute;
           bottom: 125%;
-          height: 430px;
+          height: 220px;
           width: 2px;
         }
         &::after {
@@ -1187,7 +1188,7 @@
           background: white;
           position: absolute;
           top: 100%;
-          height: 480px;
+          height: 240px;
           width: 2px;
         }
         position: relative;
@@ -1198,12 +1199,12 @@
           .play_svg {
             margin-bottom: -80%;
             padding: 15px;
-            width: 120px;
+            width: 90px;
           }
           .rotate_svg {
             border: 1px solid #fff;
             padding: 20px;
-            width: 200px;
+            width: 150px;
             border-radius: 50%;
             animation: rotate 5s linear infinite;
             -webkit-animation: rotate 5s linear infinite;
@@ -1250,7 +1251,7 @@
         padding: 6% 0 0 6%;
         display: flex;
         flex-direction: column;
-        font-size: 64px;
+        font-size: 60px;
         gap: 85px;
         font-style: normal;
         font-weight: 400;
@@ -1278,7 +1279,7 @@
               /*150%*/
               letter-spacing: 0.1px;
               font-family: "Sans-Regular";
-              padding: 20px;
+              padding: 15px;
               background-color: $primary-black;
               color: $primary-black-40;
               border-radius: 20px;
@@ -1299,7 +1300,7 @@
               grid-template-columns: repeat(2, 1fr);
               gap: 40px;
               .title_links {
-                font-size: 40px;
+                font-size: 35px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 50px; /* 125% */
@@ -1307,7 +1308,7 @@
                 color: $primary-black;
               }
               a {
-                font-size: 24px;
+                font-size: 20px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 32px;
@@ -1317,9 +1318,13 @@
             .seventh_pattern {
               align-self: self-end;
               z-index: -1;
-              margin-top: 45px;
+              margin-top: -40px;
               opacity: 0.2;
               margin-bottom: -37%;
+              svg {
+                width: 500px;
+                height: 500px;
+              }
             }
           }
         }
@@ -1367,5 +1372,7 @@
     position: sticky;
     top: 10%;
     margin-top: 10%;
+    width: 666px;
+    height: 128px;
   }
 }
