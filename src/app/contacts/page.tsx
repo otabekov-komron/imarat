@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import en from "../../../public/locales/en.json";
 import ru from "../../../public/locales/ru.json";
-import sendForm from '@/utils/sendForm'
+import sendForm from "@/utils/sendForm";
 
 const Contacts = () => {
   const [lang, setLang] = useState();
@@ -10,18 +10,22 @@ const Contacts = () => {
     const getLang: any = localStorage.getItem("lang");
     setLang(getLang);
   }, []);
-  function sendOrder (e: any) {
-    e.preventDefault()
-    const userName = document.querySelector('#userName')
-    const userEmail = document.querySelector('#userEmail')
-    const userMessage = document.querySelector('#userMessage')
-    sendForm(userName.value, userEmail.value, userMessage.value)
-  }
+  const userNameRef = useRef<HTMLInputElement | null>(null);
+  const userEmailRef = useRef<HTMLInputElement | null>(null);
+  const userMessageRef = useRef<HTMLTextAreaElement | null>(null);
+
+  const handleSubmit = () => {
+    const userName = userNameRef.current?.value;
+    const userEmail = userEmailRef.current?.value;
+    const userMessage = userMessageRef.current?.value;
+
+    sendForm(userName, userEmail, userMessage);
+  };
   return (
     <div className="contacts">
       <div className="contacts_container">
         <div className="contacts_details">
-          <form onSubmit={sendOrder} action="">
+          <form onSubmit={handleSubmit} action="">
             <p>{lang === "en" ? en.Contact.Title : ru.Contact.Title}</p>
             <input
               placeholder={
@@ -29,6 +33,7 @@ const Contacts = () => {
               }
               type="text"
               id="userName"
+              ref={userNameRef}
             />
             <input
               placeholder={
@@ -37,6 +42,7 @@ const Contacts = () => {
               type="email"
               name=""
               id="userEmail"
+              ref={userEmailRef}
             />
             <textarea
               placeholder={
@@ -44,14 +50,14 @@ const Contacts = () => {
               }
               name=""
               id="userMessage"
+              ref={userMessageRef}
               cols={30}
               rows={10}
             ></textarea>
-            <span className="form_btn">
-              <button onClick={sendOrder} className="btn_component">
-                {lang === "en" ? en.Contact.Send : ru.Contact.Send}
-              </button>
-            </span>
+            <button onClick={handleSubmit} className="btn_component">
+              {lang === "en" ? en.Contact.Send : ru.Contact.Send}
+            </button>
+            \
           </form>
           <div className="contacts_details_right">
             <div className="email contact_sectors">
@@ -135,7 +141,7 @@ const Contacts = () => {
                     viewBox="0 0 66 48"
                     fill="none"
                   >
-                    <g clip-path="url(#clip0_1410_4232)">
+                    <g clipPath="url(#clip0_1410_4232)">
                       <path
                         d="M52.3413 0.666672H12.992C5.828 0.666672 0 6.51334 0 13.6987V35.6333C0 42.82 5.828 48.6653 12.992 48.6653H52.3413C59.5053 48.6653 65.3333 42.8187 65.3333 35.6333V13.6987C65.3333 6.51334 59.5053 0.666672 52.3413 0.666672ZM62.6667 35.6347C62.6667 41.3507 58.0347 46 52.3413 46H12.992C7.29867 46 2.66667 41.3493 2.66667 35.6347V13.6987C2.66667 7.98401 7.29867 3.33334 12.992 3.33334H52.3413C58.0347 3.33334 62.6667 7.98401 62.6667 13.6987V35.6347Z"
                         fill="#1C1C1C"
