@@ -52,6 +52,7 @@ const Contacts = () => {
               id="userMessage"
               ref={userMessageRef}
               cols={30}
+              
               rows={10}
             ></textarea>
             <button onClick={handleSubmit} className="btn_component">
