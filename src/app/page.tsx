@@ -3371,7 +3371,7 @@ export default function Home() {
             </svg>
           </span>
           <div className="second_section_right_img">
-            <Image width={700} height={714} src={group} alt="group" />
+            <Image width={0} height={0} src={group} alt="group" />
           </div>
           <div className="blur_content">
             <div className="second_section_right_blur">
