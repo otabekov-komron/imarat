@@ -42,17 +42,17 @@ const ProjectSwiper = () => {
     <Swiper
       breakpoints={{
         320: {
-            slidesPerView: 1,
-            spaceBetween: 0,
+            slidesPerView: 1.5,
+            spaceBetween: 20,
             slideToClickedSlide: true,
         },
         480: {
-            slidesPerView: 1,
+            slidesPerView: 2.5,
             spaceBetween: 0,
             slideToClickedSlide: true,
         },
         1200: {
-            slidesPerView: 4,
+            slidesPerView: 3.5,
             spaceBetween: 30,
             slideToClickedSlide: true,
           }

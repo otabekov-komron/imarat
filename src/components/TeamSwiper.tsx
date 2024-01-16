@@ -1,22 +1,31 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import en from "../../public/locales/en.json"
-import ru from "../../public/locales/ru.json"
+import en from "../../public/locales/en.json";
+import ru from "../../public/locales/ru.json";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
 import { Autoplay, Navigation } from "swiper/modules";
 import Image from "next/image";
-import { team1, team2, team3, team4, team5, team6, team7, team8} from "@/assets/images";
+import {
+  team1,
+  team2,
+  team3,
+  team4,
+  team5,
+  team6,
+  team7,
+  team8,
+} from "@/assets/images";
 import Link from "next/link";
 const TeamSwiper = () => {
-  const [lang, setLang] = useState()
+  const [lang, setLang] = useState();
   useEffect(() => {
-    const getLang: any = localStorage.getItem('lang')
-    setLang(getLang)
-  }, [])
+    const getLang: any = localStorage.getItem("lang");
+    setLang(getLang);
+  }, []);
   const [autoplayEnabled, setAutoplayEnabled] = useState(true); // State to control autoplay
   const swiperRef = useRef(null);
 
@@ -37,9 +46,31 @@ const TeamSwiper = () => {
       slidesPerView={4.2}
       ref={swiperRef}
       spaceBetween={50}
+      breakpoints={{
+        350: {
+          slidesPerView: 1.5,
+          spaceBetween: 30,
+          slideToClickedSlide: true,
+        },
+        550: {
+          slidesPerView: 2.5,
+          spaceBetween: 30,
+          slideToClickedSlide: true,
+        },
+        1000:  {
+          slidesPerView: 3.5,
+          spaceBetween: 30,
+          slideToClickedSlide: true,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+          slideToClickedSlide: true,
+        },
+      }}
       loop={true}
       autoplay={{
-        delay: 1000,
+        delay: 3000,
         disableOnInteraction: false,
         ...(autoplayEnabled ? { autoplay: true } : { autoplay: false }),
       }}
@@ -54,52 +85,80 @@ const TeamSwiper = () => {
       className="teamSwiper"
     >
       <SwiperSlide className="ts-slide">
-        <Image  src={team1} alt="ts-item" />
+        <Image src={team1} alt="ts-item" />
         <span className="ts-slide-title">
-          <p className="ts-slide-name">{lang === 'en' ? en.Team.user1.Name : ru.Team.user1.Name}</p>
-          <p className="ts-slide-desc">{lang === 'en' ? en.Team.user1.Role : ru.Team.user1.Role}</p>
+          <p className="ts-slide-name">
+            {lang === "en" ? en.Team.user1.Name : ru.Team.user1.Name}
+          </p>
+          <p className="ts-slide-desc">
+            {lang === "en" ? en.Team.user1.Role : ru.Team.user1.Role}
+          </p>
         </span>
       </SwiperSlide>
       <SwiperSlide className="ts-slide">
         <Image width={400} height={400} src={team2} alt="ts-item" />
         <span className="ts-slide-title">
-          <p className="ts-slide-name">{lang === 'en' ? en.Team.user2.Name : ru.Team.user2.Name}</p>
-          <p className="ts-slide-desc">{lang === 'en' ? en.Team.user2.Role : ru.Team.user2.Role}</p>
+          <p className="ts-slide-name">
+            {lang === "en" ? en.Team.user2.Name : ru.Team.user2.Name}
+          </p>
+          <p className="ts-slide-desc">
+            {lang === "en" ? en.Team.user2.Role : ru.Team.user2.Role}
+          </p>
         </span>
       </SwiperSlide>
       <SwiperSlide className="ts-slide">
         <Image width={400} height={400} src={team3} alt="ts-item" />
         <span className="ts-slide-title">
-          <p className="ts-slide-name">{lang === 'en' ? en.Team.user3.Name : ru.Team.user3.Name}</p>
-          <p className="ts-slide-desc">{lang === 'en' ? en.Team.user3.Role : ru.Team.user3.Role}</p>
+          <p className="ts-slide-name">
+            {lang === "en" ? en.Team.user3.Name : ru.Team.user3.Name}
+          </p>
+          <p className="ts-slide-desc">
+            {lang === "en" ? en.Team.user3.Role : ru.Team.user3.Role}
+          </p>
         </span>
       </SwiperSlide>
       <SwiperSlide className="ts-slide">
         <Image width={400} height={400} src={team4} alt="ts-item" />
         <span className="ts-slide-title">
-          <p className="ts-slide-name">{lang === 'en' ? en.Team.user4.Name : ru.Team.user4.Name}</p>
-          <p className="ts-slide-desc">{lang === 'en' ? en.Team.user4.Role : ru.Team.user4.Role}</p>
+          <p className="ts-slide-name">
+            {lang === "en" ? en.Team.user4.Name : ru.Team.user4.Name}
+          </p>
+          <p className="ts-slide-desc">
+            {lang === "en" ? en.Team.user4.Role : ru.Team.user4.Role}
+          </p>
         </span>
       </SwiperSlide>
       <SwiperSlide className="ts-slide">
         <Image width={400} height={400} src={team5} alt="ts-item" />
         <span className="ts-slide-title">
-          <p className="ts-slide-name">{lang === 'en' ? en.Team.user5.Name : ru.Team.user5.Name}</p>
-          <p className="ts-slide-desc">{lang === 'en' ? en.Team.user5.Role : ru.Team.user5.Role}</p>
+          <p className="ts-slide-name">
+            {lang === "en" ? en.Team.user5.Name : ru.Team.user5.Name}
+          </p>
+          <p className="ts-slide-desc">
+            {lang === "en" ? en.Team.user5.Role : ru.Team.user5.Role}
+          </p>
         </span>
       </SwiperSlide>
       <SwiperSlide className="ts-slide">
         <Image width={400} height={400} src={team6} alt="ts-item" />
         <span className="ts-slide-title">
-          <p className="ts-slide-name">{lang === 'en' ? en.Team.user6.Name : ru.Team.user6.Name}</p>
-          <p className="ts-slide-desc">{lang === 'en' ? en.Team.user6.Role : ru.Team.user6.Role}</p>
+          <p className="ts-slide-name">
+            {lang === "en" ? en.Team.user6.Name : ru.Team.user6.Name}
+          </p>
+          <p className="ts-slide-desc">
+            {lang === "en" ? en.Team.user6.Role : ru.Team.user6.Role}
+          </p>
         </span>
       </SwiperSlide>
       <SwiperSlide className="ts-slide">
         <Image width={400} height={400} src={team7} alt="ts-item" />
         <span className="ts-slide-title">
-          <p className="ts-slide-name">{lang === 'en' ? en.Team.user7.Name : ru.Team.user7.Name}</p>
-          <p className="ts-slide-desc">{lang === 'en' ? en.Team.user7.Role : ru.Team.user7.Role}</p>
+          <p className="ts-slide-name">
+            {lang === "en" ? en.Team.user7.Name : ru.Team.user7.Name}
+          </p>
+          <p className="ts-slide-desc">
+            {lang === "en" ? en.Team.user7.Role : ru.Team.user7.Role}
+          </p>
         </span>
       </SwiperSlide>
       <div className="ts">
@@ -153,8 +212,10 @@ const TeamSwiper = () => {
             </svg>
           </div>
         </div>
-        <Link href={'/about'} className="btn_component">
-          <span className="btn_component_text">{lang === 'en' ? en.Team.LearnMore : ru.Team.LearnMore}</span>
+        <Link href={"/about"} className="btn_component">
+          <span className="btn_component_text">
+            {lang === "en" ? en.Team.LearnMore : ru.Team.LearnMore}
+          </span>
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -775,7 +775,7 @@ export default function Home() {
             {lang === "en" ? en.About.Title : ru.About.Title}
           </p>
           <span className="left_quote">
-            <svg
+            <svg  
               xmlns="http://www.w3.org/2000/svg"
               width="80"
               height="80"
