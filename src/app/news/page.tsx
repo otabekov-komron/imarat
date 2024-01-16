@@ -13,33 +13,21 @@ interface Vacancy {
 }
 const News = () => {
   const [blogs, setBlogs] = useState([]);
-  const [vacancies, setVacancies] = useState<Vacancy[]>([]);
+  const [vacancies, setVacancies] = useState<any>()
+  const [vacancyCategories, setVacansyCategories] = useState<Vacancy[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<any>(null);
   const [filteredVacancies, setFilteredVacancies] = useState<Vacancy[]>([]);
   const [lang, setLang] = useState();
   const [activeCategory, setActiveCategory] = useState<any>(null);
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const response = await axios.get<Vacancy[]>(
-          "https://admin.imaratgroup.uz/api/vacancies"
-        );
-        setVacancies(response?.data);
-      } catch (error) {
-        console.error("Error fetching projects:", error);
-      }
-    };
-    fetchProjects();
-  }, []);
 
   useEffect(() => {
     if (selectedCategory) {
       const filtered = vacancies.filter(
-        (project) => project.category === selectedCategory
+        (project: Vacancy) => project.category === selectedCategory
       );
       setFilteredVacancies(filtered);
     }
-  }, [selectedCategory, vacancies]);
+  }, [selectedCategory]);
 
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
@@ -77,6 +65,10 @@ const News = () => {
         "https://admin.imaratgroup.uz/api/vacancies"
       );
       setVacancies(vacancies.data);
+      const response = await axios.get<Vacancy[]>(
+        "https://admin.imaratgroup.uz/api/categories"
+      );
+      setVacansyCategories(response.data);
     })();
     const getLang: any = localStorage.getItem("lang");
     setLang(getLang);
@@ -267,7 +259,7 @@ const News = () => {
         </div>
         <div className="vacancies__wrapper">
           <div className="vacancies__list">
-            {vacancies.map((item, index) => (
+            {vacancyCategories.map((item, index) => (
               <span
                 onClick={() => handleCategoryClick(item.category)}
                 key={index}
@@ -305,14 +297,16 @@ const News = () => {
             </div>
           ) : (
             <div className="vacancies_items">
-              {filteredVacancies.map((item) => (
-                <div key={item._id} className="vacancy_item">
-                  <p className="vacancy__item-title">{item.title}</p>
-                  <p className="vacancy__item-price">{item.price}</p>
-                  <p className="vacancy__item-text">{item.description}</p>
-                  <Link href={"/contacts"}>Send</Link>
-                </div>
-              ))}
+              {
+                filteredVacancies.length > 0 ? filteredVacancies?.map((item) => (
+                  <div key={item._id} className="vacancy_item">
+                    <p className="vacancy__item-title">{item.title}</p>
+                    <p className="vacancy__item-price">{item.price}</p>
+                    <p className="vacancy__item-text">{item.description}</p>
+                    <Link href={"/contacts"}>Send</Link>
+                  </div>
+                )) : <p className="choose_category">{lang === 'en' ? 'There are no vacancies for this category' : 'Для данной категории вакансий нет'}</p>
+              }
             </div>
           )}
         </div>
