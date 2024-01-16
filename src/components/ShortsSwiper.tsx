@@ -23,6 +23,7 @@ export default function ShortsSwiper() {
       const res = await axios.get("https://admin.imaratgroup.uz/api/shorts");
       setShorts(res.data);
     })();
+    
   }, []);
 
   return (
@@ -33,6 +34,7 @@ export default function ShortsSwiper() {
         centeredSlides={true}
         slidesPerView={3}
         autoplay={{
+          pauseOnMouseEnter: true,
           delay: 2500,
           disableOnInteraction: true,
         }}

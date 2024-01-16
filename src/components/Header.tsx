@@ -355,7 +355,7 @@ const Header = () => {
             </span>
           </div>
           <div className="navbar_bottom_right">
-            <span className="navbar_bottom_right_item">
+            <a href="https://www.instagram.com/imarat.group.uz?igsh=M2VpZ3hkNGs2OG8=" target="_blan" className="navbar_bottom_right_item">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -381,8 +381,8 @@ const Header = () => {
                   </clipPath>
                 </defs>
               </svg>
-            </span>
-            <span className="navbar_bottom_right_item">
+            </a>
+            <a href="https://t.me/imaratgroupuz" target="_blank" className="navbar_bottom_right_item">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -404,7 +404,7 @@ const Header = () => {
                   </clipPath>
                 </defs>
               </svg>
-            </span>
+            </a>
             <button onClick={closeNavbar} className="navbar_bottom_right_item close_btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

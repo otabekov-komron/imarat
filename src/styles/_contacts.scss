@@ -75,13 +75,19 @@
             font-weight: 500;
           }
           .social {
+            display: flex;
+            flex-direction: column;
             span {
               display: flex;
-              width: 100%;
-              gap: 5%;
-
-              svg {
-                width: 8%;
+              justify-content: start;
+              align-items: center;
+              gap: 10%;
+              svg{
+                width: 40px;
+                height: 40px;
+                &:last-child{
+                  width: 50px;
+                }
               }
             }
           }
@@ -186,9 +192,6 @@
               display: flex;
               width: 100%;
               gap: 5%;
-              svg {
-                width: 8%;
-              }
             }
           }
           .contact_pattern {
