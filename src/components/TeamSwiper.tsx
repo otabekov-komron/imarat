@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import Image from "next/image";
 import { team1, team2, team3, team4, team5, team6, team7, team8} from "@/assets/images";
+import Link from "next/link";
 const TeamSwiper = () => {
   const [lang, setLang] = useState()
   useEffect(() => {
@@ -152,7 +153,7 @@ const TeamSwiper = () => {
             </svg>
           </div>
         </div>
-        <button className="btn_component">
+        <Link href={'/about'} className="btn_component">
           <span className="btn_component_text">{lang === 'en' ? en.Team.LearnMore : ru.Team.LearnMore}</span>
           <span>
             <svg
@@ -168,7 +169,7 @@ const TeamSwiper = () => {
               />
             </svg>
           </span>
-        </button>
+        </Link>
         <div className="ts_right">
           <div onClick={handleToggleAutoplay} className="ts_buttons">
             {autoplayEnabled ? (

@@ -291,7 +291,10 @@ const News = () => {
             ))}
           </div>
           {selectedCategory == null ? (
-            <p className="choose_category">Choose type vacancy</p>
+            <div className="choose-category">
+              <p className="first_text">Imarat Group</p>
+              <p className="second_text">pleased to work with you</p>
+            </div>
           ) : (
             <div className="vacancies_items">
               {
