@@ -354,12 +354,12 @@
     background-color: $primary-black;
     .gallery-wrapper {
       .buttons {
-        margin: 4% 0;
+        margin: 2% 0;
         display: flex;
         justify-content: space-between;
         button {
           background: none;
-          font-size: 24px;
+          font-size: 14px;
           font-style: normal;
           font-weight: 500;
           line-height: 32px; /* 133.333% */
@@ -368,9 +368,13 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 16px 36px;
+          padding: 8px 34px;
           border-radius: 20px;
           border: 1px solid #f3cd00;
+          svg {
+            width: 18px !important;
+            height: 18px !important;
+          }
         }
         .active {
           background-color: #f3cd00;
@@ -438,12 +442,12 @@
             }
             .title_slide {
               position: absolute;
-              width: 200px;
-              height: 200px;
+              width: 150px;
+              height: 150px;
               display: flex;
               align-items: center;
               justify-content: center;
-              font-size: 24px;
+              font-size: 20px;
               font-style: normal;
               border-radius: 50%;
               font-weight: 600;
@@ -550,9 +554,9 @@
             }
           }
           .link_button {
-            margin-top: 55px;
+            margin-top: 30px;
             background: none;
-            font-size: 24px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 500;
             line-height: 32px;
@@ -562,7 +566,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 16px 36px;
+            padding: 14px 28px;
             border-radius: 20px;
             border: 1px solid #f3cd00;
             transition: all 0.7s ease-in-out;
@@ -604,8 +608,8 @@
         justify-content: flex-start;
         align-items: center;
         p {
-          font-size: 64px;
-          width: 100%;
+          font-size: 41px;
+          width: 80%;
           font-style: normal;
           font-weight: 400;
           line-height: 72px; /* 112.5% */
@@ -633,11 +637,11 @@
             background-color: #f3cd00;
           }
           .steps_number {
-            font-size: 40px;
+            font-size: 30px;
             font-style: normal;
             font-weight: 400;
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             text-transform: lowercase;
             display: flex;
             justify-content: center;
@@ -661,17 +665,17 @@
             p {
               color: #fff;
               &:first-child {
-                font-size: 48px;
+                font-size: 36px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 56px; /* 116.667% */
                 margin-bottom: 15px;
               }
               &:last-child {
-                font-size: 30px;
+                font-size: 24px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 50px; /* 166.667% */
+                line-height: 35px; /* 166.667% */
               }
             }
           }

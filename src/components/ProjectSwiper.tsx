@@ -80,7 +80,7 @@ const ProjectSwiper = () => {
         <Link href={"/projects"}>
           <Image width={500} height={400} src={design} alt="image" />
           <span className="sw-slide-title">
-            <p>Living room</p>
+            <p>{lang === 'en' ? 'Living room' : 'Гостиная'}</p>
             <span className="sw-slide-title-svg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
