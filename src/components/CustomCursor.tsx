@@ -10,9 +10,9 @@ interface Position {
 
 const CustomCursor = () => {
   const [position, setPosition] = useState<Position>({ x: -35, y: -35 });
-  if (window.innerWidth >= 1200) {
-    useEffect(() => {
-      const onMouseMove = (e: MouseEvent) => {
+  useEffect(() => {
+    if (window.innerWidth >= 1200) {
+    const onMouseMove = (e: MouseEvent) => {
         setPosition({ x: e.clientX, y: e.clientY });
       };
   
@@ -20,29 +20,31 @@ const CustomCursor = () => {
   
       return () => {
         document.removeEventListener('mousemove', onMouseMove);
-      };
+      };}
     }, []);
   
-    const throttle = (func: Function, limit: number) => {
-      let lastFunc: NodeJS.Timeout;
-      let lastRan: number;
-      return function (this: any, ...args: any[]) {
-        const context = this;
-        if (!lastRan) {
-          func.apply(context, args);
-          lastRan = Date.now();
-        } else {
-          clearTimeout(lastFunc);
-          lastFunc = setTimeout(function () {
-            if (Date.now() - lastRan >= limit) {
-              func.apply(context, args);
-              lastRan = Date.now();
-            }
-          }, limit - (Date.now() - lastRan));
-        }
-      };
-    };
-  }
+    if(window.innerWidth >= 1200){
+      const throttle = (func: Function, limit: number) => {
+        let lastFunc: NodeJS.Timeout;
+        let lastRan: number;
+        return function (this: any, ...args: any[]) {
+          const context = this;
+          if (!lastRan) {
+            func.apply(context, args);
+            lastRan = Date.now();
+          } else {
+            clearTimeout(lastFunc);
+            lastFunc = setTimeout(function () {
+              if (Date.now() - lastRan >= limit) {
+                func.apply(context, args);
+                lastRan = Date.now();
+              }
+            }, limit - (Date.now() - lastRan));
+          }
+        };
+      };  
+    }
+  
   
   
 

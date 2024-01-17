@@ -38,7 +38,7 @@ export default function ShortsSwiper() {
           },
           1200: {
             spaceBetween: 100,
-            slidesPerView: 30
+            slidesPerView: 3
           },
         }}
         centeredSlides={true}

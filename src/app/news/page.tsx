@@ -73,7 +73,7 @@ const News = () => {
     })();
     const getLang: any = localStorage.getItem("lang");
     setLang(getLang);
-  }, []);
+  }, [vacancies]);
 
   return (<>
     <Loader/>
