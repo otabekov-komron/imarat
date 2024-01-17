@@ -5,7 +5,7 @@ import SwiperComponent from "@/components/SwiperComponent";
 import Image from "next/image";
 import ProjectSwiper from "@/components/ProjectSwiper";
 import TeamSwiper from "@/components/TeamSwiper";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import en from "../../public/locales/en.json";
 import ru from "../../public/locales/ru.json";
 import Link from "next/link";
@@ -584,13 +584,17 @@ export default function Home() {
     },
   ];
 
-  function sendOrder (e: any) {
-    e.preventDefault()
-    const userName = document.querySelector('#userName')
-    const userEmail = document.querySelector('#userEmail')
-    const userMessage = document.querySelector('#userMessage')
-    sendForm(userName.value, userEmail.value, userMessage.value)
-  }
+  const userFirstName = useRef<HTMLInputElement | null>(null);
+  const userFirstEmail = useRef<HTMLInputElement | null>(null);
+  const userFirstMessage = useRef<HTMLTextAreaElement | null>(null);
+
+  const handleSubmitFirst = () => {
+    const userName = userFirstName.current?.value;
+    const userEmail = userFirstEmail.current?.value;
+    const userMessage = userFirstMessage.current?.value;
+
+    sendForm(userName, userEmail, userMessage);
+  };
 
   return (
     <div className="home">
@@ -771,7 +775,7 @@ export default function Home() {
             {lang === "en" ? en.About.Title : ru.About.Title}
           </p>
           <span className="left_quote">
-            <svg
+            <svg  
               xmlns="http://www.w3.org/2000/svg"
               width="80"
               height="80"
@@ -3367,7 +3371,7 @@ export default function Home() {
             </svg>
           </span>
           <div className="second_section_right_img">
-            <Image width={700} height={714} src={group} alt="group" />
+            <Image width={0} height={0} src={group} alt="group" />
           </div>
           <div className="blur_content">
             <div className="second_section_right_blur">
@@ -3529,7 +3533,7 @@ export default function Home() {
             </span>{" "}
             {lang === "en" ? en.Team.EndTitle : ru.Team.EndTitle}
           </p>
-          <span>
+          <span className="third_section_icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="180"
@@ -3875,8 +3879,9 @@ export default function Home() {
         <div className="seventh_section_content">
           <p>{lang === "en" ? en.Contact.Title : ru.Contact.Title}</p>
           <div className="form_content">
-            <form className="content_left" action="#">
+            <form onSubmit={handleSubmitFirst} className="content_left" action="#">
               <input
+              ref={userFirstName}
                 type="text"
                 placeholder={
                   lang === "en" ? en.Contact.InputName : ru.Contact.InputName
@@ -3885,6 +3890,7 @@ export default function Home() {
                 id="name"
               />
               <input
+              ref={userFirstEmail}
                 type="email"
                 placeholder={
                   lang === "en" ? en.Contact.InputEmail : ru.Contact.InputEmail
@@ -3893,6 +3899,7 @@ export default function Home() {
                 id="name"
               />
               <textarea
+              ref={userFirstMessage}
                 name="message"
                 placeholder={
                   lang === "en" ? en.Contact.Message : ru.Contact.Message
@@ -3900,7 +3907,7 @@ export default function Home() {
                 cols={30}
                 rows={10}
               ></textarea>
-              <button className="btn_component">
+              <button onClick={handleSubmitFirst} className="btn_component">
                 <span className="btn_component_text">
                   {lang === "en" ? en.Contact.Send : ru.Contact.Send}
                 </span>
