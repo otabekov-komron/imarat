@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import en from "../../../public/locales/en.json";
 import ru from "../../../public/locales/ru.json";
 import sendForm from "@/utils/sendForm";
+import Loader from '@/components/Loader'
 
 const Contacts = () => {
   const [lang, setLang] = useState();
@@ -21,7 +22,8 @@ const Contacts = () => {
 
     sendForm(userName, userEmail, userMessage);
   };
-  return (
+  return (<>
+    <Loader/>
     <div className="contacts">
       <div className="contacts_container">
         <div className="contacts_details">
@@ -2230,7 +2232,7 @@ const Contacts = () => {
         </div>
       </div>
     </div>
-  );
+    </>);
 };
 
 export default Contacts;

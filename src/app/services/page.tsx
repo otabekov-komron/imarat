@@ -3,6 +3,7 @@ import Card from "@/components/Card";
 import React, { useEffect, useState } from "react";
 import en from "../../../public/locales/en.json";
 import ru from "../../../public/locales/ru.json";
+import Loader from '@/components/Loader'
 
 const Services = () => {
   const [expandedIds, setExpandedIds] = useState<number[]>([]);
@@ -377,7 +378,8 @@ const Services = () => {
     },
   ];
 
-  return (
+  return (<>
+    <Loader/>
     <div className="services">
       <div className="title">
         <span className="title__left"></span>
@@ -441,7 +443,7 @@ const Services = () => {
         ))}
       </ul>
     </div>
-  );
+    </>);
 };
 
 export default Services;

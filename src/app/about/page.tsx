@@ -7,6 +7,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import en from "../../../public/locales/en.json";
 import ru from "../../../public/locales/ru.json";
+import Loader from '@/components/Loader'
 
 const About = () => {
   const [lang, setLang] = useState();
@@ -15,7 +16,8 @@ const About = () => {
     setLang(lang);
   }, []);
 
-  return (
+  return (<>
+      <Loader/>
     <div className="about">
       <div className="first_section">
         <div className="top">
@@ -2317,7 +2319,7 @@ const About = () => {
         <div className="third_section_bottom"></div>
       </div>
     </div>
-  );
+  </>);
 };
 
 export default About;

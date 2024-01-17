@@ -12,6 +12,7 @@ import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import sendForm from '@/utils/sendForm';
+import Loader from '@/components/Loader'
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -596,7 +597,8 @@ export default function Home() {
     sendForm(userName, userEmail, userMessage);
   };
 
-  return (
+  return (<>
+  <Loader/>
     <div className="home">
       <section className="first_section">
         <div className="first_section_container">
@@ -3381,7 +3383,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <span>
+      <span className="flower-wrapper">
         <svg
           className="flower_pattern"
           xmlns="http://www.w3.org/2000/svg"
@@ -6002,5 +6004,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  );
+  </>)
 }
