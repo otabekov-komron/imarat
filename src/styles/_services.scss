@@ -88,13 +88,13 @@
     }
 
     .list__item-title {
-      font-size: 40px;
+      font-size: 24px;
       width: 80%;
       font-weight: 500;
       list-style: none;
     }
     .list__item-desc {
-      font-size: 32px;
+      font-size: 18px;
       font-style: normal;
       font-weight: 400;
       line-height: 52px; /* 162.5% */
@@ -102,6 +102,7 @@
     }
     .visible {
       display: block;
+      
     }
     .hidden {
       display: none;

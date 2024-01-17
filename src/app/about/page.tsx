@@ -2157,8 +2157,16 @@ const About = () => {
         </div>
         <Team />
       </div>
+        <div className="third_section_top">
+        <div className="title">
+          <span className="title__left"></span>
+          <h2 className="title__content">
+            {lang === "en" ? en.Projects.Title : ru.Projects.Title}
+          </h2>
+          <span className="title__right"></span>
+        </div>
+        </div>
       <div className="third_section">
-        <div className="third_section_top"></div>
         <div className="third_section_content">
           <div className="third_section_projects_done">
             <div className="yellow_content">

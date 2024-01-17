@@ -346,6 +346,14 @@
             }
           }
         }
+        .choose_category {
+          color: $primary-yellow;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 32px;
+        }
         .choose-category {
           height: 100%;
           gap: 55px;
@@ -745,5 +753,43 @@
         }
       }
     }
+  }
+  .choose-category {
+    height: 100%;
+    gap: 55px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    place-self: center;
+    align-items: center;
+    font-size: 32px;
+    p {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 32px;
+      background-color: $primary-yellow;
+      padding: 10px 45px;
+      border-radius: 16px;
+      -webkit-border-radius: 16px;
+      -moz-border-radius: 16px;
+      -ms-border-radius: 16px;
+      -o-border-radius: 16px;
+    }
+    .first_text {
+      transform: rotate(-5deg);
+      -webkit-transform: rotate(-5deg);
+      -moz-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      -o-transform: rotate(-5deg);
+}
+    .second_text{
+      transform: rotate(5deg);
+      -webkit-transform: rotate(5deg);
+      -moz-transform: rotate(5deg);
+      -ms-transform: rotate(5deg);
+      -o-transform: rotate(5deg);
+}
   }
 }
