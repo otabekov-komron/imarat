@@ -19,232 +19,239 @@ export default function Home() {
   const [loading, setLoading] = useState<Boolean>(false);
   const [lang, setLang] = useState("en");
   useEffect(() => {
-    gsap.fromTo(
-      ".imarat_svg", // Replace with the actual CSS selector of your element
-      {
-        x: 800,
-        // Initial translation value
-      },
-      {
-        x: 0,
-        scrollTrigger: {
-          trigger: ".fourth_section", // Replace with the actual CSS selector of your trigger element
-          start: "top center",
-          end: "bottom center",
-          scrub: 5, // Smooth scrolling effect
+    gsap.registerPlugin(ScrollTrigger);
+    const maxWidth = 1200;
+
+    if (window.innerWidth >= maxWidth) {
+      
+
+      gsap.fromTo(
+        ".imarat_svg", // Replace with the actual CSS selector of your element
+        {
+          x: '80vw',
+          // Initial translation value
         },
-      }
-    );
-    gsap.fromTo(
-      ".left_top", // Replace with the actual CSS selector of your element
-      { x: 0, opacity: 1 }, // Initial translation value
-      {
-        x: -40,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: ".first_section", // Replace with the actual CSS selector of your container
-          start: "80%",
-          end: "bottom center",
-          scrub: 3, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".left_bottom_live", // Replace with the actual CSS selector of your element
-      { y: 0, opacity: 1 }, // Initial translation value
-      {
-        y: 40,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: ".first_section", // Replace with the actual CSS selector of your container
-          start: "80%",
-          end: "bottom center",
-          scrub: 2, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".left_bottom_360", // Replace with the actual CSS selector of your element
-      { y: 0, opacity: 1 }, // Initial translation value
-      {
-        y: 40,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: ".first_section", // Replace with the actual CSS selector of your container
-          start: "80%",
-          end: "bottom center",
-          scrub: 2, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".mySwiper", // Replace with the actual CSS selector of your element
-      { x: 0, opacity: 1 }, // Initial translation value
-      {
-        x: 40,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: ".first_section", // Replace with the actual CSS selector of your container
-          start: "80%",
-          end: "bottom center",
-          scrub: 2, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".first_section_text", // Replace with the actual CSS selector of your element
-      { y: 0, opacity: 1 }, // Initial translation value
-      {
-        y: 40,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: ".first_section", // Replace with the actual CSS selector of your container
-          start: "80%",
-          end: "bottom center",
-          scrub: 2, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".second_section_left_title", // Replace with the actual CSS selector of your element
-      { y: -50, opacity: 0 }, // Initial translation value
-      {
-        y: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".first_section", // Replace with the actual CSS selector of your container
-          start: "30%",
-          end: "bottom center",
-          scrub: 1, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".second_section_left_desc, .left_quote", // Replace with the actual CSS selector of your element
-      { x: -150, opacity: 0 }, // Initial translation value
-      {
-        x: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".first_section", // Replace with the actual CSS selector of your container
-          start: "30%",
-          end: "bottom center",
-          scrub: 1, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".second_section_right_texture", // Replace with the actual CSS selector of your element
-      { x: 150, opacity: 0 }, // Initial translation value
-      {
-        x: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".first_section", // Replace with the actual CSS selector of your container
-          start: "30%",
-          end: "bottom",
-          scrub: 1, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".second_section_right_img", // Replace with the actual CSS selector of your element
-      { scale: 0.8, opacity: 0 }, // Initial translation value
-      {
-        scale: 1,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".first_section", // Replace with the actual CSS selector of your container
-          start: "30%",
-          end: "bottom",
-          scrub: 1, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".blur_content", // Replace with the actual CSS selector of your element
-      { y: 150, opacity: 0 }, // Initial translation value
-      {
-        y: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".first_section", // Replace with the actual CSS selector of your container
-          start: "70%",
-          end: "bottom",
-          scrub: 1, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".third_section_title", // Replace with the actual CSS selector of your element
-      { y: 150, opacity: 0 }, // Initial translation value
-      {
-        y: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".second_section", // Replace with the actual CSS selector of your container
-          start: "50%",
-          end: "bottom",
-          scrub: 1, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".third_section_icon", // Replace with the actual CSS selector of your element
-      { x: 150, opacity: 0 }, // Initial translation value
-      {
-        x: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".second_section", // Replace with the actual CSS selector of your container
-          start: "50%",
-          end: "bottom",
-          scrub: 1, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".fourth_left_title", // Replace with the actual CSS selector of your element
-      { x: 150, opacity: 0 }, // Initial translation value
-      {
-        x: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".fourth_section", // Replace with the actual CSS selector of your container
-          start: "1%",
-          end: "50%",
-          scrub: 1, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".fourth_left_text", // Replace with the actual CSS selector of your element
-      { x: -150, opacity: 0 }, // Initial translation value
-      {
-        x: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".fourth_section", // Replace with the actual CSS selector of your container
-          start: "1%",
-          end: "50%",
-          scrub: 1, // Smooth scrolling effect
-        },
-      }
-    );
-    gsap.fromTo(
-      ".fourth_left_link", // Replace with the actual CSS selector of your element
-      { y: 150, opacity: 0 }, // Initial translation value
-      {
-        y: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".fourth_section", // Replace with the actual CSS selector of your container
-          start: "1%",
-          end: "50%",
-          scrub: 1, // Smooth scrolling effect
-        },
-      }
-    );
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".fourth_section", // Replace with the actual CSS selector of your trigger element
+            start: "30% center",
+            end: "20%",
+            scrub: 5, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".left_top", // Replace with the actual CSS selector of your element
+        { x: 0, opacity: 1 }, // Initial translation value
+        {
+          x: -40,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: ".first_section", // Replace with the actual CSS selector of your container
+            start: "80%",
+            end: "bottom center",
+            scrub: 3, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".left_bottom_live", // Replace with the actual CSS selector of your element
+        { y: 0, opacity: 1 }, // Initial translation value
+        {
+          y: 40,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: ".first_section", // Replace with the actual CSS selector of your container
+            start: "80%",
+            end: "bottom center",
+            scrub: 2, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".left_bottom_360", // Replace with the actual CSS selector of your element
+        { y: 0, opacity: 1 }, // Initial translation value
+        {
+          y: 40,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: ".first_section", // Replace with the actual CSS selector of your container
+            start: "80%",
+            end: "bottom center",
+            scrub: 2, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".mySwiper", // Replace with the actual CSS selector of your element
+        { x: 0, opacity: 1 }, // Initial translation value
+        {
+          x: 40,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: ".first_section", // Replace with the actual CSS selector of your container
+            start: "80%",
+            end: "bottom center",
+            scrub: 2, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".first_section_text", // Replace with the actual CSS selector of your element
+        { y: 0, opacity: 1 }, // Initial translation value
+        {
+          y: 40,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: ".first_section", // Replace with the actual CSS selector of your container
+            start: "80%",
+            end: "bottom center",
+            scrub: 2, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".second_section_left_title", // Replace with the actual CSS selector of your element
+        { y: -50, opacity: 0 }, // Initial translation value
+        {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".first_section", // Replace with the actual CSS selector of your container
+            start: "30%",
+            end: "bottom center",
+            scrub: 1, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".second_section_left_desc, .left_quote", // Replace with the actual CSS selector of your element
+        { x: -150, opacity: 0 }, // Initial translation value
+        {
+          x: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".first_section", // Replace with the actual CSS selector of your container
+            start: "30%",
+            end: "bottom center",
+            scrub: 1, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".second_section_right_texture", // Replace with the actual CSS selector of your element
+        { x: 150, opacity: 0 }, // Initial translation value
+        {
+          x: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".first_section", // Replace with the actual CSS selector of your container
+            start: "30%",
+            end: "bottom",
+            scrub: 1, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".second_section_right_img", // Replace with the actual CSS selector of your element
+        { scale: 0.8, opacity: 0 }, // Initial translation value
+        {
+          scale: 1,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".first_section", // Replace with the actual CSS selector of your container
+            start: "30%",
+            end: "bottom",
+            scrub: 1, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".blur_content", // Replace with the actual CSS selector of your element
+        { y: 150, opacity: 0 }, // Initial translation value
+        {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".first_section", // Replace with the actual CSS selector of your container
+            start: "70%",
+            end: "bottom",
+            scrub: 1, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".third_section_title", // Replace with the actual CSS selector of your element
+        { y: 150, opacity: 0 }, // Initial translation value
+        {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".second_section", // Replace with the actual CSS selector of your container
+            start: "50%",
+            end: "bottom",
+            scrub: 1, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".third_section_icon", // Replace with the actual CSS selector of your element
+        { x: 150, opacity: 0 }, // Initial translation value
+        {
+          x: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".second_section", // Replace with the actual CSS selector of your container
+            start: "50%",
+            end: "bottom",
+            scrub: 1, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".fourth_left_title", // Replace with the actual CSS selector of your element
+        { x: 150, opacity: 0 }, // Initial translation value
+        {
+          x: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".fourth_section", // Replace with the actual CSS selector of your container
+            start: "1%",
+            end: "50%",
+            scrub: 1, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".fourth_left_text", // Replace with the actual CSS selector of your element
+        { x: -150, opacity: 0 }, // Initial translation value
+        {
+          x: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".fourth_section", // Replace with the actual CSS selector of your container
+            start: "1%",
+            end: "50%",
+            scrub: 1, // Smooth scrolling effect
+          },
+        }
+      );
+      gsap.fromTo(
+        ".fourth_left_link", // Replace with the actual CSS selector of your element
+        { y: 150, opacity: 0 }, // Initial translation value
+        {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".fourth_section", // Replace with the actual CSS selector of your container
+            start: "1%",
+            end: "50%",
+            scrub: 1, // Smooth scrolling effect
+          },
+        }
+      );
+    }
   }, []);
 
   setTimeout(() => {
@@ -777,7 +784,7 @@ export default function Home() {
             {lang === "en" ? en.About.Title : ru.About.Title}
           </p>
           <span className="left_quote">
-            <svg  
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               width="80"
               height="80"
@@ -3666,18 +3673,18 @@ export default function Home() {
               {lang === "en" ? en.Projects.LearnMore : ru.Projects.LearnMore}
             </span>
             {/* <span> */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="36"
-                height="20"
-                viewBox="0 0 36 20"
-                fill="none"
-              >
-                <path
-                  d="M35.7621 9.42327L27.5804 1.24157C27.2865 0.898378 26.77 0.858371 26.4268 1.15234C26.0837 1.44624 26.0436 1.96275 26.3376 2.30594C26.365 2.33793 26.3948 2.36781 26.4268 2.39516L33.2094 9.18597H0.818142C0.366322 9.18597 0 9.55229 0 10.0042C0 10.4561 0.366322 10.8223 0.818142 10.8223H33.2094L26.4268 17.6049C26.0837 17.8988 26.0436 18.4153 26.3376 18.7585C26.6316 19.1017 27.148 19.1417 27.4912 18.8477C27.5232 18.8203 27.5531 18.7905 27.5804 18.7585L35.7621 10.5768C36.0793 10.2578 36.0793 9.74241 35.7621 9.42327Z"
-                  fill="black"
-                />
-              </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="20"
+              viewBox="0 0 36 20"
+              fill="none"
+            >
+              <path
+                d="M35.7621 9.42327L27.5804 1.24157C27.2865 0.898378 26.77 0.858371 26.4268 1.15234C26.0837 1.44624 26.0436 1.96275 26.3376 2.30594C26.365 2.33793 26.3948 2.36781 26.4268 2.39516L33.2094 9.18597H0.818142C0.366322 9.18597 0 9.55229 0 10.0042C0 10.4561 0.366322 10.8223 0.818142 10.8223H33.2094L26.4268 17.6049C26.0837 17.8988 26.0436 18.4153 26.3376 18.7585C26.6316 19.1017 27.148 19.1417 27.4912 18.8477C27.5232 18.8203 27.5531 18.7905 27.5804 18.7585L35.7621 10.5768C36.0793 10.2578 36.0793 9.74241 35.7621 9.42327Z"
+                fill="black"
+              />
+            </svg>
             {/* </span>w */}
           </Link>
         </div>
@@ -3881,9 +3888,13 @@ export default function Home() {
         <div className="seventh_section_content">
           <p>{lang === "en" ? en.Contact.Title : ru.Contact.Title}</p>
           <div className="form_content">
-            <form onSubmit={handleSubmitFirst} className="content_left" action="#">
+            <form
+              onSubmit={handleSubmitFirst}
+              className="content_left"
+              action="#"
+            >
               <input
-              ref={userFirstName}
+                ref={userFirstName}
                 type="text"
                 placeholder={
                   lang === "en" ? en.Contact.InputName : ru.Contact.InputName
@@ -3892,7 +3903,7 @@ export default function Home() {
                 id="name"
               />
               <input
-              ref={userFirstEmail}
+                ref={userFirstEmail}
                 type="email"
                 placeholder={
                   lang === "en" ? en.Contact.InputEmail : ru.Contact.InputEmail
@@ -3901,7 +3912,7 @@ export default function Home() {
                 id="name"
               />
               <textarea
-              ref={userFirstMessage}
+                ref={userFirstMessage}
                 name="message"
                 placeholder={
                   lang === "en" ? en.Contact.Message : ru.Contact.Message
