@@ -55,7 +55,17 @@ const ProjectSwiper = () => {
             slidesPerView: 3.5,
             spaceBetween: 30,
             slideToClickedSlide: true,
-          }
+          },
+        1500: {
+            slidesPerView: 3.5,
+            spaceBetween: 30,
+            slideToClickedSlide: true,
+        },
+        1600: {
+            slidesPerView: 4.5,
+            spaceBetween: 30,
+            slideToClickedSlide: true,
+        },
       }}
       slidesPerView={5.4}
       spaceBetween={50}

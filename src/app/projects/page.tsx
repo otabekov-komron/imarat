@@ -7,6 +7,7 @@ import { photo1, photo2, photo3, photo4, project } from "@/assets/images";
 import Link from "next/link";
 import en from "../../../public/locales/en.json"
 import ru from "../../../public/locales/ru.json"
+import Loader from '@/components/Loader'
 
 interface Project {
   _id: string;
@@ -52,7 +53,8 @@ const Projects = () => {
     setSelectedCategory(category);
   };
 
-  return (
+  return (<>
+    <Loader/>
     <div className="projects">
       <div className="gallery-wrapper">
         <div className="title">
@@ -315,7 +317,7 @@ const Projects = () => {
         </div>
       </div>
     </div>
-  );
+    </>);
 };
 
 export default Projects;

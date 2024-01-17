@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
+import Loader from '@/components/Loader'
 
 export default function BlogDetails({
   params,
@@ -47,7 +48,8 @@ export default function BlogDetails({
     return formattedDate;
   };
 
-  return (
+  return (<>
+  <Loader/>
     <div>
       {blog ? (
         <div className="blog">
@@ -315,5 +317,6 @@ export default function BlogDetails({
         })}
       </div>
     </div>
+    </>
   );
 }
