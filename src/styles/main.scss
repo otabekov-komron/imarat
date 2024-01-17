@@ -698,10 +698,11 @@ ul {
     align-items: center;
     justify-content: center;
     .title__content {
-      font-size: 64px;
+      text-align: center;
+      font-size: 32px;
       font-style: normal;
       font-weight: 400;
-      line-height: 72px;
+      line-height: 38px; /* 118.75% */
       color: #ffffff;
     }
 
@@ -720,50 +721,40 @@ ul {
     }
   }
   .team_card {
-    height: 500px;
+    height: 200px;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5%;
-    margin-bottom: 55%;
-    &:hover {
-      .team_card_desc {
-        opacity: 1;
-      }
-      .team_card_img {
-        box-shadow: -1px 1px 112px 46px rgba(61, 61, 61, 0.7);
-        -webkit-box-shadow: -1px 1px 112px 46px rgba(61, 61, 61, 0.7);
-        -moz-box-shadow: -1px 1px 112px 46px rgba(61, 61, 61, 0.7);
-      }
-    }
+    margin-bottom: 100px;
 
     .team_card_img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      padding: 40px 0 0 0;
-      border-radius: 40px;
+      padding: 20px 0 0 0;
+      border-radius: 8px;
       background-color: $primary-black-90;
-      -webkit-border-radius: 40px;
-      -moz-border-radius: 40px;
-      -ms-border-radius: 40px;
-      -o-border-radius: 40px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
       transition: all ease-in-out 0.5s;
       -webkit-transition: all ease-in-out 0.5s;
       -moz-transition: all ease-in-out 0.5s;
       -ms-transition: all ease-in-out 0.5s;
       -o-transition: all ease-in-out 0.5s;
-    }
+}
     .team_card_desc {
-      opacity: 0;
+      opacity: 1;
       transition: opacity 0.5s ease-in-out;
       background-color: #f3cd00;
-      border-radius: 20px;
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      -ms-border-radius: 20px;
-      -o-border-radius: 20px;
-      padding: 20px;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+      padding: 7px;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -775,17 +766,17 @@ ul {
         font-family: "Sans-Regular";
         &:first-child {
           color: $primary-black;
-          font-size: 36px;
+          font-size: 12px;
           font-style: normal;
           font-weight: 400;
-          line-height: 42px; /* 116.667% */
+          line-height: 18.446px; /* 116.667% */
         }
         &:last-child {
-          font-size: 20px;
+          font-size: 8.784px;
           font-style: normal;
           font-weight: 400;
-          line-height: 30px; /* 150% */
-          letter-spacing: 0.1px;
+          line-height: 13.176px; /* 150% */
+          letter-spacing: 0.044px;
         }
       }
     }

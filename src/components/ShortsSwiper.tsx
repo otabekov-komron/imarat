@@ -31,6 +31,16 @@ export default function ShortsSwiper() {
       <Swiper
         spaceBetween={100}
         loop={true}
+        breakpoints={{
+          350: {
+            spaceBetween: 20,
+            slidesPerView: 1.5
+          },
+          1200: {
+            spaceBetween: 100,
+            slidesPerView: 30
+          },
+        }}
         centeredSlides={true}
         slidesPerView={3}
         autoplay={{

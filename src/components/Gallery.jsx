@@ -2,8 +2,8 @@
 import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import en from '../../public/locales/en.json'
-import ru from '../../public/locales/ru.json'
+import en from "../../public/locales/en.json";
+import ru from "../../public/locales/ru.json";
 
 // Import Swiper styles
 import "swiper/css";
@@ -26,21 +26,29 @@ import {
 
 export default function Gallery({ images }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const [lang, setLang] = useState()
+  const [lang, setLang] = useState();
   useEffect(() => {
-    const getLang = localStorage.getItem('lang')
-    setLang(getLang)
-  }, [])
+    const getLang = localStorage.getItem("lang");
+    setLang(getLang);
+  }, []);
   return (
     <div className="swiper_gallery">
       <Swiper
         direction="vertical"
+        breakpoints={{
+          350: {
+            spaceBetween: 30,
+          },
+          1200: {
+            spaceBetween: 10,
+          },
+        }}
         loop={true}
         speed={2000}
         autoplay={{
           delay: 5000,
           enabled: true,
-          disableOnInteraction: false
+          disableOnInteraction: false,
         }}
         spaceBetween={10}
         navigation={{
@@ -79,18 +87,18 @@ export default function Gallery({ images }) {
               <p key={index}>
                 {(() => {
                   switch (category.category) {
-                    case 'Bedroom':
-                      return lang === 'en' ? "Bedroom" : "Спальня";
-                    case 'Kitchen':
-                      return lang === 'en' ? "Kitchen" : "Кухня";
-                    case 'Home office':
-                      return lang === 'en' ? "Home office" : "Домашний офис";
-                    case 'Living room':
-                      return lang === 'en' ? "Living room" : "Гостиная";
-                    case 'Dining room':
-                      return lang === 'en' ? "Dining room" : "Столовая";
-                    case 'Bathroom':
-                      return lang === 'en' ? "Bathroom" : "Ванная";
+                    case "Bedroom":
+                      return lang === "en" ? "Bedroom" : "Спальня";
+                    case "Kitchen":
+                      return lang === "en" ? "Kitchen" : "Кухня";
+                    case "Home office":
+                      return lang === "en" ? "Home office" : "Домашний офис";
+                    case "Living room":
+                      return lang === "en" ? "Living room" : "Гостиная";
+                    case "Dining room":
+                      return lang === "en" ? "Dining room" : "Столовая";
+                    case "Bathroom":
+                      return lang === "en" ? "Bathroom" : "Ванная";
                     default:
                       return category.category;
                   }
@@ -175,6 +183,16 @@ export default function Gallery({ images }) {
         onSwiper={setThumbsSwiper}
         loop={true}
         direction="vertical"
+        breakpoints={{
+          350: {
+            direction: "horizontal",
+            slidesPerView: 2.7,
+          },
+          1200: {
+            direction: "vertical",
+            slidesPerView: 4,
+          },
+        }}
         spaceBetween={10}
         slidesPerView={4}
         freeMode={true}
@@ -182,8 +200,7 @@ export default function Gallery({ images }) {
         modules={[FreeMode, Navigation, Thumbs]}
         className="thumbs_images"
       >
-        <SwiperSlide style={{display: 'none'}}>
-        </SwiperSlide>
+        <SwiperSlide style={{ display: "none" }}></SwiperSlide>
         {images.slice(0, 8).map((product, index) => (
           <SwiperSlide key={index}>
             <Image

@@ -2303,13 +2303,13 @@ const About = () => {
             <div className="count">50+</div>
           </div>
           <div className="third_section_pv">
-            <div className="">
+            <div className="first">
               <ProjectsVertical />
             </div>
-            <div className="">
+            <div className="second">
               <ProjectsVerticalRV />
             </div>
-            <div className="">
+            <div className="third">
               <ProjectsVertical />
             </div>
           </div>

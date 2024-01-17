@@ -58,7 +58,6 @@ const Contacts = () => {
             <button onClick={handleSubmit} className="btn_component">
               {lang === "en" ? en.Contact.Send : ru.Contact.Send}
             </button>
-            \
           </form>
           <div className="contacts_details_right">
             <div className="email contact_sectors">
