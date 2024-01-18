@@ -421,7 +421,8 @@
               opacity: 1;
             }
           }
-          a {
+          a,
+          a:-webkit-any-link {
             position: relative;
             display: flex;
             align-items: center;
@@ -587,7 +588,8 @@
             gap: 40px;
             align-items: flex-end;
             input,
-            textarea {
+            textarea,
+            a:-webkit-any-link {
               resize: none;
               width: 100%;
               font-size: 20px;
@@ -625,7 +627,8 @@
                 text-transform: lowercase;
                 color: $primary-black;
               }
-              a {
+              a,
+              a:-webkit-any-link {
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 500;
@@ -1135,7 +1138,8 @@
               opacity: 1;
             }
           }
-          a {
+          a,
+          a:-webkit-any-link {
             position: relative;
             display: flex;
             align-items: center;
@@ -1306,7 +1310,8 @@
             gap: 40px;
             align-items: flex-end;
             input,
-            textarea {
+            textarea,
+            a:-webkit-any-link {
               resize: none;
               width: 100%;
               font-size: 18px;
@@ -1346,7 +1351,8 @@
                 text-transform: lowercase;
                 color: $primary-black;
               }
-              a {
+              a,
+              a:-webkit-any-link {
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 500;
@@ -1860,7 +1866,8 @@
         height: 350px;
         .sw-slide {
           width: 100%;
-          a {
+          a,
+          a:-webkit-any-link {
             position: relative;
             display: flex;
             align-items: center;
@@ -2038,7 +2045,8 @@
             gap: 10px;
             align-items: flex-end;
             input,
-            textarea {
+            textarea,
+            a:-webkit-any-link {
               resize: none;
               width: 100%;
               font-size: 11px;
@@ -2076,7 +2084,8 @@
                 text-transform: lowercase;
                 color: $primary-black;
               }
-              a {
+              a,
+              a:-webkit-any-link {
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;

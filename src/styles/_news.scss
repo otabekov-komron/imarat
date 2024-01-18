@@ -325,7 +325,8 @@
               line-height: normal;
               letter-spacing: 0.055px;
             }
-            a {
+            a,
+            a:-webkit-any-link {
               width: fit-content;
               color: black;
 
@@ -722,7 +723,8 @@
               line-height: normal;
               letter-spacing: 0.055px;
             }
-            a {
+            a,
+            a:-webkit-any-link {
               width: fit-content;
               color: black;
 
@@ -1131,7 +1133,8 @@
               line-height: 24px; /* 200% */
               letter-spacing: 0.06px;
             }
-            a {
+            a,
+            a:-webkit-any-link {
               width: fit-content;
               color: black;
               display: flex;
@@ -1146,12 +1149,13 @@
               font-style: normal;
               font-weight: 500;
               line-height: 20px;
-              /*142.857%*/margin-top: 30px;
+              /*142.857%*/
+              margin-top: 30px;
               -webkit-border-radius: 80px;
               -moz-border-radius: 80px;
               -ms-border-radius: 80px;
               -o-border-radius: 80px;
-}
+            }
           }
         }
         .choose_category {

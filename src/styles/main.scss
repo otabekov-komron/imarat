@@ -1,6 +1,6 @@
 @import "blog";
 @import "extends";
-.overflow-none{
+.overflow-none {
   overflow: hidden;
 }
 * {
@@ -494,7 +494,8 @@ ul {
           flex-direction: column;
           gap: 20px;
         }
-        a {
+        a,
+        a:-webkit-any-link {
           color: #ffffff8f;
           font-size: 14px;
           font-style: normal;
@@ -509,7 +510,8 @@ ul {
       .footer_columns_contact {
         width: 100%;
         grid-column: 1/4;
-        a {
+        a,
+        a:-webkit-any-link {
           display: flex;
           align-items: center;
           gap: 12px;
@@ -1215,7 +1217,8 @@ ul {
           flex-direction: column;
           gap: 20px;
         }
-        a {
+        a,
+        a:-webkit-any-link {
           color: #ffffff8f;
         }
         svg {
@@ -1223,7 +1226,8 @@ ul {
         }
       }
       .footer_columns_contact {
-        a {
+        a,
+        a:-webkit-any-link {
           display: flex;
           align-items: center;
           gap: 12px;
@@ -1953,7 +1957,8 @@ ul {
           gap: 20px;
           font-size: 13px;
         }
-        a {
+        a,
+        a:-webkit-any-link {
           color: #ffffff8f;
         }
         svg {
@@ -1961,7 +1966,8 @@ ul {
         }
       }
       .footer_columns_contact {
-        a {
+        a,
+        a:-webkit-any-link {
           display: flex;
           align-items: center;
           gap: 12px;
