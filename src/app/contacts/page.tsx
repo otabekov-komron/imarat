@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import en from "../../../public/locales/en.json";
 import ru from "../../../public/locales/ru.json";
 import sendForm from "@/utils/sendForm";
-import Loader from '@/components/Loader'
+import LoaderMini from "@/components/LoaderMini";
 
 const Contacts = () => {
   const [lang, setLang] = useState();
@@ -23,7 +23,7 @@ const Contacts = () => {
     sendForm(userName, userEmail, userMessage);
   };
   return (<>
-    <Loader/>
+    <LoaderMini/>
     <div className="contacts">
       <div className="contacts_container">
         <div className="contacts_details">

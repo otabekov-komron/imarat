@@ -1,19 +1,30 @@
 import { useState, useEffect } from 'react';
 
 const LoadingComponent = () => {
-  const [progress, setProgress] = useState(0);
+  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    const loadingInterval = setInterval(() => {
-      const randomIncrement = Math.floor(Math.random() * (100 - progress + 1));
-      setProgress((prevProgress) => Math.min(prevProgress + randomIncrement, 100));
-    }, 1000);
-    return () => clearInterval(loadingInterval);
-  }, [progress]);
+    const intervalId = setInterval(() => {
+      // Increment the counter by 1 until it reaches 100
+      setCounter((prevCounter) => (prevCounter < 100 ? prevCounter + 1 : prevCounter));
+    }, 50);
+
+    // Cleanup the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, []); 
+  useEffect(() => {
+    
+    const bodyK = document.querySelector('body')
+    if(counter !== 100){
+      bodyK.classList.add('overflow-none')
+    } else{
+      bodyK.classList.remove('overflow-none')
+    }
+  },[counter])
 
   return (<>
     {
-        progress !== 100 ? <div className='loader'>
+        counter !== 100 ? <div className='loader'>
             <svg width="889" height="300" viewBox="0 0 889 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.6">
                 <path d="M230.113 266.441H264.161V269.942C264.161 278.376 261.148 285.506 255.111 291.346C249.015 297.115 240.943 300 230.88 300C220.818 300 211.978 296.592 205.289 289.787C198.542 282.912 195.169 274.572 195.169 264.789C195.169 255.006 198.542 246.666 205.289 239.779C211.966 232.974 220.504 229.566 230.88 229.566C237.104 229.566 242.885 231.09 248.201 234.138C253.459 237.185 257.507 241.233 260.369 246.293L254.331 249.795C252.191 245.642 249.015 242.338 244.793 239.872C240.57 237.406 235.941 236.173 230.88 236.173C222.319 236.173 215.374 238.93 210.058 244.444C204.673 250.027 201.986 256.797 201.986 264.777C201.986 272.757 204.673 279.539 210.058 285.111C215.374 290.624 222.319 293.381 230.88 293.381C238.535 293.381 244.665 291.474 249.271 287.647C253.808 283.75 256.437 278.829 257.158 272.862H230.113V266.441Z" fill="white"/>
@@ -29,7 +40,7 @@ const LoadingComponent = () => {
                 <path d="M559.589 170.741H529.112L493.307 108.542H460.411V170.741H432.598V0H500.333C515.49 0 528.309 5.36254 538.79 16.0993C549.434 26.5103 554.75 39.4339 554.75 54.8817C554.75 65.7813 551.644 75.7386 545.432 84.7654C539.22 93.7922 531.124 100.341 521.12 104.401L559.577 170.741H559.589ZM500.322 26.3474H460.411V79.2865H500.322C507.731 79.2865 514.025 76.518 519.189 70.9926C524.343 65.4672 526.704 59.7906 526.704 51.8224C526.704 45.948 524.354 40.1667 519.189 34.6297C514.025 29.1043 507.731 26.3358 500.322 26.3358V26.3474Z" fill="white"/>
                 </g>
             </svg>
-            <p className='loader_process'>{progress}%</p>
+            <p className='loader_process'>{counter}%</p>
         </div> : <></>
     }
   </>);

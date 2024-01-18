@@ -7,7 +7,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import en from "../../../public/locales/en.json";
 import ru from "../../../public/locales/ru.json";
-import Loader from '@/components/Loader'
+import LoaderMini from "@/components/LoaderMini";
 
 const About = () => {
   const [lang, setLang] = useState();
@@ -17,7 +17,7 @@ const About = () => {
   }, []);
 
   return (<>
-      <Loader/>
+      <LoaderMini/>
     <div className="about">
       <div className="first_section">
         <div className="top">

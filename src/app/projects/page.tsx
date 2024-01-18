@@ -7,7 +7,7 @@ import { photo1, photo2, photo3, photo4, project } from "@/assets/images";
 import Link from "next/link";
 import en from "../../../public/locales/en.json"
 import ru from "../../../public/locales/ru.json"
-import Loader from '@/components/Loader'
+import LoaderMini from "@/components/LoaderMini";
 
 interface Project {
   _id: string;
@@ -54,7 +54,7 @@ const Projects = () => {
   };
 
   return (<>
-    <Loader/>
+    <LoaderMini/>
     <div className="projects">
       <div className="gallery-wrapper">
         <div className="title">

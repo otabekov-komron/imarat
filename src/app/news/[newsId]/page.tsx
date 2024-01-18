@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
-import Loader from '@/components/Loader'
+import LoaderMini from "@/components/LoaderMini";
 
 export default function BlogDetails({
   params,
@@ -49,7 +49,7 @@ export default function BlogDetails({
   };
 
   return (<>
-  <Loader/>
+  <LoaderMini/>
     <div>
       {blog ? (
         <div className="blog">

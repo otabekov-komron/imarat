@@ -3,7 +3,7 @@ import Card from "@/components/Card";
 import React, { useEffect, useState } from "react";
 import en from "../../../public/locales/en.json";
 import ru from "../../../public/locales/ru.json";
-import Loader from '@/components/Loader'
+import LoaderMini from "@/components/LoaderMini";
 
 const Services = () => {
   const [expandedIds, setExpandedIds] = useState<number[]>([]);
@@ -248,12 +248,12 @@ const Services = () => {
       id: 5,
       title:
         lang === "en"
-          ? en.OurServices.Minimalism.Title
-          : ru.OurServices.Minimalism.Title,
+          ? en.OurServices.Contemporary.Title
+          : ru.OurServices.Contemporary.Title,
       desc:
         lang === "en"
-          ? en.OurServices.Minimalism.Text
-          : ru.OurServices.Minimalism.Text,
+          ? en.OurServices.Contemporary.Text
+          : ru.OurServices.Contemporary.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -379,7 +379,7 @@ const Services = () => {
   ];
 
   return (<>
-    <Loader/>
+    <LoaderMini/>
     <div className="services">
       <div className="title">
         <span className="title__left"></span>

@@ -1,6 +1,8 @@
 @import "blog";
 @import "extends";
-
+.overflow-none{
+  overflow: hidden;
+}
 * {
   padding: 0;
   margin: 0;
@@ -38,7 +40,8 @@ body {
     background: $primary-yellow;
   }
 }
-a {
+a,
+a:-webkit-any-link {
   text-decoration: none;
   color: unset;
 }
@@ -50,9 +53,56 @@ ul {
 
 //components
 
+/* HTML: <div class="loader"></div> */
+.mini-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999999999999;
+  .loaderMini {
+    --c: no-repeat linear-gradient(#fff000 0 0);
+    background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c),
+      var(--c), var(--c), var(--c);
+    background-size: 16px 16px;
+    animation: l32-1 1s infinite, l32-2 1s infinite;
+  }
+}
+@keyframes l32-1 {
+  0%,
+  100% {
+    width: 45px;
+    height: 45px;
+  }
+  35%,
+  65% {
+    width: 65px;
+    height: 65px;
+  }
+}
+@keyframes l32-2 {
+  0%,
+  40% {
+    background-position: 0 0, 0 50%, 0 100%, 50% 100%, 100% 100%, 100% 50%,
+      100% 0, 50% 0, 50% 50%;
+  }
+  60%,
+  100% {
+    background-position: 0 50%, 0 100%, 50% 100%, 100% 100%, 100% 50%, 100% 0,
+      50% 0, 0 0, 50% 50%;
+  }
+}
+
 .loader {
   position: fixed;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -84,6 +134,7 @@ ul {
     .left {
       svg {
         width: 80px;
+        height: 50px;
       }
     }
     .right {
@@ -768,7 +819,7 @@ ul {
       -moz-transition: all ease-in-out 0.5s;
       -ms-transition: all ease-in-out 0.5s;
       -o-transition: all ease-in-out 0.5s;
-}
+    }
     .team_card_desc {
       opacity: 1;
       transition: opacity 0.5s ease-in-out;

@@ -1297,9 +1297,10 @@
         .form_content {
           display: flex;
           width: 100%;
+          gap: 5%;
           justify-content: space-around;
           .content_left {
-            width: 40%;
+            width: 55%;
             display: flex;
             flex-direction: column;
             gap: 40px;
@@ -1336,6 +1337,8 @@
               grid-template-columns: repeat(2, 1fr);
               gap: 40px;
               .title_links {
+                margin: 0 !important;
+                padding: 0 !important;
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 400;

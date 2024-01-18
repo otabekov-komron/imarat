@@ -9,8 +9,9 @@
         "Connect": "Connect with us"
     },
     "Hero": {
-        "Title": "Interior Design",
-        "Text": "we offer you great comfort and great design in apartment renovation.",
+        "Title": "home repair ",
+        "Title2": "interior design",
+        "Text": "Imarat Group is engaged in the renovation of apartments, offices of kindergartens and schools.",
         "Connect": "Connect with us",
         "Live": "You can follow us live",
         "Projects": "Projects 360",
@@ -109,7 +110,7 @@
         },
         "faq6": {
             "Title": "Do we do renovations without a design project ?",
-            "Text": "No, we do not. There are nuances that need to be considered, and while there are many advantages, the only drawback is financial."
+            "Text": "No, we do not. There are nuances that need to be considered."
         }
     },
     "Process": {

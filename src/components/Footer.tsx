@@ -82,20 +82,12 @@ const Footer = () => {
           id: 4,
           name:
             lang === "en"
-              ? en.Footer.Services.Contemporary
-              : ru.Footer.Services.Contemporary,
-          url: "/services",
-        },
-        {
-          id: 5,
-          name:
-            lang === "en"
               ? en.Footer.Services.Classical
               : ru.Footer.Services.Classical,
           url: "/services",
         },
         {
-          id: 6,
+          id: 5,
           name:
             lang === "en"
               ? en.Footer.Services.VersaceStyle
@@ -103,13 +95,13 @@ const Footer = () => {
           url: "/services",
         },
         {
-          id: 7,
+          id: 6,
           name:
             lang === "en" ? en.Footer.Services.Loft : ru.Footer.Services.Loft,
           url: "/services",
         },
         {
-          id: 8,
+          id: 7,
           name:
             lang === "en"
               ? en.Footer.Services.Baroque
@@ -246,7 +238,7 @@ const Footer = () => {
               <p>{lang === "en" ? en.Footer.Map : ru.Footer.Map}</p>
             </a>
             <a className="map" href="https://maps.app.goo.gl/qRJLXfddSnc8fZdD7">
-              map
+              {lang === "en" ? 'map' : 'карта'}
             </a>
           </div>
           <div>
@@ -351,7 +343,7 @@ const Footer = () => {
       </div>
       <div className="footer_text">
         <p>{lang === "en" ? en.Footer.Since : ru.Footer.Since}</p>
-        <div className="hypernova_logo"></div>
+        <a href="https://hypernova.uz" className="hypernova_logo"></a>
       </div>
     </div>
   );

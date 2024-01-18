@@ -28,15 +28,15 @@ export default function Home() {
       gsap.fromTo(
         ".imarat_svg", // Replace with the actual CSS selector of your element
         {
-          x: '80vw',
+          x: '60vw',
           // Initial translation value
         },
         {
           x: 0,
           scrollTrigger: {
             trigger: ".fourth_section", // Replace with the actual CSS selector of your trigger element
-            start: "30% center",
-            end: "20%",
+            start: "10% center",
+            end: "90%",
             scrub: 5, // Smooth scrolling effect
           },
         }
@@ -615,6 +615,7 @@ export default function Home() {
               <p className="left_top_title">
                 {lang === "en" ? en.Hero.Title : ru.Hero.Title}
               </p>
+              <p className="left_top_title">{lang === "en" ? en.Hero.Title2 : ru.Hero.Title2}</p>
               <p className="left_top_desc">
                 {lang === "en" ? en.Hero.Text : ru.Hero.Text}
               </p>
@@ -3625,6 +3626,12 @@ export default function Home() {
             </Link>
           </div>
           <div className="fourth_section_container_right" id="cards">
+          <Card
+              idCard={lists[0].id}
+              svgContent={lists[0].svgContent}
+              title={lists[0].title}
+              desc={lists[0].desc}
+            />
             <Card
               idCard={lists[1].id}
               svgContent={lists[1].svgContent}

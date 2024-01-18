@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
-import Loader from '@/components/Loader'
+import LoaderMini from "@/components/LoaderMini";
 interface Vacancy {
   _id: string;
   category: string;
@@ -76,7 +76,7 @@ const News = () => {
   }, [vacancies]);
 
   return (<>
-    <Loader/>
+    <LoaderMini/>
     <div className="news">
       <div className="blogs">
         <div className="title">
