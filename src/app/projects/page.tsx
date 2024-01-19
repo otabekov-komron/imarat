@@ -179,7 +179,7 @@ const Projects = () => {
       <div className="wrapper_360">
         <div className="title">
           <span className="title__left"></span>
-          <h2 className="title__content">{lang === 'en' ? "Project 360°" : "Проект 360°."}</h2>
+          <h2 className="title__content">{lang === 'en' ? "Project 360°" : "Проект 360°"}</h2>
           <span className="title__right"></span>
         </div>
         <div className="cards_360">
