@@ -703,6 +703,9 @@ ul {
       background: $primary-yellow-50;
     }
     display: flex;
+    span {
+      color: #000;
+    }
     background-color: $primary-yellow;
     padding: 10px 20px;
     justify-content: center;
@@ -1410,6 +1413,9 @@ ul {
   .btn_component {
     &:hover {
       background: $primary-yellow-50;
+    }
+    span {
+      color: #000;
     }
     display: flex;
     background-color: $primary-yellow;

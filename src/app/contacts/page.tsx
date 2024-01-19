@@ -57,7 +57,7 @@ const Contacts = () => {
               
               rows={10}
             ></textarea>
-            <button onClick={handleSubmit} className="btn_component">
+            <button onClick={handleSubmit} className="form_btn btn_component">
               {lang === "en" ? en.Contact.Send : ru.Contact.Send}
             </button>
           </form>
