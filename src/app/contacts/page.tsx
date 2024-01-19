@@ -72,7 +72,8 @@ const Contacts = () => {
               <p className="title">
                 {lang === "en" ? en.Contact.Phone : ru.Contact.Phone}
               </p>
-              <p className="desc">+998 95 747 77 77</p>
+              <a href="tel:+998957477777" className="desc">+998 95 747 77 77</a>
+              <a href="tel:+998787777575" className="desc">+998 78 777 75 75</a>
             </div>
             <div className="address contact_sectors">
               <p className="title">

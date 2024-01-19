@@ -113,6 +113,7 @@
         width: 100%;
         justify-content: flex-end;
         .blur_content_another {
+          z-index: 5;
           position: absolute;
           .second_section_right_blur {
             border-radius: 30px;
@@ -380,6 +381,7 @@
         width: 100%;
         justify-content: flex-end;
         .blur_content_another {
+          z-index: 5;
           position: absolute;
           .second_section_right_blur {
             border-radius: 30px;
@@ -667,6 +669,7 @@
         width: 100%;
         justify-content: center;
         .blur_content_another {
+          z-index: 5;
           margin: -45px 0 0 0;
           .second_section_right_blur {
             border-radius: 30px;

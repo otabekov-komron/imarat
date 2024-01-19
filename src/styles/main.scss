@@ -44,6 +44,10 @@ a,
 a:-webkit-any-link {
   text-decoration: none;
   color: unset;
+  -webkit-appearance: none;
+}
+button{
+-webkit-tap-highlight-color: unset;
 }
 ul {
   list-style: none;
@@ -728,6 +732,7 @@ ul {
     }
   }
   .blur_content {
+    z-index: 5;
     display: flex;
     justify-content: center;
     width: 100%;
