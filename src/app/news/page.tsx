@@ -295,7 +295,7 @@ const News = () => {
           {selectedCategory == null ? (
             <div className="choose-category">
               <p className="first_text">Imarat Group</p>
-              <p className="second_text">pleased to work with you</p>
+              <p className="second_text">{lang === "en" ? "Pleased work with you" : "Рад работать с вами"}</p>
             </div>
           ) : (
             <div className="vacancies_items">

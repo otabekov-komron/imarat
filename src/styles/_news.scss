@@ -119,15 +119,6 @@
           }
           .swiper-slide {
             height: 100%;
-            iframe {
-              object-fit: cover !important;
-            }
-            &:hover,
-            &:active {
-              .overlay {
-                visibility: hidden;
-              }
-            }
             transform: scale(0.8);
             -webkit-transform: scale(0.8);
             -moz-transform: scale(0.8);
@@ -138,63 +129,13 @@
             -moz-border-radius: 40px;
             -ms-border-radius: 40px;
             -o-border-radius: 40px;
-            &:nth-child(n) {
-              .overlay {
-                background: url("../assets/images/design.jpg");
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            &:nth-child(2n) {
-              .overlay {
-                background: url("../assets/images/bedroom.webp");
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            &:nth-child(3n) {
-              .overlay {
-                background: url("../assets/images/bathroom.webp");
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            &:nth-child(4) {
-              .overlay {
-                background: url("../assets/images/dining\ room.webp");
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            .overlay {
-              transition: visibility 0.7s ease-in-out;
-              -webkit-transition: visibility 0.7s ease-in-out;
-              -moz-transition: visibility 0.7s ease-in-out;
-              -ms-transition: visibility 0.7s ease-in-out;
-              -o-transition: visibility 0.7s ease-in-out;
-              visibility: visible;
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 40px;
-              -webkit-border-radius: 40px;
-              -moz-border-radius: 40px;
-              -ms-border-radius: 40px;
-              -o-border-radius: 40px;
-              svg {
-                width: 20%;
-              }
-            }
             iframe {
               border-radius: 40px;
               -webkit-border-radius: 40px;
               -moz-border-radius: 40px;
               -ms-border-radius: 40px;
               -o-border-radius: 40px;
-              object-fit: cover;
+              object-fit: cover !important;
             }
           }
           .swiper-slide-active {
@@ -517,15 +458,6 @@
           }
           .swiper-slide {
             height: 100%;
-            iframe {
-              object-fit: cover !important;
-            }
-            &:hover,
-            &:active {
-              .overlay {
-                visibility: hidden;
-              }
-            }
             transform: scale(0.8);
             -webkit-transform: scale(0.8);
             -moz-transform: scale(0.8);
@@ -536,56 +468,6 @@
             -moz-border-radius: 40px;
             -ms-border-radius: 40px;
             -o-border-radius: 40px;
-            &:nth-child(n) {
-              .overlay {
-                background: url("../assets/images/design.jpg");
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            &:nth-child(2n) {
-              .overlay {
-                background: url("../assets/images/bedroom.webp");
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            &:nth-child(3n) {
-              .overlay {
-                background: url("../assets/images/bathroom.webp");
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            &:nth-child(4) {
-              .overlay {
-                background: url("../assets/images/dining\ room.webp");
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            .overlay {
-              transition: visibility 0.7s ease-in-out;
-              -webkit-transition: visibility 0.7s ease-in-out;
-              -moz-transition: visibility 0.7s ease-in-out;
-              -ms-transition: visibility 0.7s ease-in-out;
-              -o-transition: visibility 0.7s ease-in-out;
-              visibility: visible;
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 40px;
-              -webkit-border-radius: 40px;
-              -moz-border-radius: 40px;
-              -ms-border-radius: 40px;
-              -o-border-radius: 40px;
-              svg {
-                width: 20%;
-              }
-            }
             iframe {
               border-radius: 40px;
               -webkit-border-radius: 40px;
@@ -920,15 +802,6 @@
           }
           .swiper-slide {
             height: 100%;
-            iframe {
-              object-fit: cover !important;
-            }
-            &:hover,
-            &:active {
-              .overlay {
-                visibility: hidden;
-              }
-            }
             transform: scale(0.8);
             -webkit-transform: scale(0.8);
             -moz-transform: scale(0.8);
@@ -939,56 +812,6 @@
             -moz-border-radius: 40px;
             -ms-border-radius: 40px;
             -o-border-radius: 40px;
-            &:nth-child(n) {
-              .overlay {
-                background: url("../assets/images/design.jpg");
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            &:nth-child(2n) {
-              .overlay {
-                background: url("../assets/images/bedroom.webp");
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            &:nth-child(3n) {
-              .overlay {
-                background: url("../assets/images/bathroom.webp");
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            &:nth-child(4) {
-              .overlay {
-                background: url("../assets/images/dining\ room.webp");
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            .overlay {
-              transition: visibility 0.7s ease-in-out;
-              -webkit-transition: visibility 0.7s ease-in-out;
-              -moz-transition: visibility 0.7s ease-in-out;
-              -ms-transition: visibility 0.7s ease-in-out;
-              -o-transition: visibility 0.7s ease-in-out;
-              visibility: visible;
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 40px;
-              -webkit-border-radius: 40px;
-              -moz-border-radius: 40px;
-              -ms-border-radius: 40px;
-              -o-border-radius: 40px;
-              svg {
-                width: 20%;
-              }
-            }
             iframe {
               border-radius: 40px;
               -webkit-border-radius: 40px;

@@ -52,6 +52,10 @@
     .hidden {
       display: none;
     }
+    
+  }
+  .btn_component{
+    color: #000;
   }
 }
 
@@ -107,6 +111,9 @@
       display: none;
     }
   }
+  .btn_component{
+    color: #000;
+  }
 }
 @media only screen and (min-width: 350px) and (max-width: 1200px) {
   .services {
@@ -161,5 +168,8 @@
     .hidden {
       display: none;
     }
+  }
+  .btn_component{
+    color: #000;
   }
 }
