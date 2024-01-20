@@ -1986,8 +1986,11 @@
             border-radius: 50%;
             animation: rotate 5s linear infinite;
             -webkit-animation: rotate 5s linear infinite;
-
-            @keyframes rotate {
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            @keyframes rotate{
               0% {
                 transform: rotate(0deg);
                 -webkit-transform: rotate(0deg);

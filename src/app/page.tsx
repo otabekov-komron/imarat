@@ -463,12 +463,12 @@ export default function Home() {
       id: 5,
       title:
         lang === "en"
-          ? en.OurServices.Minimalism.Title
-          : ru.OurServices.Minimalism.Title,
+          ? en.OurServices.Neoclassical.Title
+          : ru.OurServices.Neoclassical.Title,
       desc:
         lang === "en"
-          ? en.OurServices.Minimalism.Text
-          : ru.OurServices.Minimalism.Text,
+          ? en.OurServices.Neoclassical.Text
+          : ru.OurServices.Neoclassical.Text,
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
