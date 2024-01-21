@@ -402,6 +402,7 @@ ul {
     backdrop-filter: blur(15px);
     transition: bottom 0.3s ease; /* Smooth transition for visibility */
     span {
+      place-self: center;
       width: 50px;
       svg {
         width: 100%;
@@ -409,6 +410,8 @@ ul {
       }
     }
     button {
+      place-self: center;
+      margin-top: 3px;
       border: none;
       background: none;
 

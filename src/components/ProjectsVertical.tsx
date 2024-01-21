@@ -16,6 +16,23 @@ export default function ProjectsVertical() {
   return (
     <>
       <Swiper
+            breakpoints={{
+              350: {
+                slidesPerView:3.1,
+              centeredSlides:true,
+              spaceBetween:20,
+              },
+              1200: {
+                slidesPerView:2.1,
+              centeredSlides:true,
+              spaceBetween:20,
+              },
+              1600: {
+                slidesPerView:3.1,
+              centeredSlides:true,
+              spaceBetween:20,
+              }
+            }}
         slidesPerView={2}
         spaceBetween={20}
         loop={true}

@@ -16,6 +16,23 @@ export default function ProjectsVerticalRV() {
   return (
     <>
       <Swiper
+      breakpoints={{
+        350: {
+          slidesPerView:3.1,
+        centeredSlides:true,
+        spaceBetween:20,
+        },
+        1200: {
+          slidesPerView:2.1,
+        centeredSlides:true,
+        spaceBetween:20,
+        },
+        1600: {
+          slidesPerView:3.1,
+        centeredSlides:true,
+        spaceBetween:20,
+        }
+      }}
         slidesPerView={2.1}
         centeredSlides={true}
         spaceBetween={20}

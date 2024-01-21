@@ -95,7 +95,7 @@ export default function Gallery({ images }) {
                       return lang === "en" ? "Home office" : "Домашний офис";
                     case "Living room":
                       return lang === "en" ? "Living room" : "Гостиная";
-                    case "Dining room":
+                    case "Dining Room":
                       return lang === "en" ? "Dining room" : "Столовая";
                     case "Bathroom":
                       return lang === "en" ? "Bathroom" : "Ванная";

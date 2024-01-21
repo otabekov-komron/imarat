@@ -5,11 +5,8 @@ const LoadingComponent = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      // Increment the counter by 1 until it reaches 100
       setCounter((prevCounter) => (prevCounter < 100 ? prevCounter + 1 : prevCounter));
-    }, 50);
-
-    // Cleanup the interval when the component unmounts
+    }, 40);
     return () => clearInterval(intervalId);
   }, []); 
   useEffect(() => {
