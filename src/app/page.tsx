@@ -3388,7 +3388,7 @@ export default function Home() {
             <div className="second_section_right_blur">
               {lang === "en" ? en.About.Team : ru.About.Team}
             </div>
-            <p className="second_section_right_count">30+</p>
+            <p className="second_section_right_count">40+</p>
           </div>
         </div>
       </section>
