@@ -194,8 +194,15 @@
           .social {
             span {
               display: flex;
-              width: 100%;
-              gap: 5%;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 10%;
+              svg {
+                height: 30px;
+                &:last-child {
+                  width: 40px;
+                }
+              }
             }
           }
           .contact_pattern {

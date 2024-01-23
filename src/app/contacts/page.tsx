@@ -39,10 +39,9 @@ const Contacts = () => {
               ref={userNameRef}
             />
             <input
-              placeholder={
-                lang === "en" ? en.Contact.InputEmail : ru.Contact.InputEmail
-              }
-              type="tel"
+              placeholder='+998'
+              type="number"
+              pattern="^\+\d{12}$"
               required
               name=""
               id="userEmail"

@@ -41,7 +41,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <Script src="//code.jivosite.com/widget/nkfMhpajgc" async />
+        <Script src="//code.jivo.ru/widget/Ux14XFCgl4" async />
       </body>
     </html>
   );

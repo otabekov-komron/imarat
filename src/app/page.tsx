@@ -3914,9 +3914,8 @@ export default function Home() {
                 ref={userFirstEmail}
                 type="tel"
                 required
-                placeholder={
-                  lang === "en" ? en.Contact.InputEmail : ru.Contact.InputEmail
-                }
+                pattern="^\+\d{12}$"
+                placeholder='+998'
                 name="name"
                 id="name"
               />
