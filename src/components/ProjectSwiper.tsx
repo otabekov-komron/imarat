@@ -29,7 +29,7 @@ const ProjectSwiper = () => {
       try {
         const response = await axios.get<[]>(
           "https://admin.imaratgroup.uz/api/projects"
-        ); // Replace with your API endpoint
+        ); 
         setImages(response?.data);
       } catch (error) {
         console.error("Error fetching projects:", error);
@@ -44,39 +44,33 @@ const ProjectSwiper = () => {
         320: {
             slidesPerView: 1.5,
             spaceBetween: 20,
-            slideToClickedSlide: true,
         },
         480: {
             slidesPerView: 2.5,
             spaceBetween: 0,
-            slideToClickedSlide: true,
         },
         1200: {
             slidesPerView: 3.5,
             spaceBetween: 30,
-            slideToClickedSlide: true,
           },
         1500: {
             slidesPerView: 3.5,
             spaceBetween: 30,
-            slideToClickedSlide: true,
         },
         1600: {
-            slidesPerView: 4.5,
+            slidesPerView: 5.4,
             spaceBetween: 30,
-            slideToClickedSlide: true,
         },
       }}
       slidesPerView={5.4}
       spaceBetween={50}
       loop={true}
+      speed={1000}
       autoplay={{
         delay: 1000,
         disableOnInteraction: false,
       }}
-      allowTouchMove={false}
       centeredSlides={true}
-      mousewheel-force-to-axis="true"
       navigation={{
         enabled: true,
         nextEl: ".sw-button-next",
@@ -135,7 +129,7 @@ const ProjectSwiper = () => {
                       return lang === 'en' ? "Home office" : "Домашний офис";
                     case 'Living room':
                       return lang === 'en' ? "Living room" : "Гостиная";
-                    case 'Dining room':
+                    case 'Dining Room':
                       return lang === 'en' ? "Dining room" : "Столовая";
                     case 'Bathroom':
                       return lang === 'en' ? "Bathroom" : "Ванная";

@@ -40,7 +40,7 @@ const Contacts = () => {
             />
             <input
               placeholder='+998'
-              type="number"
+              type="tel"
               pattern="^\+\d{12}$"
               required
               name=""
