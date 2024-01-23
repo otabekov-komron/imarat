@@ -286,8 +286,7 @@
           border-radius: 32px;
           display: flex;
           width: 100%;
-          min-height: 320px;
-          max-height: 320px;
+          height: 350px;
           padding: 15%;
           justify-content: center;
           align-items: center;
@@ -316,8 +315,15 @@
               filter: none;
               -webkit-filter: none;
             }
-            background: $primary-black-70;
+            background: $primary-black-90;
           }
+        }
+        .list_item:nth-child(8):hover,
+        .list_item:nth-child(9):hover,
+        .list_item:nth-child(10):hover,
+        .list_item:nth-child(11):hover,
+        .list_item:nth-child(12):hover {
+          background: #ffffff;
         }
       }
     }
@@ -608,7 +614,7 @@
           border-radius: 32px;
           display: flex;
           width: 100%;
-          min-height: 250px;
+          height: 250px;
           padding: 15%;
           justify-content: center;
           align-items: center;
@@ -639,10 +645,10 @@
             }
           }
         }
-        .list_item:nth-child(4):hover,
-        .list_item:nth-child(7):hover,
         .list_item:nth-child(8):hover,
+        .list_item:nth-child(9):hover,
         .list_item:nth-child(10):hover,
+        .list_item:nth-child(11):hover,
         .list_item:nth-child(12):hover {
           background: #ffffff;
         }
@@ -965,10 +971,10 @@
         grid-template-columns: repeat(3, 31%);
         row-gap: 2%;
         column-gap: 2%;
-        .list_item:nth-child(4),
-        .list_item:nth-child(7),
         .list_item:nth-child(8),
+        .list_item:nth-child(9),
         .list_item:nth-child(10),
+        .list_item:nth-child(11),
         .list_item:nth-child(12) {
           background: #ffffff;
         }

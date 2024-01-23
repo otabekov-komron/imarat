@@ -2327,13 +2327,13 @@ const About = () => {
           <div className="third_section_bottom"></div>
         </div>
         <div className="fourth_section">
-            <div className="title">
-              <span className="title__left"></span>
-              <h2 className="title__content">
-                {lang === "en" ? en.About.Brands : ru.About.Brands}
-              </h2>
-              <span className="title__right"></span>
-            </div>
+          <div className="title">
+            <span className="title__left"></span>
+            <h2 className="title__content">
+              {lang === "en" ? en.About.Brands : ru.About.Brands}
+            </h2>
+            <span className="title__right"></span>
+          </div>
           <div className="fourth_section_content">
             <div className="list_item">
               <Image src={brand1} alt="brand" />
@@ -2342,31 +2342,32 @@ const About = () => {
               <Image src={brand2} alt="brand" />
             </div>
             <div className="list_item">
-              <Image src={brand3} alt="brand" />
-            </div>
-            <div className="list_item">
-              <Image src={brand4} alt="brand" />
-            </div>
-            <div className="list_item">
-              <Image src={brand5} alt="brand" />
-            </div>
-            <div className="list_item">
               <Image src={brand6} alt="brand" />
             </div>
             <div className="list_item">
-              <Image src={brand7} alt="brand" />
-            </div>
-            <div className="list_item">
-              <Image src={brand8} alt="brand" />
+              <Image src={brand11} alt="brand" />
             </div>
             <div className="list_item">
               <Image src={brand9} alt="brand" />
             </div>
             <div className="list_item">
+              <Image src={brand5} alt="brand" />
+            </div>
+            <div className="list_item">
+              <Image src={brand3} alt="brand" />
+            </div>
+            <div className="list_item">
+              <Image src={brand4} alt="brand" />
+            </div>
+
+            <div className="list_item">
+              <Image src={brand7} alt="brand" />
+            </div>
+            <div className="list_item">
               <Image src={brand10} alt="brand" />
             </div>
             <div className="list_item">
-              <Image src={brand11} alt="brand" />
+              <Image src={brand8} alt="brand" />
             </div>
             <div className="list_item">
               <Image src={brand12} alt="brand" />

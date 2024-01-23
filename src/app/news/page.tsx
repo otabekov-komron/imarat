@@ -28,7 +28,7 @@ const News = () => {
       );
       setFilteredVacancies(filtered);
     }
-  }, [selectedCategory]);
+  }, [selectedCategory, vacancies]);
 
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
