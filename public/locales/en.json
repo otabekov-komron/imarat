@@ -23,7 +23,7 @@
         "SecondText": "At Imarat group, we consider ourselves pioneers in design, always pushing boundaries and seeking the latest trends. Our team, consisting of industry experts and creative minds, is here to leave a lasting impact on every project we undertake. Choose us for a collaborative and visionary design journey.",
         "Team": "we have experienced professionals in our team.",
         "OurTeam": "Our team.",
-        "Brands": "Our brands"
+        "Brands": "Brands"
     },
     "OurTeam": {
         "Title": "We’ve got an entire team dedicated to supporting you and your business",
@@ -65,7 +65,7 @@
     "Contact": {
         "Title": "Contact",
         "InputName": "Name",
-        "InputEmail": "Email",
+        "InputEmail": "Telephone number",
         "Message": "Message",
         "Email": "email",
         "Phone": "Phone",

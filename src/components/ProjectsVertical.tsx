@@ -35,6 +35,7 @@ export default function ProjectsVertical() {
             }}
         slidesPerView={2}
         spaceBetween={20}
+        allowTouchMove={false}
         loop={true}
         speed={2000}
         direction={"vertical"}

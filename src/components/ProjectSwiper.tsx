@@ -72,8 +72,9 @@ const ProjectSwiper = () => {
       loop={true}
       autoplay={{
         delay: 1000,
-        disableOnInteraction: true,
+        disableOnInteraction: false,
       }}
+      allowTouchMove={false}
       centeredSlides={true}
       mousewheel-force-to-axis="true"
       navigation={{

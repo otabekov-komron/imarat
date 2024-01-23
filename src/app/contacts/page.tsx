@@ -27,9 +27,10 @@ const Contacts = () => {
     <div className="contacts">
       <div className="contacts_container">
         <div className="contacts_details">
-          <form onSubmit={handleSubmit} action="">
+          <form onSubmit={handleSubmit}>
             <p>{lang === "en" ? en.Contact.Title : ru.Contact.Title}</p>
             <input
+            required
               placeholder={
                 lang === "en" ? en.Contact.InputName : ru.Contact.InputName
               }
@@ -41,12 +42,14 @@ const Contacts = () => {
               placeholder={
                 lang === "en" ? en.Contact.InputEmail : ru.Contact.InputEmail
               }
-              type="email"
+              type="tel"
+              required
               name=""
               id="userEmail"
               ref={userEmailRef}
             />
             <textarea
+            required
               placeholder={
                 lang === "en" ? en.Contact.Message : ru.Contact.Message
               }
@@ -57,7 +60,7 @@ const Contacts = () => {
               
               rows={10}
             ></textarea>
-            <button onClick={handleSubmit} className="form_btn btn_component">
+            <button className="form_btn btn_component">
               {lang === "en" ? en.Contact.Send : ru.Contact.Send}
             </button>
           </form>

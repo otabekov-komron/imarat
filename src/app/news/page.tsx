@@ -85,7 +85,11 @@ const News = () => {
           <span className="title__right"></span>
         </div>
         <div className="blogs__list">
-          {blogs.slice(0, end).map((blog: BlogType) => {
+          {blogs.length == 0 ? (
+            <div className="blogs__list_error">
+              <p>{lang === "en" ? "There is no blogs" : "Нет блогов"}</p>
+            </div>
+          ) : (blogs.slice(0, end).map((blog: BlogType) => {
             return (
               
                 <div className="blogs__item" key={blog._id}>
@@ -217,7 +221,7 @@ const News = () => {
                 </div>
               
             );
-          })}
+          }))}
         </div>
         {blogs.length > end ? (
           <button onClick={() => setEnd(end + 6)} className="blog__view">

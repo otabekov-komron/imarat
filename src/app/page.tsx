@@ -3609,11 +3609,10 @@ export default function Home() {
                   ? en.OurServices.LearnMore
                   : ru.OurServices.LearnMore}
               </span>
-              <span>
+              <span className="btn_component_svg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="36"
-                  height="20"
                   viewBox="0 0 36 20"
                   fill="none"
                 >
@@ -3676,7 +3675,7 @@ export default function Home() {
           <ProjectSwiper />
         </div>
         <div className="fifth_section_btn">
-          <Link href={"/services"} className="btn_component">
+          <Link href={"/projects"} className="btn_component">
             <span className="btn_component_text">
               {lang === "en" ? en.Projects.LearnMore : ru.Projects.LearnMore}
             </span>
@@ -3904,6 +3903,7 @@ export default function Home() {
               <input
                 ref={userFirstName}
                 type="text"
+                required
                 placeholder={
                   lang === "en" ? en.Contact.InputName : ru.Contact.InputName
                 }
@@ -3912,7 +3912,8 @@ export default function Home() {
               />
               <input
                 ref={userFirstEmail}
-                type="email"
+                type="tel"
+                required
                 placeholder={
                   lang === "en" ? en.Contact.InputEmail : ru.Contact.InputEmail
                 }
@@ -3920,6 +3921,7 @@ export default function Home() {
                 id="name"
               />
               <textarea
+              required
                 ref={userFirstMessage}
                 name="message"
                 placeholder={
@@ -3928,7 +3930,7 @@ export default function Home() {
                 cols={30}
                 rows={10}
               ></textarea>
-              <button onClick={handleSubmitFirst} className="btn_component">
+              <button className="btn_component">
                 <span className="btn_component_text">
                   {lang === "en" ? en.Contact.Send : ru.Contact.Send}
                 </span>

@@ -12,6 +12,18 @@
         justify-content: space-between;
         margin-top: 3%;
         margin-bottom: 3%;
+        .blogs__list_error{
+          color: $primary-yellow;
+          width: 100% !important;
+          grid-column-start: 1;
+          grid-column-end: 4;
+          grid-row-start: 1;
+          grid-row-end: 3;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 52px;
+        }
         .blogs__item {
           margin-bottom: 6%;
           border-radius: 26px !important;
@@ -351,6 +363,18 @@
         justify-content: space-between;
         margin-top: 2%;
         margin-bottom: 2%;
+        .blogs__list_error{
+          color: $primary-yellow;
+          width: 100% !important;
+          grid-column-start: 1;
+          grid-column-end: 4;
+          grid-row-start: 1;
+          grid-row-end: 3;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 32px;
+        }
         .blogs__item {
           margin-bottom: 4%;
           border-radius: 26px !important;
@@ -689,6 +713,18 @@
         justify-content: space-between;
         margin-top: 5%;
         margin-bottom: 3%;
+        .blogs__list_error{
+          color: $primary-yellow;
+          width: 100% !important;
+          grid-column-start: 1;
+          grid-column-end: 4;
+          grid-row-start: 1;
+          grid-row-end: 3;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 22px;
+        }
         .blogs__item {
           margin-bottom: 6%;
           border-radius: 26px !important;

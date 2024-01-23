@@ -42,7 +42,7 @@ const Footer = () => {
         {
           id: 5,
           name: lang === "en" ? en.NavBar.Contacts : ru.NavBar.Contacts,
-          url: "/contact",
+          url: "/contacts",
         },
       ],
       services: [

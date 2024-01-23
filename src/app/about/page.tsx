@@ -2327,7 +2327,6 @@ const About = () => {
           <div className="third_section_bottom"></div>
         </div>
         <div className="fourth_section">
-          <div className="fourth_section_top">
             <div className="title">
               <span className="title__left"></span>
               <h2 className="title__content">
@@ -2335,7 +2334,6 @@ const About = () => {
               </h2>
               <span className="title__right"></span>
             </div>
-          </div>
           <div className="fourth_section_content">
             <div className="list_item">
               <Image src={brand1} alt="brand" />

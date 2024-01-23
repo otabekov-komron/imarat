@@ -33,6 +33,7 @@ export default function ProjectsVerticalRV() {
         spaceBetween:20,
         }
       }}
+      allowTouchMove={false}
         slidesPerView={2.1}
         centeredSlides={true}
         spaceBetween={20}

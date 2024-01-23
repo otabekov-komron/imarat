@@ -35,6 +35,7 @@ export default function Gallery({ images }) {
     <div className="swiper_gallery">
       <Swiper
         direction="vertical"
+        allowTouchMove={false}
         breakpoints={{
           350: {
             spaceBetween: 30,
