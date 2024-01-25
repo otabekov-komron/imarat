@@ -6,7 +6,7 @@
     flex-direction: column;
     overflow: clip;
     .first_section {
-      padding: 1% 6%;
+      padding: 0% 6%;
       background-color: $primary-black;
       .first_section_container {
         display: flex;
@@ -29,7 +29,6 @@
               color: $primary-black;
               font-size: 90px;
               font-weight: 400;
-              text-transform: capitalize;
               font-family: "Sans-Regular";
             }
             .left_top_desc {
@@ -38,7 +37,6 @@
               font-weight: 600;
               margin-top: 45px;
               letter-spacing: 1px;
-              text-transform: lowercase;
               font-family: "Sans-Light";
             }
             .left_top_btn {
@@ -699,7 +697,7 @@
     overflow: clip;
     flex-direction: column;
     .first_section {
-      padding: 1% 6%;
+      padding: 0% 6%;
       background-color: $primary-black;
       .first_section_container {
         display: flex;
@@ -710,7 +708,7 @@
           display: flex;
           gap: 20px;
           .left_top {
-            padding: 50px;
+            padding: 30px;
             border-radius: 20px;
             background-color: $primary-yellow;
             -webkit-border-radius: 20px;
@@ -719,18 +717,16 @@
             -o-border-radius: 20px;
             .left_top_title {
               color: $primary-black;
-              font-size: 55px;
+              font-size: 35px;
               font-weight: 400;
-              text-transform: capitalize;
               font-family: "Sans-Regular";
             }
             .left_top_desc {
               color: $primary-black;
-              font-size: 30px;
+              font-size: 20px;
               font-weight: 400;
               margin-top: 35px;
               letter-spacing: 1px;
-              text-transform: lowercase;
               font-family: "Sans-Light";
             }
             .left_top_btn {
@@ -741,7 +737,7 @@
               border: none;
               outline: none;
               display: flex;
-              margin-top: 55px;
+              margin-top: 25px;
               padding: 10px 28px;
               justify-content: center;
               align-items: center;
@@ -750,7 +746,7 @@
               flex: 1 0 0;
               flex-wrap: wrap;
               border-radius: 20px;
-              font-size: 24px;
+              font-size: 20px;
               -webkit-border-radius: 20px;
               -moz-border-radius: 20px;
               -ms-border-radius: 20px;
@@ -1463,9 +1459,7 @@
               font-size: 40px;
               font-style: normal;
               font-weight: 400;
-              line-height: 45.785px; /* 114.463% */
-              text-transform: capitalize;
-              text-transform: capitalize;
+              line-height: 45.785px;
               font-family: "Sans-Regular";
             }
             .left_top_desc {
@@ -1474,8 +1468,7 @@
               font-style: normal;
               font-weight: 400;
               margin-top: 15px;
-              line-height: 22.012px; /* 122.29% */
-              text-transform: lowercase;
+              line-height: 22.012px;
               font-family: "Sans-Light";
             }
             .left_top_btn {

@@ -9,7 +9,6 @@ import "../styles/_projects.scss";
 import "../styles/_error.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import CustomCursor from "@/components/CustomCursor";
 import Script from "next/script";
 import Head from "next/head";
 
@@ -109,7 +108,6 @@ export default function RootLayout({
         <meta name="theme-color" content="#F3CD00" />
       </Head>
       <body>
-        <CustomCursor />
         <Header />
         {children}
         <Footer />

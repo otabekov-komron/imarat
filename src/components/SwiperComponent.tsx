@@ -19,7 +19,7 @@ export default function SwiperComponent() {
         speed={2000}
         autoplay={{
           delay: 4000,
-          disableOnInteraction: true,
+          disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
