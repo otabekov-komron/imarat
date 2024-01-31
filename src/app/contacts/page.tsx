@@ -18,6 +18,7 @@ const Contacts = () => {
   const handleSubmitSecond = (e) => {
     e.preventDefault();
     sendForm(name, phone, message);
+    window.location.reload()
   };
   return (<>
     <LoaderMini/>

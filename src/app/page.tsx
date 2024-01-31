@@ -621,6 +621,7 @@ export default function Home() {
   const handleSubmitFirst = (e) => {
     e.preventDefault();
     sendForm(name, phone, message);
+    window.location.reload()
   };
 
   return (

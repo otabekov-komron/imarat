@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     yandex: "3587d7d9bc9d5354",
   },
   icons: {
-    icon: ["/public/favicon-96x96.png"],
+    icon: ["/favicon.ico"],
     apple: ["/public/apple-icon-180x180.png"],
-    shortcut: ["/public/favicon-96x96.png"],
+    shortcut: ["/public/favicon.ico"],
   },
 };
 
