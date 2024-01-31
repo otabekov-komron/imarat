@@ -90,8 +90,8 @@ const Footer = () => {
           id: 5,
           name:
             lang === "en"
-              ? en.Footer.Services.VersaceStyle
-              : ru.Footer.Services.VersaceStyle,
+              ? en.Footer.Services.Versace
+              : ru.Footer.Services.Versace,
           url: "/services",
         },
         {
@@ -99,15 +99,7 @@ const Footer = () => {
           name:
             lang === "en" ? en.Footer.Services.Loft : ru.Footer.Services.Loft,
           url: "/services",
-        },
-        {
-          id: 7,
-          name:
-            lang === "en"
-              ? en.Footer.Services.Baroque
-              : ru.Footer.Services.Baroque,
-          url: "/services",
-        },
+        }
       ],
     },
   ];

@@ -132,7 +132,7 @@ const ProjectSwiper = () => {
                     case 'Dining Room':
                       return lang === 'en' ? "Dining room" : "Столовая";
                     case 'Bathroom':
-                      return lang === 'en' ? "Bathroom" : "Ванная";
+                      return lang === 'en' ? "Bathroom" : "Ванная комната";
                     default:
                       return image.category;
                   }

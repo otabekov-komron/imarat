@@ -1,170 +1,175 @@
 {
-    "NavBar": {
-        "About": "About us",
-        "Services": "Services",
-        "Projects": "Projects",
-        "News": "News",
-        "Contacts": "Contacts",
-        "Showroom": "Showroom",
-        "Connect": "Connect with us"
+  "NavBar": {
+    "About": "About us",
+    "Services": "Services",
+    "Projects": "Projects",
+    "News": "News",
+    "Contacts": "Contacts",
+    "Showroom": "Showroom",
+    "Connect": "Connect with us"
+  },
+  "Hero": {
+    "Title": "Home repair ",
+    "Title2": "Interior design",
+    "Text": "Imarat Group is engaged in the renovation of apartments, commercial premises, kindergartens and schools.",
+    "Connect": "Connect with us",
+    "Live": "Watch the process online",
+    "Projects": "Projects 360",
+    "LineText": "we are happy to make your dream home a reality"
+  },
+  "About": {
+    "Title": "About us",
+    "FirstText": "Imarat Group was founded in 2020 and has more than 3 years of experience to date. The company's goal is to provide its clients with a cozy and comfortable space. ",
+    "SecondText": "The founder of the Imarat Group is Makhkamov Gulom Zokirovich, who has assembled a team of 40 professionals who are qualified specialists in their field.",
+    "OurTeam": "Our team.",
+    "Team": "Our team consists of experienced professionals.",
+    "Brands": "Brands"
+  },
+  "OurTeam": {
+    "Title": "We’ve got an entire team dedicated to supporting you and your business",
+    "LearnMore": "Learn more"
+  },
+  "OurServices": {
+    "Title": "Our services",
+    "Text": "we provide the best services for our customers",
+    "LearnMore": "Learn more",
+    "Neoclassical": {
+      "Title": "Neoclassical",
+      "Text": "Our neoclassical designs combine traditional Greek style and Roman elegance with modern design, creating timeless, custom designs for our clients"
     },
-    "Hero": {
-        "Title": "Home repair ",
-        "Title2": "Interior design",
-        "Text": "Imarat Group is engaged in the renovation of apartments, commercial premises, kindergartens and schools.",
-        "Connect": "Connect with us",
-        "Live": "Watch the process online",
-        "Projects": "Projects 360",
-        "LineText": "we are happy to make your dream home a reality"
+    "HighTech": {
+      "Title": "High Tech",
+      "Text": "The distinctive features of High-Tech are the absence of decor and the dominance of functionality, which in turn in the interior of the apartment places the main emphasis on the shape and texture of architectural details and objects. From materials, it allows you to freely experiment with combinations of glass, metal and plastic "
     },
-    "About": {
-        "Title": "About us",
-        "FirstText": "Imarat Group was founded in 2020 and has more than 3 years of experience to date. The company's goal is to provide its clients with a cozy and comfortable space. ",
-        "SecondText": "The founder of the Imarat Group is Makhkamov Gulom Zokirovich, who has assembled a team of 40 professionals who are qualified specialists in their field.",
-        "OurTeam": "Our team.",
-        "Brands": "Brands"
+    "Loft": {
+      "Title": "Loft",
+      "Text": "The loft style is a relatively young industrial interior design, which is distinguished by an abundance of free space and the preservation of industrial details in the room. The main features of this direction are high ceilings, brick walls, cement floors, etc."
     },
-    "OurTeam": {
-        "Title": "We’ve got an entire team dedicated to supporting you and your business",
-        "LearnMore": "Learn more"
+    "Classical": {
+      "Title": "Classical",
+      "Text": "Features of the 'Classic' style is a fairly broad concept, meaning something that is recognized by absolutely everyone. It is based on laconicism, proportionality and rigor. There are no bright palettes, decorative elements or catchy prints."
     },
-    "OurServices": {
-        "Title": "Our services",
-        "Text": "we provide the best services for our customers",
-        "LearnMore": "Learn more",
-        "Minimalism": {
-            "Title": "Minimalism",
-            "Text": "Our Minimalism service offers sleek, functional designs with an emphasis on space and simplicity, delivering serene, uncluttered environments"
-        },
-        "HighTech": {
-            "Title": "High Tech",
-            "Text": "Our High Tech service delivers futuristic, efficient designs with a focus on innovative technology and sleek aesthetics"
-        },
-        "Modern": {
-            "Title": "Luxury",
-            "Text": "It is always expensive, luxurious, and refined. Luxury interior design is usually created by professional and renowned designers who skillfully and subtly convey the high status of the apartment owner without unnecessary ostentation."
-        },
-        "Contemporary": {
-            "Title": "Versace",
-            "Text": "Creating an interior in the style of Versace involves luxurious, glamorous, and expressive design, often incorporating bright colors, intricate patterns, and precious materials"
-        },
-        "Neoclassical": {
-            "Title": "Neoclassical",
-            "Text": "Our Neoclassical design merges traditional Greek and Roman elegance with modern design, creating timeless, tailored projects for our clients"
-        },
-        "Classical": {
-            "Title": "Classical",
-            "Text": "Classical interior design features intricate furniture, luxurious materials like marble and fine textiles, and a balanced, symmetrical layout"
-        }
+    "Minimalism": {
+      "Title": "Minimalism",
+      "Text": "The true style of minimalism in the interior is not associated with an ascetic lifestyle or financial need. It represents an aesthetically attractive environment characterized, above all, by space, functionality and a clear organization of space."
     },
-    "Projects": {
-        "Title": "Projects",
-        "LearnMore": "Learn more"
+    "Contemporary": {
+      "Title": "Versace",
+      "Text": "Creating a Versace style interior involves luxurious, glamorous and expressive design, often incorporating bright colors, exquisite patterns and precious materials"
     },
-    "Contact": {
-        "Title": "Contact",
-        "InputName": "Name",
-        "InputEmail": "Telephone number",
-        "Message": "Message",
-        "Email": "email",
-        "Phone": "Phone",
-        "Address": "address",
-        "Map": "Asaka St 3, 100000, Tashkent",
-        "Send": "Send",
-        "Social": "Social media"
-    },
-    "Footer": {
-        "Navigations": "Navigations",
-        "Services": {
-            "Title": "Services",
-            "Neoclassicism": "Neoclassicism",
-            "Minimalism": "Minimalism",
-            "HighTech": "High Tech",
-            "Modern": "Modern",
-            "Contemporary": "Contemporary",
-            "Classical": "Classical",
-            "VersaceStyle": "Versace Style",
-            "Loft": "Loft",
-            "Baroque": "Baroque"
-        },
-        "Contact": "Contact",
-        "Map": "Asaka St 3, 100000, Tashkent",
-        "Since": "© 2023 SquareUp. All rights reserved."
-    },
-    "FAQ": {
-        "faq1": {
-            "Title": "Do we submit projects on time ?",
-            "Text": "It depends on both parties."
-        },
-        "faq2": {
-            "Title": "Do we guarantee quality ?",
-            "Text": "We guarantee quality for one year. If something happens due to our fault, we will redo it at our expense."
-        },
-        "faq3": {
-            "Title": "How is the payment processed ?",
-            "Text": "The payment will be divided into 4 stages, with 25% due at."
-        },
-        "faq4": {
-            "Title": "For approximately 100 square meters, how many months will the renovation take ?",
-            "Text": "It depends on the design, but on average, it will take 4-5 months."
-        },
-        "faq5": {
-            "Title": "Is the design project included as a bonus ?",
-            "Text": "Unfortunately, no. The design project is a separate payment."
-        },
-        "faq6": {
-            "Title": "Do we do renovations without a design project ?",
-            "Text": "No, we do not. There are nuances that need to be considered."
-        }
-    },
-    "Process": {
-        "Title": "We provide the best process experience",
-        "first": {
-            "Title": "Briefing",
-            "Text": "First thing you determine the consept and model you want, then choose what colors and materials you want to use in your furniture."
-        },
-        "second": {
-            "Title": "Processing",
-            "Text": "When the briefing process in complete and what the client wants has been achieved. then we carr out the execution of the desired consept."
-        },
-        "three": {
-            "Title": "Finishing",
-            "Text": "After the process is complete, we will immediately carry out the finishing stage and we do it carefully and make sure there are no mistakes."
-        }
-    },
-    "Team": {
-        "StartTitle": "We’ve got an entire",
-        "CenterTitle": "team",
-        "EndTitle": "dedicated to supporting you and your business",
-        "LearnMore": "Learn more",
-        "TeamMembers": "Team Members",
-        "user1": {
-            "Name": "G'ulom Maxkamov",
-            "Role": "Imarat group Founder"
-        },
-        "user2": {
-            "Name": "Abduxalilov Xurshid",
-            "Role": "Supplier"
-        },
-        "user3": {
-            "Name": "Abduxalilov Omad",
-            "Role": "Warehouse manager"
-        },
-        "user4": {
-            "Name": "Kazaxbayev Yerlan",
-            "Role": "Gas block laying master"
-        },
-        "user5": {
-            "Name": "Ishkabilov Ibragim",
-            "Role": "Tile installation specialist"
-        },
-        "user6": {
-            "Name": "Atamurotov Javlon",
-            "Role": "Master of finishing works"
-        },
-        "user7": {
-            "Name": "Mirsolihov Mirg'ani",
-            "Role": "A/C installation specialist"
-        }
+
+    "Modern": {
+      "Title": "Luxury",
+      "Text": "It is always expensive, chic and sophisticated. Luxury interior design is usually created by professional and eminent designers who can subtly and without pompousness convey the high status of the owner of the apartment."
     }
+  },
+  "Projects": {
+    "Title": "Projects",
+    "LearnMore": "Learn more"
+  },
+  "Contact": {
+    "Title": "Contact",
+    "InputName": "Name",
+    "InputEmail": "Telephone number",
+    "Message": "Message",
+    "Email": "email",
+    "Phone": "Phone",
+    "Address": "address",
+    "Map": "Asaka St 3, 100000, Tashkent",
+    "Send": "Send",
+    "Social": "Social media"
+  },
+  "Footer": {
+    "Navigations": "Navigations",
+    "Services": {
+      "Title": "Services",
+      "Neoclassicism": "Neoclassical",
+      "Minimalism": "Minimalism",
+      "HighTech": "High Tech",
+      "Modern": "Modern",
+      "Contemporary": "Contemporary",
+      "Classical": "Classical",
+      "Versace": "Versace",
+      "Loft": "Loft"
+    },
+    "Contact": "Contact",
+    "Map": "Asaka St 3, 100000, Tashkent",
+    "Since": "© 2023 SquareUp. All rights reserved."
+  },
+  "FAQ": {
+    "faq1": {
+      "Title": "Do we submit projects on time ?",
+      "Text": "It depends on both parties."
+    },
+    "faq2": {
+      "Title": "Do we guarantee quality ?",
+      "Text": "We guarantee quality for one year. If something happens due to our fault, we will redo it at our expense."
+    },
+    "faq3": {
+      "Title": "How is the payment processed ?",
+      "Text": "The procedure for paying for repair work is specified in the contract and provides for both payment in cash and payment in the form of a bank transfer according to the details. The standard condition when signing a contract is an advance payment of 25% before the start of work, that is, within 3 days from the date of conclusion of the contract. Subsequent payment occurs in installments (25%) after each stage of completed work. ▪️ Prepayment - as a rule, goes towards the purchase of draft materials. ▪️ After completion of the 1st stage (plumbing and electrical work, installation, dismantling of walls). ▪️ After completion of the 2nd stage (after rough finishing work and preparation of walls and ceilings for final finishing). ▪️ After completion of the 3rd stage (finishing and complete completion of all work). After each stage, a certificate of completion of work is signed."
+    },
+    "faq4": {
+      "Title": "Will the final result match the design project?",
+      "Text": "If you order a design project and construction work, i.e. renovation of an apartment with turnkey interior design, then the final result will be 99% identical to what was planned in the sketches and visualizations. Three-dimensional visualization allows you to “try on” selected finishing materials in a room, look at the combination of colors, and evaluate the arrangement of furniture. Based on the measurements, Rhome designers create several layout options with the placement of furniture and lighting, kitchen equipment and plumbing fixtures. As a result, the design project meets your expectations as much as possible."
+    },
+    "faq5": {
+      "Title": "Is the design project included as a bonus ?",
+      "Text": "Unfortunately, no. The design project is a separate payment."
+    },
+    "faq6": {
+      "Title": "Do we do renovations without a design project ?",
+      "Text": "No, we do not. There are nuances that need to be considered."
+    }
+  },
+  "Process": {
+    "Title": "We provide the best process experience",
+    "first": {
+      "Title": "Briefing",
+      "Text": "First thing you determine the consept and model you want, then choose what colors and materials you want to use in your furniture."
+    },
+    "second": {
+      "Title": "Processing",
+      "Text": "When the briefing process in complete and what the client wants has been achieved. then we carr out the execution of the desired consept."
+    },
+    "three": {
+      "Title": "Finishing",
+      "Text": "After the process is complete, we will immediately carry out the finishing stage and we do it carefully and make sure there are no mistakes."
+    }
+  },
+  "Team": {
+    "StartTitle": "We’ve got an entire",
+    "CenterTitle": "team",
+    "EndTitle": "dedicated to supporting you and your business",
+    "LearnMore": "Learn more",
+    "TeamMembers": "Team Members",
+    "user1": {
+      "Name": "G'ulom Maxkamov",
+      "Role": "Imarat group Founder"
+    },
+    "user2": {
+      "Name": "Abduxalilov Xurshid",
+      "Role": "Supplier"
+    },
+    "user3": {
+      "Name": "Abduxalilov Omad",
+      "Role": "Warehouse manager"
+    },
+    "user4": {
+      "Name": "Kazaxbayev Yerlan",
+      "Role": "Gas block laying master"
+    },
+    "user5": {
+      "Name": "Ishkabilov Ibragim",
+      "Role": "Tile installation specialist"
+    },
+    "user6": {
+      "Name": "Atamurotov Javlon",
+      "Role": "Master of finishing works"
+    },
+    "user7": {
+      "Name": "Mirsolihov Mirg'ani",
+      "Role": "A/C installation specialist"
+    }
+  }
 }

@@ -11,23 +11,20 @@ const Contacts = () => {
     const getLang: any = localStorage.getItem("lang");
     setLang(getLang);
   }, []);
-  const userNameRef = useRef<HTMLInputElement | null>(null);
-  const userEmailRef = useRef<HTMLInputElement | null>(null);
-  const userMessageRef = useRef<HTMLTextAreaElement | null>(null);
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleSubmit = () => {
-    const userName = userNameRef.current?.value;
-    const userEmail = userEmailRef.current?.value;
-    const userMessage = userMessageRef.current?.value;
-
-    sendForm(userName, userEmail, userMessage);
+  const handleSubmitSecond = (e) => {
+    e.preventDefault();
+    sendForm(name, phone, message);
   };
   return (<>
     <LoaderMini/>
     <div className="contacts">
       <div className="contacts_container">
         <div className="contacts_details">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmitSecond}>
             <p>{lang === "en" ? en.Contact.Title : ru.Contact.Title}</p>
             <input
             required
@@ -36,7 +33,7 @@ const Contacts = () => {
               }
               type="text"
               id="userName"
-              ref={userNameRef}
+              onChange={(e) => setName(e.target.value)}
             />
             <input
               placeholder='+998'
@@ -45,7 +42,7 @@ const Contacts = () => {
               required
               name=""
               id="userEmail"
-              ref={userEmailRef}
+              onChange={(e) => setPhone(e.target.value)}
             />
             <textarea
             required
@@ -54,7 +51,7 @@ const Contacts = () => {
               }
               name=""
               id="userMessage"
-              ref={userMessageRef}
+              onChange={(e) => setMessage(e.target.value)}
               cols={30}
               
               rows={10}
