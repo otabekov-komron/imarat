@@ -58,34 +58,33 @@ const Footer = () => {
           id: 1,
           name:
             lang === "en"
-              ? en.Footer.Services.Minimalism
-              : ru.Footer.Services.Minimalism,
+              ? en.Footer.Services.HighTech
+              : ru.Footer.Services.HighTech,
           url: "/services",
         },
         {
           id: 2,
           name:
-            lang === "en"
-              ? en.Footer.Services.HighTech
-              : ru.Footer.Services.HighTech,
+            lang === "en" ? en.Footer.Services.Loft : ru.Footer.Services.Loft,
           url: "/services",
         },
         {
           id: 3,
           name:
             lang === "en"
-              ? en.Footer.Services.Modern
-              : ru.Footer.Services.Modern,
+              ? en.Footer.Services.Classical
+              : ru.Footer.Services.Classical,
           url: "/services",
         },
         {
           id: 4,
           name:
             lang === "en"
-              ? en.Footer.Services.Classical
-              : ru.Footer.Services.Classical,
+              ? en.Footer.Services.Minimalism
+              : ru.Footer.Services.Minimalism,
           url: "/services",
         },
+
         {
           id: 5,
           name:
@@ -96,10 +95,9 @@ const Footer = () => {
         },
         {
           id: 6,
-          name:
-            lang === "en" ? en.Footer.Services.Loft : ru.Footer.Services.Loft,
+          name: "Luxury",
           url: "/services",
-        }
+        },
       ],
     },
   ];
@@ -230,11 +228,14 @@ const Footer = () => {
               <p>{lang === "en" ? en.Footer.Map : ru.Footer.Map}</p>
             </a>
             <a className="map" href="https://maps.app.goo.gl/qRJLXfddSnc8fZdD7">
-              {lang === "en" ? 'map' : 'карта'}
+              {lang === "en" ? "map" : "карта"}
             </a>
           </div>
           <div>
-            <a target="_blank" href="https://www.instagram.com/imarat.group.uz?igsh=M2VpZ3hkNGs2OG8=">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/imarat.group.uz?igsh=M2VpZ3hkNGs2OG8="
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="27"
@@ -303,7 +304,10 @@ const Footer = () => {
                 </defs>
               </svg>
             </a>
-            <a target="_blank" href="https://youtube.com/@gulomjonmaxkamov005?si=u3Y-sKYe_wDQu7XT">
+            <a
+              target="_blank"
+              href="https://youtube.com/@gulomjonmaxkamov005?si=u3Y-sKYe_wDQu7XT"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
