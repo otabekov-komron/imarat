@@ -110,7 +110,7 @@ const Footer = () => {
           </span>
           <div className="navigation_list">
             {links[0].navigation.map((link) => (
-              <Link key={link.id} href={link.url}>
+              <Link rel="canonical" key={link.id} href={link.url}>
                 {link.name}
               </Link>
             ))}
@@ -124,7 +124,7 @@ const Footer = () => {
           </span>
           <div className="navigation_list">
             {links[0].services.map((link) => (
-              <Link key={link.id} href={link.url}>
+              <Link rel="canonical" key={link.id} href={link.url}>
                 {link.name}
               </Link>
             ))}

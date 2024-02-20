@@ -14,7 +14,7 @@ export default function Error() {
         <div className='error__wrapper'>
             <Image src={error} alt="error img" width={500} height={500}/>
             <p>{lang === 'en' ? 'Corrections are being made' : "Вносятся исправления"}</p>
-            <Link href='/projects' className='error_button'>
+            <Link rel="canonical" href='/projects' className='error_button'>
                 <p>{lang === 'en' ? 'Go back' : 'Назад'}</p>
             </Link>
         </div>

@@ -11,11 +11,29 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 import Head from "next/head";
+{/* <meta property="og:type" content="business.business">
+<meta property="og:title" content="Imarat Group">
+<meta property="og:url" content="https://imaratgroup.uz/">
+<meta property="og:image" content="https://imaratgroup.uz/favicon.ico">
+<meta property="og:description" content="Imarat Group is engaged in the renovation of apartments, commercial premises, kindergartens, and schools.">
+<meta property="business:contact_data:street_address" content="Asaka St 3">
+<meta property="business:contact_data:locality" content="Tashkent">
+<meta property="business:contact_data:region" content="Tashkent">
+<meta property="business:contact_data:postal_code" content="100000">
+<meta property="business:contact_data:country_name" content="Uzbekistan"> */}
 
 export const metadata: Metadata = {
   title: "IMARAT Group",
   description:
-    "Добро пожаловать в группу 'Imarat'. Мы - страстная команда энтузиастов дизайна, посвятивших себя достижению отличных результатов в каждом проекте. Нашей основной целью является понимание и удовлетворение потребностей каждого клиента, предоставляя исключительные дизайнерские услуги, соответствующие их видению.",
+    "Добро пожаловать в группу 'Imarat'. Мы - страстная команда энтузиастов дизайна, посвятивших себя достижению отличных результатов в каждом проекте.",
+    openGraph: {
+      title: 'Imarat Group',
+      description: 'Imarat Group is engaged in the renovation of apartments, commercial premises, kindergartens, and schools.',
+      url: 'https://imaratgroup.uz/',
+      countryName: 'Uzbekistan',
+      locale: 'Tashkent',
+      siteName: 'imaratgroup.uz'
+    },
   keywords:
     "IMARAT, HyperNova, ремонт квартир в ташкенте, дизайн интерьера, евро ремонт квартир, неоклассика ремонт, хайтек ремонт, Ремонт в стиле Хай тек, ремонт нежилых помещений, ремонт дом, ремонт квартир и дизайн, мастер по ремонту квартир, ремонтная компания, качественный ремонт квартир, быстрый ремонт квартиры, Дешевый и качественный ремонт  ремонт, ремонт в ташкенте, ремонт квартир в Джизаке, ремонт квартир в Андижане, ремонт квартир в Бухаре, ремонт квартир в Кашкадарье, ремонт квартир в Навои, ремонт квартир в Намангане, ремонт квартир в Самарканде, ремонт квартир в Сырдарье, ремонт квартир в Сурхандарье, ремонт квартир в Фергане, ремонт квартир в Хорезме, Современный ремонт квартир в Ташкенте и области, РЕМОНТ И ОТДЕЛКА КВАРТИР, ДОМОВ И ОФИСОВ В ТАШКЕНТ, Ремонт квартир, Дизайнерский Ремонт под ключ",
   verification: {

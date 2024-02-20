@@ -573,7 +573,7 @@ export default function Home() {
       svgContent: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="100" 
+          width="100"
           viewBox="0 0 100 100"
           fill="none"
         >
@@ -611,7 +611,6 @@ export default function Home() {
         </svg>
       ),
     },
-
   ];
 
   const [name, setName] = useState("");
@@ -621,7 +620,7 @@ export default function Home() {
   const handleSubmitFirst = (e) => {
     e.preventDefault();
     sendForm(name, phone, message);
-    window.location.reload()
+    window.location.reload();
   };
 
   return (
@@ -641,7 +640,7 @@ export default function Home() {
                 <p className="left_top_desc">
                   {lang === "en" ? en.Hero.Text : ru.Hero.Text}
                 </p>
-                <Link href={"/contacts"} className="left_top_btn">
+                <Link rel="canonical" href={"/contacts"} className="left_top_btn">
                   <span>
                     {lang === "en" ? en.Hero.Connect : ru.Hero.Connect}
                   </span>
@@ -680,6 +679,7 @@ export default function Home() {
               </div>
               <div className="left_bottom">
                 <Link
+                rel="canonical"
                   href={"https://live.imaratgroup.uz"}
                   className="left_bottom_live"
                 >
@@ -709,7 +709,7 @@ export default function Home() {
                     />
                   </svg>
                 </Link>
-                <Link href={"/projects"} className="left_bottom_360">
+                <Link rel="canonical" href={"/projects"} className="left_bottom_360">
                   <p>{lang === "en" ? en.Hero.Projects : ru.Hero.Projects}</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -3628,6 +3628,7 @@ export default function Home() {
                 {lang === "en" ? en.OurServices.Text : ru.OurServices.Text}
               </p>
               <Link
+              rel="canonical"
                 href={"/services"}
                 className="btn_component fourth_left_link"
               >
@@ -3691,7 +3692,7 @@ export default function Home() {
                 title={lists[5].title}
                 desc={lists[5].desc}
               />
-               <Card
+              <Card
                 idCard={lists[6].id}
                 svgContent={lists[6].svgContent}
                 title={lists[6].title}
@@ -3708,7 +3709,8 @@ export default function Home() {
             <ProjectSwiper />
           </div>
           <div className="fifth_section_btn">
-            <Link href={"/projects"} className="btn_component">
+            <Link
+            rel="canonical" href={"/projects"} className="btn_component">
               <span className="btn_component_text">
                 {lang === "en" ? en.Projects.LearnMore : ru.Projects.LearnMore}
               </span>

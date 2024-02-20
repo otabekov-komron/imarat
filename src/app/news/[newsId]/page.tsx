@@ -187,7 +187,7 @@ export default function BlogDetails({
         {blogs.map((blog: BlogType) => {
           return (
             <div className="blogs__item" key={blog._id}>
-              <Link href={`/news/${blog._id}`}>
+              <Link rel="canonical" href={`/news/${blog._id}`}>
                 <div className="blog__item-img">
                   <Image
                     src={`https://admin.imaratgroup.uz/${blog.photo}`}

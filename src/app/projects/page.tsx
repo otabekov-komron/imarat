@@ -170,7 +170,7 @@ const Projects = () => {
               <Image src={photo1} alt="background" />
               <span>360°</span>
             </div>
-            <Link className="link_button" href={"/project360"}>
+            <Link rel="canonical" className="link_button" href={"/project360"}>
               <p>{lang === 'en' ? "View project 360°" : "Просмотреть 360°"}</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +191,7 @@ const Projects = () => {
               <Image src={photo2} alt="background" />
               <span>360°</span>
             </div>
-            <Link className="link_button" href={"/project360"}>
+            <Link rel="canonical" className="link_button" href={"/project360"}>
               <p>{lang === 'en' ? "View project 360°" : "Просмотреть 360°"}</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +212,7 @@ const Projects = () => {
               <Image src={photo3} alt="background" />
               <span>360°</span>
             </div>
-            <Link className="link_button" href={"/project360"}>
+            <Link rel="canonical" className="link_button" href={"/project360"}>
               <p>{lang === 'en' ? "View project 360°" : "Просмотреть 360°"}</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -233,7 +233,7 @@ const Projects = () => {
               <Image src={photo4} alt="background" />
               <span>360°</span>
             </div>
-            <Link className="link_button" href={"/project360"}>
+            <Link rel="canonical" className="link_button" href={"/project360"}>
               <p>{lang === 'en' ? "View project 360°" : "Просмотреть 360°"}</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

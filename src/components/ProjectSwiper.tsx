@@ -82,7 +82,7 @@ const ProjectSwiper = () => {
       <SwiperSlide
         className="sw-slide"
       >
-        <Link href={"/projects"}>
+        <Link rel="canonical" href={"/projects"}>
           <Image width={500} height={400} src={design} alt="image" />
           <span className="sw-slide-title">
             <p>{lang === 'en' ? 'Living room' : 'Гостиная'}</p>
@@ -110,7 +110,7 @@ const ProjectSwiper = () => {
             key={index}
             className="sw-slide"
           >
-            <Link  href={"/projects"}>
+            <Link rel="canonical" href={"/projects"}>
               <Image
                 width={500}
                 height={400}

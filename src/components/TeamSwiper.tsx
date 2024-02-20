@@ -57,7 +57,7 @@ const TeamSwiper = () => {
           spaceBetween: 30,
           slideToClickedSlide: true,
         },
-        1000:  {
+        1000: {
           slidesPerView: 3.5,
           spaceBetween: 30,
           slideToClickedSlide: true,
@@ -212,7 +212,7 @@ const TeamSwiper = () => {
             </svg>
           </div>
         </div>
-        <Link href={"/about"} className="btn_component">
+        <Link rel="canonical" href={"/about"} className="btn_component">
           <span className="btn_component_text">
             {lang === "en" ? en.Team.LearnMore : ru.Team.LearnMore}
           </span>

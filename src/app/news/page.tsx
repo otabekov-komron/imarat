@@ -93,7 +93,7 @@ const News = () => {
             return (
               
                 <div className="blogs__item" key={blog._id}>
-                  <Link href={`/news/${blog._id}`}>
+                  <Link rel="canonical" href={`/news/${blog._id}`}>
                     <div className="blog__item-img">
                       <Image
                         src={`https://admin.imaratgroup.uz/${blog.photo}`}
@@ -309,7 +309,7 @@ const News = () => {
                     <p className="vacancy__item-title">{item.title}</p>
                     <p className="vacancy__item-price">{item.price}</p>
                     <p className="vacancy__item-text">{item.description}</p>
-                    <Link href={"/contacts"}>Send</Link>
+                    <Link rel="canonical" href={"/contacts"}>Send</Link>
                   </div>
                 )) : <p className="choose_category">{lang === 'en' ? 'There are no vacancies for this category' : 'Для данной категории вакансий нет'}</p>
               }

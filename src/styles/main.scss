@@ -45,8 +45,8 @@ a:-webkit-any-link {
   color: unset;
   -webkit-appearance: none;
 }
-button{
--webkit-tap-highlight-color: unset;
+button {
+  -webkit-tap-highlight-color: unset;
 }
 ul {
   list-style: none;
@@ -127,6 +127,7 @@ ul {
 @media only screen and (min-width: 350px) and (max-width: 1200px) {
   .loader_process {
     font-size: 30px !important;
+    font-weight: 300;
   }
   .header {
     background: $primary-black;
@@ -879,6 +880,11 @@ ul {
 }
 
 @media only screen and (min-width: 1600px) {
+  .loader_process {
+    font-size: 60px !important;
+    font-weight: 300;
+    padding-top: 40px;
+  }
   .header {
     background: $primary-black;
     display: flex;
@@ -1586,6 +1592,11 @@ ul {
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  .loader_process {
+    font-size: 60px !important;
+    font-weight: 300;
+    padding-top: 20px;
+  }
   .loader {
     svg {
       width: 50% !important;

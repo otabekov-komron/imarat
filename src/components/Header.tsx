@@ -64,7 +64,7 @@ const Header = () => {
     <>
     <div>
       <div className="header">
-        <Link href={'/'} className="left">
+        <Link rel="canonical" href={'/'} className="left">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 149 50"
@@ -142,7 +142,7 @@ const Header = () => {
       </div>
       <div className={`open_navbar ${isOpen === 1 ? 'active' : isOpen === 2 ? 'nonactive' : ''}`}>
         <div className="navbar_top">
-          <Link onClick={closeNavbar} href={"/about"} className="navbar_top_item">
+          <Link rel="canonical" onClick={closeNavbar} href={"/about"} className="navbar_top_item">
             <span className="navbar_top_item_letters">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +172,7 @@ const Header = () => {
               </span>
             </div>
           </Link>
-          <Link onClick={closeNavbar} href={"/services"} className="navbar_top_item">
+          <Link rel="canonical" onClick={closeNavbar} href={"/services"} className="navbar_top_item">
             <span className="navbar_top_item_letters">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +205,7 @@ const Header = () => {
               </span>
             </div>
           </Link>
-          <Link onClick={closeNavbar} href={"/projects"} className="navbar_top_item">
+          <Link rel="canonical" onClick={closeNavbar} href={"/projects"} className="navbar_top_item">
             <span className="navbar_top_item_letters">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -238,7 +238,7 @@ const Header = () => {
               </span>
             </div>
           </Link>
-          <Link onClick={closeNavbar} href={"/news"} className="navbar_top_item">
+          <Link rel="canonical" onClick={closeNavbar} href={"/news"} className="navbar_top_item">
             <span className="navbar_top_item_letters">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -271,7 +271,7 @@ const Header = () => {
               </span>
             </div>
           </Link>
-          <Link onClick={closeNavbar} href={"/contacts"} className="navbar_top_item">
+          <Link rel="canonical" onClick={closeNavbar} href={"/contacts"} className="navbar_top_item">
             <span className="navbar_top_item_letters">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -304,7 +304,7 @@ const Header = () => {
               </span>
             </div>
           </Link>
-          <Link onClick={closeNavbar} target="_blank" href={"https://live.imaratgroup.uz/"} className="navbar_top_item">
+          <Link rel="canonical" onClick={closeNavbar} target="_blank" href={"https://live.imaratgroup.uz/"} className="navbar_top_item">
             <span className="navbar_top_item_letters">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
