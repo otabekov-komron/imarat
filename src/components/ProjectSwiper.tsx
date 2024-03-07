@@ -114,7 +114,7 @@ const ProjectSwiper = () => {
               <Image
                 width={500}
                 height={400}
-                src={`https://imarat2.hypernova.uz/${image.photo}`}
+                src={`https://imarat2.hypernova.uz/uploads/${image.photo}`}
                 alt="image"
               />
               <span className="sw-slide-title">
