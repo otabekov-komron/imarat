@@ -20,7 +20,7 @@ export default function ShortsSwiper() {
   const [shorts, setShorts] = useState([]);
   useEffect(() => {
     (async () => {
-      const res = await axios.get("https://admin.imaratgroup.uz/api/shorts");
+      const res = await axios.get("https://imarat2.hypernova.uz/api/shorts");
       setShorts(res.data);
     })();
     

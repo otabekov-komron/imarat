@@ -27,7 +27,7 @@ const Projects = () => {
     const fetchProjects = async () => {
       try {
         const response = await axios.get<Project[]>(
-          "https://admin.imaratgroup.uz/api/projects"
+          "https://imarat2.hypernova.uz/api/projects"
         ); // Replace with your API endpoint
         setProjects(response?.data);
       } catch (error) {

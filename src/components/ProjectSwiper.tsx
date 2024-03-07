@@ -28,7 +28,7 @@ const ProjectSwiper = () => {
     const fetchProjects = async () => {
       try {
         const response = await axios.get<[]>(
-          "https://admin.imaratgroup.uz/api/projects"
+          "https://imarat2.hypernova.uz/api/projects"
         ); 
         setImages(response?.data);
       } catch (error) {
@@ -114,7 +114,7 @@ const ProjectSwiper = () => {
               <Image
                 width={500}
                 height={400}
-                src={`https://admin.imaratgroup.uz/${image.photo}`}
+                src={`https://imarat2.hypernova.uz/${image.photo}`}
                 alt="image"
               />
               <span className="sw-slide-title">
