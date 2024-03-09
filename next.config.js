@@ -11,7 +11,7 @@ module.exports = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'admin.imaratgroup.uz',
+        hostname: 'imarat2.hypernova.uz',
         port: '',
         pathname: '/uploads/**',
       },

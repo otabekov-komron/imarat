@@ -60,14 +60,14 @@ const News = () => {
 
   useEffect(() => {
     (async () => {
-      const blog = await axios.get("https://admin.imaratgroup.uz/api/blogs");
+      const blog = await axios.get("https://imarat2.hypernova.uz/api/blogs");
       setBlogs(blog.data);
       const vacancies = await axios.get(
-        "https://admin.imaratgroup.uz/api/vacancies"
+        "https://imarat2.hypernova.uz/api/vacancies"
       );
       setVacancies(vacancies.data);
       const response = await axios.get<Vacancy[]>(
-        "https://admin.imaratgroup.uz/api/categories"
+        "https://imarat2.hypernova.uz/api/categories"
       );
       setVacansyCategories(response.data);
     })();
@@ -96,7 +96,7 @@ const News = () => {
                   <Link rel="canonical" href={`/news/${blog._id}`}>
                     <div className="blog__item-img">
                       <Image
-                        src={`https://admin.imaratgroup.uz/${blog.photo}`}
+                        src={`https://imarat2.hypernova.uz/${blog.photo}`}
                         alt={"blog img"}
                         width={400}
                         height={400}

@@ -19,17 +19,17 @@ import axios from "axios";
 import Link from "next/link";
 const ProjectSwiper = () => {
   const [images, setImages] = useState<Imag[]>([]);
-  const [lang, setLang] = useState()
+  const [lang, setLang] = useState();
   useEffect(() => {
-    const getLang: any = localStorage.getItem('lang')
-    setLang(getLang)
-  }, [])
+    const getLang: any = localStorage.getItem("lang");
+    setLang(getLang);
+  }, []);
   useEffect(() => {
     const fetchProjects = async () => {
       try {
         const response = await axios.get<[]>(
-          "https://admin.imaratgroup.uz/api/projects"
-        ); 
+          "https://imarat2.hypernova.uz/api/projects"
+        );
         setImages(response?.data);
       } catch (error) {
         console.error("Error fetching projects:", error);
@@ -42,24 +42,24 @@ const ProjectSwiper = () => {
     <Swiper
       breakpoints={{
         320: {
-            slidesPerView: 1.5,
-            spaceBetween: 20,
+          slidesPerView: 1.5,
+          spaceBetween: 20,
         },
         480: {
-            slidesPerView: 2.5,
-            spaceBetween: 0,
+          slidesPerView: 2.5,
+          spaceBetween: 0,
         },
         1200: {
-            slidesPerView: 3.5,
-            spaceBetween: 30,
-          },
+          slidesPerView: 3.5,
+          spaceBetween: 30,
+        },
         1500: {
-            slidesPerView: 3.5,
-            spaceBetween: 30,
+          slidesPerView: 3.5,
+          spaceBetween: 30,
         },
         1600: {
-            slidesPerView: 5.4,
-            spaceBetween: 30,
+          slidesPerView: 5.4,
+          spaceBetween: 30,
         },
       }}
       slidesPerView={5.4}
@@ -79,13 +79,11 @@ const ProjectSwiper = () => {
       modules={[Navigation, Autoplay]}
       className="projectSwiper"
     >
-      <SwiperSlide
-        className="sw-slide"
-      >
+      <SwiperSlide className="sw-slide">
         <Link rel="canonical" href={"/projects"}>
           <Image width={500} height={400} src={design} alt="image" />
           <span className="sw-slide-title">
-            <p>{lang === 'en' ? 'Living room' : 'Гостиная'}</p>
+            <p>{lang === "en" ? "Living room" : "Гостиная"}</p>
             <span className="sw-slide-title-svg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -106,37 +104,34 @@ const ProjectSwiper = () => {
       {images
         .sort(() => Math.random() - 0.5)
         .map((image, index) => (
-          <SwiperSlide
-            key={index}
-            className="sw-slide"
-          >
+          <SwiperSlide key={index} className="sw-slide">
             <Link rel="canonical" href={"/projects"}>
               <Image
                 width={500}
                 height={400}
-                src={`https://admin.imaratgroup.uz/${image.photo}`}
+                src={`https://imarat2.hypernova.uz/${image.photo}`}
                 alt="image"
               />
               <span className="sw-slide-title">
                 <p>
-                {(() => {
-                  switch (image.category) {
-                    case 'Bedroom':
-                      return lang === 'en' ? "Bedroom" : "Спальня";
-                    case 'Kitchen':
-                      return lang === 'en' ? "Kitchen" : "Кухня";
-                    case 'Home office':
-                      return lang === 'en' ? "Home office" : "Домашний офис";
-                    case 'Living room':
-                      return lang === 'en' ? "Living room" : "Гостиная";
-                    case 'Dining Room':
-                      return lang === 'en' ? "Dining room" : "Столовая";
-                    case 'Bathroom':
-                      return lang === 'en' ? "Bathroom" : "Ванная комната";
-                    default:
-                      return image.category;
-                  }
-                })()}
+                  {(() => {
+                    switch (image.category) {
+                      case "Bedroom":
+                        return lang === "en" ? "Bedroom" : "Спальня";
+                      case "Kitchen":
+                        return lang === "en" ? "Kitchen" : "Кухня";
+                      case "Home office":
+                        return lang === "en" ? "Home office" : "Домашний офис";
+                      case "Living room":
+                        return lang === "en" ? "Living room" : "Гостиная";
+                      case "Dining Room":
+                        return lang === "en" ? "Dining room" : "Столовая";
+                      case "Bathroom":
+                        return lang === "en" ? "Bathroom" : "Ванная комната";
+                      default:
+                        return image.category;
+                    }
+                  })()}
                 </p>
                 <span className="sw-slide-title-svg">
                   <svg

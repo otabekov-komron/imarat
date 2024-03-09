@@ -20,10 +20,9 @@ export default function ShortsSwiper() {
   const [shorts, setShorts] = useState([]);
   useEffect(() => {
     (async () => {
-      const res = await axios.get("https://admin.imaratgroup.uz/api/shorts");
+      const res = await axios.get("https://imarat2.hypernova.uz/api/shorts");
       setShorts(res.data);
     })();
-    
   }, []);
 
   return (
@@ -34,11 +33,11 @@ export default function ShortsSwiper() {
         breakpoints={{
           350: {
             spaceBetween: 20,
-            slidesPerView: 1.5
+            slidesPerView: 1.5,
           },
           1200: {
             spaceBetween: 100,
-            slidesPerView: 3
+            slidesPerView: 3,
           },
         }}
         centeredSlides={true}

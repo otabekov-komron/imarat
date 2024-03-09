@@ -109,7 +109,7 @@ export default function Gallery({ images }) {
         {images.slice(0, 8).map((product, index) => (
           <SwiperSlide key={index}>
             <Image
-              src={`https://admin.imaratgroup.uz/${product.photo}`}
+              src={`https://imarat2.hypernova.uz/${product.photo}`}
               alt={`Slide ${index}`}
               width={1000}
               height={1000}
@@ -205,7 +205,7 @@ export default function Gallery({ images }) {
             <Image
               placeholder="blur"
               blurDataURL={product.photo}
-              src={`https://admin.imaratgroup.uz/${product.photo}`}
+              src={`https://imarat2.hypernova.uz/${product.photo}`}
               alt={`Slide ${index}`}
               width={200}
               height={200}

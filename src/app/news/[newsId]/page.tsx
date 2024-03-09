@@ -27,11 +27,11 @@ export default function BlogDetails({
   useEffect(() => {
     (async () => {
       const res = await axios.get(
-        `https://admin.imaratgroup.uz/api/blogs/${newsId}`
+        `https://imarat2.hypernova.uz/api/blogs/${newsId}`
       );
       setBlog(res.data);
       const response = await axios.get(
-        `https://admin.imaratgroup.uz/api/blogs`
+        `https://imarat2.hypernova.uz/api/blogs`
       );
       setBlogs(response.data);
     })();
@@ -56,7 +56,7 @@ export default function BlogDetails({
           <div className="blog__image-wrapper">
             <Image
               className="blog__img"
-              src={`https://admin.imaratgroup.uz/${blog.photo}`}
+              src={`https://imarat2.hypernova.uz/${blog.photo}`}
               alt=""
               width={680}
               height={500}
@@ -190,7 +190,7 @@ export default function BlogDetails({
               <Link rel="canonical" href={`/news/${blog._id}`}>
                 <div className="blog__item-img">
                   <Image
-                    src={`https://admin.imaratgroup.uz/${blog.photo}`}
+                    src={`https://imarat2.hypernova.uz/${blog.photo}`}
                     alt={"blog img"}
                     width={400}
                     height={400}
