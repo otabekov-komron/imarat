@@ -167,7 +167,7 @@ const Footer = () => {
             </svg>
             Imarat_group@mail.ru
           </a>
-          <a href="tel:+998957477777">
+{/*           <a href="tel:+998957477777">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -184,8 +184,8 @@ const Footer = () => {
               </g>
             </svg>
             +998 95 747 77 77
-          </a>
-          <a href="tel:+998787777575">
+          </a> */}
+          <a href="tel:+998988800909">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -201,7 +201,7 @@ const Footer = () => {
                 />
               </g>
             </svg>
-            +998 78 777 75 75
+            +998 98 880 09 09
           </a>
           <div>
             <a href="https://maps.app.goo.gl/qRJLXfddSnc8fZdD7">
